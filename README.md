@@ -504,7 +504,7 @@ Esperamos que alcances al menos el nivel 2 en todas tus habilidades blandas.
 | Solución de problemas | 2
 | Dar y recibir feedback | 2
 | Adaptabilidad | 2
-| Trabajo en equipo | 2
+| Trabajo en equipo (trabajo colaborativo y responsabilidad) | 2
 | Comunicación eficaz | 2
 | Presentaciones | 2
 
