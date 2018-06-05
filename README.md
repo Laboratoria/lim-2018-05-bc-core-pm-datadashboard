@@ -425,7 +425,7 @@ El proyecto será _entregado_ subiendo tu código a GitHub (`commit`/`push`) y l
 interfaz será desplegada usando GitHub pages.
 
 
-Para este proyecto deberás trabajar usando git colaborativamente. Puedes leer más sobre trabajo colaborativo [aquí](https://medium.com/laboratoria-how-to/t%C3%BA-y-yo-usando-git-colaborativo-no-se-pi%C3%A9nsalo-62dea67aa2eb) y [aquí](https://guides.github.com/activities/forking/).
+Para este proyecto deberás trabajar usando git colaborativamente. Puedes leer más sobre trabajo colaborativo [aquí](https://medium.com/laboratoria-how-to/t%C3%BA-y-yo-usando-git-colaborativo-no-se-pi%C3%A9nsalo-62dea67aa2eb), [aquí](https://guides.github.com/activities/forking/) y [aquí](http://aprendegit.com/que-es-un-pull-request/).
 
 Aquí algunas recomendaciones para que organices mejor el trabajo con tu compañera:
 
@@ -514,9 +514,9 @@ Esperamos que alcances al menos el nivel 2 en todas tus habilidades blandas.
 
 * Completando los requerimientos mínimos de este proyecto ganarás 250 XPs.
 * Completando el hacker edition de este proyecto ganarás 100 XPs adicionales.
-* Completando los ejercicios de manipulación de arreglos en el LMS (Añadir link)
+* Completando los ejercicios de manipulación de arreglos en el LMS (https://lms.laboratoria.la/cohorts/lim-2018-05-bc-core-pm/courses/javascript/04-arrays/06-practice)
   ganarás otros 25 XPs.
-* Completando los ejercicios de manipulación de objetos en el LMS (Añadir link)
+* Completando los ejercicios de manipulación de objetos en el LMS (https://lms.laboratoria.la/cohorts/lim-2018-05-bc-core-pm/courses/javascript/05-objects/06-practice)
   ganarás otros 25 XPs.
 
 ## Primeros pasos
@@ -533,8 +533,7 @@ Esperamos que alcances al menos el nivel 2 en todas tus habilidades blandas.
   también). Si usas Windows puedes usar [Git bash](https://git-scm.com/download/win),
   aunque recomendaría que consideres probar :penguin: GNU/Linux.
 3. Una de las integrantes del equipo debe realizar un :fork_and_knife: [fork](https://help.github.com/articles/fork-a-repo/)
-del repo de tu cohort, tus _coaches_ te compartirán un _link_ a un repo
-privado y te darán acceso de lectura en ese repo. La otra integrante del equipo deber hacer un fork **del repositorio de su compañera** y [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1) un `remote` hacia el mismo. 
+del repo de tu cohort, tus _coaches_ te compartirán un _link_ a un repo. La otra integrante del equipo deber hacer un fork **del repositorio de su compañera** y [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1) un `remote` hacia el mismo. 
 4. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
   tu _fork_ a tu computadora (copia local).
 5. 📦 Instala las dependencias del proyecto con el comando `npm
