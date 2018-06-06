@@ -151,8 +151,8 @@ desarrollar tu producto (Tip: entrevistas) y cuál fue tu proceso para definir
 el producto final a nivel de experiencia y de interfaz. Es importante que
 detalles:
 
-* Quiénes son los principales usarios de producto.
-* Cuáles son los objetivos de estos usarios en relación con el producto.
+* Quiénes son los principales usuarios de producto.
+* Cuáles son los objetivos de estos usuarios en relación con el producto.
 * Cuáles son los datos más relevantes que quieren ver en la interfaz y
   por qué. Cómo los descubriste.
 * Cuándo revisan normalmente estos datos los usuarios.
@@ -224,7 +224,7 @@ el archivo **data.js**.
 El _boilerplate_ incluye tests que esperan que implementes las
 siguientes 4 funciones y las _exportes_ al entorno global (`window`) dentro del
 script `src/data.js`, ten en cuenta que esto es solo lo básico, si necesitas más
-funciones puedes hacerlo :
+funciones puedes hacerlo:
 
 #### 1) `computeUsersStats(users, progress, courses)`
 
@@ -296,7 +296,7 @@ Arreglo de usuarios ordenado.
 
 ##### Valor de retorno
 
-Nuevo arreglo de usuarios incluyendo solo aquellos que complan la condición de
+Nuevo arreglo de usuarios incluyendo solo aquellos que cumplan la condición de
 filtrado, es decir, aquellos que contengan el string _search_ en el nombre
 (`name`) del usuario.
 
@@ -309,7 +309,7 @@ función debe invocar internamente a `computeUsersStats()`, `sortUsers()` y
 
 ##### Argumentos
 
-* `options`: An object with the following keys:
+* `options`: Un objeto con las siguientes propiedades:
   - `cohort`: Objeto cohort (de la lista de cohorts)
   - `cohortData`: Objeto con dos propiedades:
     + `users`: Arreglo de usuarios miembros del cohort.
@@ -347,11 +347,11 @@ que hemos hecho.
 ### Data
 
 En esta carpeta están los datos de prueba del proyecto, contiene información
-sobre los cohortes (grupos de estudiantes de una generación y rama en particular),
-estudiantes y su progreso en cada uno de los cursos que son parte de cada cohorte.
+sobre los cohorts (grupos de estudiantes de una generación y rama en particular),
+estudiantes y su progreso en cada uno de los cursos que son parte de cada cohort.
 Para poder usar cada uno de los archivos JSON, puedes ocupar el mismo método que
 usarías si es que estuvieses haciendo una llamada HTTP o a una API, pero usando
-una dirección **relativa**, ejemplo :
+una dirección **relativa**, ejemplo:
 
 ```javascript
 "../data/cohorts.json"
@@ -362,14 +362,14 @@ una dirección **relativa**, ejemplo :
 Tendrás también que completar las pruebas unitarias de estas funciones que se
 incluyen en el _boilerplate_, que encontrarás en el archivo `data.spec.js`.
 Si te fijas bien en la carpeta también encontrarás otros archivos, que
-detallaremos a continuación :
+detallaremos a continuación:
 
 #### index.html
 
 No confundas este archivo con tu `index.html` del proyecto, este archivo es
 especial para los test y es una manera de ver el resultado de tus pruebas
 unitarias, pero en el navegador. Para arrancar las pruebas de esta forma,
-escribe en tu consola :
+escribe en tu consola:
 
 ```javascript
 npm run test-browser
