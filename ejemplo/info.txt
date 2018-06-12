@@ -1,0 +1,60 @@
+http = protocolo reglas, va a ver con la comunicacion cliente-servidor;
+tener un index.html es el protocolo para el http. si no lo encuentra envia un codigo 400 
+si lo encuentra sale codigo 200.
+tcp/ip: protocolo funcional para el internet.
+
+                 request
+         -------------------------->
+computadora                         servidor (json)
+        <------------------------
+                 response
+
+para pedir request/response : se puede usar js
+solicitud atraves de un navegador
+AJAX = asincrono con json 
+JSON = formatos para estructurar data.
+para peticionees xmlhhtprequest, solicito atraves de una url
+
+                ¿COMO?
+1. levantar un servidor desde mi maquina.
+plugin en studio code : live server
+node.js tbm levanta servidor.
+voy a hacer un request con xmlhhtprequest.
+
+2. como hacer una peticion : 
+compatibilidad: con httprequest(antigua) o fetch(masrapidoymenoslineas)
+diferenciados por la sintaxis
+
+const  XHR =? XMLHTTPREQUEST()
+CONSOLE.LOG(XHR);
+XHR.ONREADY STATECHANGE = FUNCTION(){ // valida q el dom este cargado y lo encuentra en el servidor
+
+if (xhr.readystate ==4 &&xhr.status ==200){    //200 cargo bien la pagina del http y lo encontro
+        console.log(json.parse (xhr.responsetext));  // un parse de la respuesta(aseguramos q lo q traiga del servido sea formato json)
+        console.log(xhr.res)
+} else {
+        console.log(hay un problem con el server)
+}
+xhr.open("get", urlblablabla);
+xhr.serd();
+
+// INFO//
+DOMCONTENTLOADED abarca 3 eventos 
+carga css y js porque son externmos
+imagenes
+....
+cuando este todo cargado todo. cuando esta todo cargado tiene un valor de 4
+caniuse.com  : herramienta para saber q cosa se utiliza en que
+4. en mainjs
+
+fetch ("url data del data/cohor.json" )
+        .then(function(response){
+        return repsonse.json();
+        })
+        .then(function(data){
+        console.log(typeof data);
+        console.log(data[0].id)
+        });
+
+3.5. recorrer objetos y arrays
+si el nombre q ingresa es igual a mi data 
