@@ -4,8 +4,11 @@ const resultBox = document.getElementById("container");
 let searchedForText;
 
 const listStudents = document.querySelector("ul");
+var botonDeInicio = document.querySelector('button');
 
-fetch("http://127.0.0.1:5500/data/cohorts/lim-2018-03-pre-core-pw/users.json")
+
+botonDeInicio.onclick = function () {
+fetch("../data/cohorts/lim-2018-03-pre-core-pw/users.json")
     .then(function(response){
         return response.json();
     })
@@ -19,7 +22,7 @@ fetch("http://127.0.0.1:5500/data/cohorts/lim-2018-03-pre-core-pw/users.json")
         //document.write("2. "+data[1].name);
         })
     ;
-
+    }
     /*  lista completa de los readyStatevalores está documentada en XMLHTTPRequest.readyState y es la siguiente:
 0 (sin inicializar) o ( solicitud no inicializada )
 1 (carga) o ( conexión al servidor establecida )
@@ -27,7 +30,7 @@ fetch("http://127.0.0.1:5500/data/cohorts/lim-2018-03-pre-core-pw/users.json")
 3 (interactivo) o ( solicitud de procesamiento )
 4 (completo) o ( solicitud finalizada y la respuesta está lista )
 */ 
-fetch ("http://127.0.0.1:5500/data/cohorts/lim-2018-03-pre-core-pw/progress.json" )
+fetch ("../data/cohorts/lim-2018-03-pre-core-pw/progress.json" )
         .then(function(progress){
         return progress.json();
         })
@@ -35,7 +38,7 @@ fetch ("http://127.0.0.1:5500/data/cohorts/lim-2018-03-pre-core-pw/progress.json
             console.log(progress);
         });
 
-fetch ("http://127.0.0.1:5500/data/cohorts.json")
+fetch ("../data/cohorts.json")
         .then(function(cohorts){
         return cohorts.json();
         })
