@@ -16,7 +16,7 @@ leyó qué, qué ejercicios se han completado, los resultados de los quizzes, et
 
 A pesar de que la data de progreso del LMS (ej. lecturas leídas, ejercicios
   completados, nota en quizzes, etc.) no impacta directamente en la evaluación
-  de una estudiante, sí es una pieza de información relevante que las TMs
+  de una estudiante, sí es una pieza de información relevante que las TMs y Jedis de cada squad
   quisieran visualizar para tener un mejor entendimiento de cómo va cada
   estudiante en su proceso de aprendizaje.
 
