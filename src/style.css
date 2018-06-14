@@ -86,10 +86,8 @@ h3{
     top:0;
     bottom: 0;
     left: 0;
-    background-color: darksalmon;
 }
 .user{
-    background-color: rgb(207, 242, 110);
     width: 100%;
     height: 35%;
 }
@@ -104,18 +102,34 @@ img.sideUser{
     max-width: 100px;
     max-height: 100px;
 }
-p{
-    color: white;
+p {
+    color:black;
     font-size: 15px;
     font-family: 'Montserrat';
     text-align: center;
     margin: auto;
     padding: auto;
 }
-.navegador{
-    background-color: red;
-    width: 100%;
-    height: 65%;
+
+.nav-item{
+    padding: 15px 0 15px 25px;
+    height: 25px;
+    line-height: 25px;
+
+    font-size: 14px;
+    color: black;
+    font-family: 'Montserrat';
+}
+.nav-item img{
+    height: 25px;
+    width: auto;
+
+    float: left;
+    margin-right: 10px;
+}
+a{
+    text-decoration: none !important;
+    border: none !important;
 }
 
 .principalDashboard{
@@ -127,7 +141,6 @@ p{
     right: 0;
 }
 .banner{
-    background-color: blue;
     width: 100%;
     height: 15%;
 }
