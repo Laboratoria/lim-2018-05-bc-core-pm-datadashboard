@@ -17,34 +17,39 @@ El objetivo de este proyecto es permitirle al usuario acceder a la información 
 
 1. PROCESO
 
-  -ENTREVISTAS
+  - ENTREVISTAS
 
-   ![entrevista-Bea](ENTREVISTA1.jpg)
-   ![entrevista-Bea](ENTREVISTA2.jpg)
-   ![entrevista-Ale](ENTREVISTA-ALE1.jpg)
-   ![entrevista-Ale](ENTREVISTA-ALE2.jpg)
-   ![entrevista-Ale](ENTREVISTA-ALE3.jpg)
+   ![entrevista-Bea](img/entrevista-1.jpg)
+   ![entrevista-Bea](img/entrevista-2.jpg)
+   ![entrevista-Ale](img/entrevista-ale-1.jpg)
+   ![entrevista-Ale](img/entrevista-ale-2.jpg)
+   ![entrevista-Ale](img/entrevista-ale-3.jpg)
 
-  -PROTOTIPO DE BAJA FIDELIDAD
-  ![SKETCH](SKETCH1.jpg)
-  ![SKETCH](SKETCH2.jpg)
-  ![SKETCH](sketch3.jpg)
-  ![SKETCH](sketch4.jpg)
-  ![SKETCH](sketch5.jpg)
+  - PROTOTIPO DE BAJA FIDELIDAD
 
+   ![sketch](img/sketch-1.jpg)
+   ![sketch](img/sketch-2.jpg)
+   ![sketch](img/sketch3.jpg)
+   ![sketch](img/sketch4.jpg)
+   ![sketch](img/sketch5.jpg)
+   
+  - DIAGRAMA DE FLUJO
 
-![SKETCH](Diapositiva1.gif)
--PROTOTIPO DE ALTA FIDELIDAD
+   ![diagrama](img/diagrama.gif)
+
+  - PROTOTIPO DE ALTA FIDELIDAD
+
+   ![alt text](https://www.figma.com/proto/KkIBY9O5ACb8JPc5rEeUV9zt/Untitled?scaling=min-zoom&node-id=3%3A113)
 
 ### DISEÑO WEB
 
 1. ASPECTOS GENERALES
 Las herramientas tecnológicas que serán utilizadas son:
--Javascript
--Node.js
--HTML
--CSS
--GITHUB, GITBASH.
+- Javascript
+- Node.js
+- HTML
+- CSS
+- GITHUB, GITBASH.
 
 
 
