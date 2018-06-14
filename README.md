@@ -19,27 +19,27 @@ El objetivo de este proyecto es permitirle al usuario acceder a la información 
 
   - ENTREVISTAS
 
-   ![entrevista-Bea](img/entrevista-1.jpg)
-   ![entrevista-Bea](img/entrevista-2.jpg)
-   ![entrevista-Ale](img/entrevista-ale-1.jpg)
-   ![entrevista-Ale](img/entrevista-ale-2.jpg)
-   ![entrevista-Ale](img/entrevista-ale-3.jpg)
+   ![entrevista-Bea](img/entrevista-1.JPG)
+   ![entrevista-Bea](img/entrevista-2.JPG)
+   ![entrevista-Ale](img/entrevista-ale-1.JPG)
+   ![entrevista-Ale](img/entrevista-ale-2.JPG)
+   ![entrevista-Ale](img/entrevista-ale-3.JPG)
 
   - PROTOTIPO DE BAJA FIDELIDAD
 
-   ![sketch](img/sketch-1.jpg)
-   ![sketch](img/sketch-2.jpg)
-   ![sketch](img/sketch3.jpg)
-   ![sketch](img/sketch4.jpg)
-   ![sketch](img/sketch5.jpg)
+   ![sketch](img/sketch-1.JPG)
+   ![sketch](img/sketch-2.JPG)
+   ![sketch](img/sketch3.JPG)
+   ![sketch](img/sketch4.JPG)
+   ![sketch](img/sketch5.JPG)
    
   - DIAGRAMA DE FLUJO
 
-   ![diagrama](img/diagrama.gif)
+   ![diagrama](img/diagrama.GIF)
 
   - PROTOTIPO DE ALTA FIDELIDAD
 
-   ![alt text](https://www.figma.com/proto/KkIBY9O5ACb8JPc5rEeUV9zt/Untitled?scaling=min-zoom&node-id=3%3A113)
+   ![alt text](img/LAB3.gif)
 
 ### DISEÑO WEB
 
