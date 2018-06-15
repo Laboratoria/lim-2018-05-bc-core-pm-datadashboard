@@ -25,51 +25,55 @@ LMS (Learning Management System) de Laboratoria.
 #### B. Progreso general (Dashboard)
 
 #### C. Pestañas fijas de selección
-Sede 
-Generación
-Turno
+* Sede 
+* Generación
+* Turno
 #### D. Vista  general (fijo)
-Cantidad de alumnas
+* Cantidad de alumnas
 Número de cursos
 #### Filtrar por 
 #### Completitud total
 #### Ejercicios 
-Cantidad total de ejercicios
-Porcentaje promedio de  ejercicios avanzados por las alumnas
+* Cantidad total de ejercicios
+* Porcentaje promedio de  ejercicios avanzados por las alumnas
 #### Lecturas
-Cantidad total de lecturas
-Porcentaje promedio de  lecturas  avanzados por las alumnas
+* Cantidad total de lecturas
+* Porcentaje promedio de  lecturas  avanzados por las alumnas
 #### Quizzes	
-Cantidad total de quizzes
-Porcentaje promedio de  quizzes  avanzados por las alumnas
+* Cantidad total de quizzes
+* Porcentaje promedio de  quizzes  avanzados por las alumnas
 
-## Ordenar por(order direction):
-Ascendente 
-Descendente
+#### Ordenar por(order direction):
+* Ascendente 
+* Descendente
 #### Por alumna:
-Progreso
-Ejercicios 
-Cantidad total de ejercicios
-Cantidad total de ejercicios completados por el usuario
-Porcentaje total de ejercicios completados por el usuario
-Lecturas
-Cantidad total de lecturas
-Cantidad total de lecturas completadas por el usuario
-Porcentaje total de  lecturas completadas por el usuario
-Quizzes	
-Cantidad total de quizzes
-Cantidad total de quizzes completados por el usuario
-Porcentaje total de quizzes completados por el usuario
-Puntaje total: Suma de puntaje de todos los quizzes completados
-Promedio de puntaje
+####   Progreso
+* Ejercicios 
+* Cantidad total de ejercicios
+* Cantidad total de ejercicios completados por el usuario
+* Porcentaje total de ejercicios completados por el usuario
+####  Lecturas
+* Cantidad total de lecturas
+* Cantidad total de lecturas completadas por el usuario
+* Porcentaje total de  lecturas completadas por el usuario
+####  Quizzes	
+* Cantidad total de quizzes
+* Cantidad total de quizzes completados por el usuario
+* Porcentaje total de quizzes completados por el usuario
+* Puntaje total: Suma de puntaje de todos los quizzes completados
+* Promedio de puntaje
 
-## Contenido como valor agregado
+## 6. Contenido como valor agregado
+
 * Elegir tipo de gráfico con el que se visualizará data (barras, línea circular)
 * Ver el progreso de un grupo de alumnas (SQUAD)
 *  Seleccionar periodo de trabajo
 * Exportar  informe en PDF
 
-## Primer prototipo
+## 7. Prototipado
+
+### Primer prototipo: Sketching
+
 En primera instancia, se creó un prototipo en papel. Este contenía las funciones básicas mencionadas
 en la lista. Después de la entrevista con Ale, se quitaron algunas funciones y se organizaron mejor
 otras.
@@ -78,7 +82,7 @@ otras.
 ![primer prototipo1](https://github.com/elment9/lim-2018-05-bc-core-pm-datadashboard/blob/develop/src/img/2.jpg)
 ![primer prototipo2](https://github.com/elment9/lim-2018-05-bc-core-pm-datadashboard/blob/develop/src/img/3.jpg)
 
-## Segundo Prototipo
+### Segundo Prototipo
 
 Posteriormente, se realizó el segundo prototipo en Figma. Este tiene fidelidad media y cuenta 
 cierto dinamismo, que simula la interación con el usuario.
