@@ -19,9 +19,22 @@ fetch('http://127.0.0.1:5500/data/cohorts.json').then((response) => {
   }
  
 });*/
+let home=document.getElementById('home');
+let intro=document.getElementById('intro');
+let pageOne=document.getElementById('pageOne');
 
-var lista2 = document.getElementById('lista2');
-var Uno = "";
+intro.style.display='none';
+pageOne.style.display='none';
+
+let button=document.getElementById('button');
+button.addEventListener('click', start);
+function start(){
+  home.style.display='none';
+  pageOne.style.display='block';
+}
+
+
+var lista2 = document.getElementById('cohorts');
 var option = "";
 fetch('http://127.0.0.1:5500/data/cohorts.json').then((response) => {
   if(response.status == 200){
