@@ -75,7 +75,21 @@ transporte, o simplemente los indicadores clave de tu propio emprendimiento ;)
 
 * primero boceteamos,nuestras ideas hubieron 2 versiones,pero finalmente descartamos lo que no sirve y utilizamos lo que realmente es util para los usuarios 
 
+En la pagina numero 1 ,se pretende mostrar una version preliminar de la vista 1 que mostrara un porcentaje o promedio de todas las alumnas del cohort por curso
+
+![proto virg2](https://user-images.githubusercontent.com/39390011/41487242-7d287d16-70ad-11e8-9404-c95da88b61dc.jpg)
+
+En la pagina numero 2 ,se pretende mostrar una version preliminar de la vista 2 que mostrara un porcentaje o promedio de por alumna pero antes mostrara una tabla por orden de "merito"
+
+![proto virg1](https://user-images.githubusercontent.com/39390011/41487241-7ca32f08-70ad-11e8-941b-93edd7d96147.jpg)
+
+se pretende presentar una version de las 2 vistas juntas con graficas(barras ,dona) donde se espefica horas de trabajo,quizzes ,practices resueltos yexistentes por unidad
+
+![proto yeni](https://user-images.githubusercontent.com/39390011/41487240-7c7a2d74-70ad-11e8-90b3-602ea4418570.jpg)
+
 * tuvimos varias ideas respecto al color pero finalmente utilizamos los tonos de la marca y decidimos guiarnos de esos parametros
+
+![logo](https://user-images.githubusercontent.com/39390011/41486589-bb145bf2-70aa-11e8-9db0-622c51b65dfa.png)
 
 * tomamos como prohibido usar lo que nosotros queremos o deseamos para la pagina y se tomo la decision de tomar e n cuenta las necesidades del usuario
 
@@ -109,19 +123,55 @@ fue un proceso de prueba y error,por que teniamos ideas pero no se adecuaban a l
  - ¿Quisiera saber en que herramienta trabajas para poder obtener y manejar el grado de completitud de las alumnas en la plataforma (LMS)
   Utilizo Excel,se me hace pesado trabajar con demasiada informacion en excel por que esa forma me organizacion es abrumadora,pero me gusta tener todos los datos a la mano 
   - ¿Cuanto tiempo trabajas en esta heramienta?
-    Un dia completo cada 3 semanas
+    => Un dia completo cada 3 semanas
  
  - ¿Que colores de la paleta de laboratoria prefieres?
-    Amarillo y fucsia
+   => Amarillo y fucsia
 
 - ¿A que informacion o dato le otorgas mayor importancia?
- A los ejercicios
+   => Otorgo mayor importancia a los ejercicios y su completitud
   
 
 #### 2) Sketch de la solución (prototipo de baja fidelidad)
 
 Debes hacer un _sketch_ (boceto) de tu solución usando papel y lápiz, tomarle
 una foto, subirla a tu repositorio y hacer mención del _sketch_ en tu `README.md`.
+
+vista 1:
+
+![1](https://user-images.githubusercontent.com/39390011/41486838-b7ec5a8c-70ab-11e8-8dae-e62276cc7cb0.jpg)
+
+vista 2:
+
+![2](https://user-images.githubusercontent.com/39390011/41486839-b8205ada-70ab-11e8-9171-d90c0ec79bea.jpg)
+
+vista 3:
+
+![3](https://user-images.githubusercontent.com/39390011/41486841-b8611d54-70ab-11e8-978c-b5026bb972bc.jpg)
+
+vista 4:
+
+![4](https://user-images.githubusercontent.com/39390011/41486842-b88ef206-70ab-11e8-962a-c8881d1083b3.jpg)
+
+vista 5:
+
+![5](https://user-images.githubusercontent.com/39390011/41486836-b78e5400-70ab-11e8-838b-3fa8c6dab348.jpg)
+
+vista 6:
+
+![6](https://user-images.githubusercontent.com/39390011/41486837-b7bcb7e6-70ab-11e8-8fe2-88f77b802371.jpg)
+
+vista 7:
+
+![7](https://user-images.githubusercontent.com/39390011/41486857-bdae9106-70ab-11e8-8d75-02ef53895e43.jpg)
+
+vista 8:
+
+![8](https://user-images.githubusercontent.com/39390011/41486858-bdcc2c98-70ab-11e8-8b25-bab82e4974ef.jpg)
+
+vista 9:
+
+![9](https://user-images.githubusercontent.com/39390011/41486856-bd8bc2ca-70ab-11e8-9607-88a4e3c10d52.jpg)
 
 #### 3) Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)
 
