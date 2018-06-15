@@ -1,0 +1,113 @@
+body{
+    background-color: #ffe521;
+    margin: 0%;
+    
+}
+
+.inicio {
+    background-color: #ffffff;
+    border-radius: 7%;
+    height: 300px;
+    width: 25%;
+    margin: 150px 35%;
+
+
+}
+
+.img {
+    width: 90%;
+    height: 30%;
+    margin: 1% 5%;
+   
+}
+.inicio form{
+   font-size: 18px;
+   font-family: Gill Sans;
+   margin: 0% 10% 10% 10%;
+}
+
+.btn {
+    background-color: #000000;
+    font-family: monospace;
+    border-radius: 10px;
+    width: 70%;
+    height: 40px;
+    margin-top: 20px;
+    font-weight: bold;
+    border:none;
+    color: #ffffff;
+   
+    }
+
+.btns {
+background-color: #000000;
+font-family: monospace;
+width: 100%;
+height: 50px;
+margin-top: 15px;
+font-weight: bold;
+border:none;
+margin-top: 0px;
+color: #ffffff;
+font-size: 24px;
+}
+.btns:hover{
+    background-color: #f9fd1b;
+}
+
+.userStyle{
+    border: none;
+    background-color: #FDDD8E;
+    padding: 3%;
+    width: 90%;
+}
+
+
+#platform{
+    background-color: #000000;
+    display: none;
+    width: 25%;
+    height:700px;
+    margin-top: 0px;
+    float: left;
+    color: #ffffff;
+    
+}
+
+#contenido{
+    background-color: #f9fd1b;
+    width: 75%;
+    height: 700px;
+    display: none;
+    float: left;
+    border-radius: 5px;
+    
+}
+
+#second{
+    display: none;
+    width: 75%;
+    height: 700px;
+    display: none;
+    float: left;
+    border-radius: 5px;
+}
+
+.list{
+    background-color: #000000;
+    font-family: monospace;
+    border-radius: 10px;
+    width: 70%;
+    height: 40px;
+    margin-top: 20px;
+    font-weight: bold;
+    border:none;
+    color: #ffffff;
+}
+
+.table{
+    background-color: #000000;
+    color: #ffffff;
+    border: 10px solid #ffe521;
+    margin-left: 4px;
+}

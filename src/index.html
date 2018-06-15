@@ -6,12 +6,79 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <p> hola</p>
-    <p> hola</p>
-    <p> hola</p>
-    <p> hola</p>
-    <input type="text">
-    <p> probando la sincronizacion de git hub holaaaaa </p>
+    <div id="login" class="inicio">  
+      <img class="img" src="lab.png" alt="Laboratoria">
+      <form class="form">
+        <label>Nombre</label><br>
+        <input type="text" class="userStyle"><br>
+        <label>contraseña</label><br>
+        <input type="password" id="pass" class="userStyle" ><br>
+        <button  id="go" class="btn">INGRESAR</button>
+      </form>
+    </div>
+
+    <div id="platform">
+        <h2>Bienvenidx</h1>
+        <button class="btns" id='user'>USER</button><br>
+        <button class="btns" id='top'>TOP</button><br><br><br><br><br><br><br><br>
+        <button class="btns" id='salir'>SALIR</button>
+    </div>	
+
+
+    <div id="second">
+
+        <select id="conjuntoAnio" onchange="ShowSelected1();">
+          <option value="2018">2018</option>
+          <option value="2017">2017</option>
+          <option value="2016">2016</option>
+          <option value="2015">2015</option>
+          </select>
+    
+          <select id="conjuntoBootcamp" onchange="ShowSelected2();" >
+          <option value="lim">Lima</option>
+          <option value="scl">Chile</option>
+          <option value="cdmx">Mexico</option>
+          <option value="aqp">Arequipa</option>
+          </select>
+        <button id="lim">alumnas</button>
+		
+		
+		
+            <table class="table">
+              <thead >
+                <tr>
+                  <th>BOOTCAMP</th>
+                  <th>ID</th>
+                  <th>SEDE</th>
+                  <th>ROL</th>
+                 </tr>
+               </thead>
+               <tbody id="TableBody">
+               </tbody>                  
+             </table>
+    </div> 
+       <div id="contenido">
+      
+      <select id='dataList' class="list">
+        <option>Lima</option>
+        <option>Mexico</option>
+        <option>Sao Paulo</option>
+        <option>S.Chile</option>
+      </select>
+      <select id='dataListYear'>
+          <option id="lim">Lima</option>
+          <option>Mexico</option>
+          <option>Sao Paulo</option>
+          <option>S.Chile</option>
+        </select>
+    </div>
+
+
+
+
+   
+
+    <script src="data.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
