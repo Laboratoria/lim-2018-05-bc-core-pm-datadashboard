@@ -1,6 +1,53 @@
 body {
     background-color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
+}
+
+
+.buttonA{
+    background-color: #56F69A; 
+    position: relative;
+    border: none;
+    color: #000;
+    padding: 15px 32px;
+    text-align: center;    
+    font-size: 16px;    
+    cursor: pointer;
+    width: 19%;
+    height: auto;    
+    top: 200px;
+    left: auto;
+}
+
+.buttonC{
+    background-color: #56F69A; 
+    position: relative;
+    border: none;
+    color: #000;
+    padding: 15px 32px;
+    text-align: center;    
+    font-size: 16px;    
+    cursor: pointer;
+    width: 19%;
+    height: auto;    
+    top: 205px;
+    left: auto;
+}
+
+
+.buttonI{
+    background-color: #56F69A; 
+    position: relative;
+    border: none;
+    color: #000;
+    padding: 15px 32px;
+    text-align: center;    
+    font-size: 16px;    
+    cursor: pointer;
+    width: 19%;
+    height: auto;    
+    top: 210px;
+    left: auto;
 }
 
 .logo{    
@@ -8,7 +55,7 @@ body {
     top: 0;
     width: 19%;
     height: auto;
-    left: 20px;
+    left: 14px;
     right: 0;
 }
 
@@ -28,6 +75,9 @@ body {
 } */
 
 
+
+
+
 .caja{
     background-color: #FFE521;
     position: absolute;
@@ -42,49 +92,6 @@ body {
 }
 
 
-.cajaAlumnas{
-    background-color: #56F69A;
-    position: absolute;
-    top: 250px;
-    width: 20%;
-    height: 50px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    color: #fff;
-    text-align: center
-
-}
-
-
-.cajaCohorts{
-    background-color: #56F69A;
-    position: absolute;
-    top: 305px;
-    width: 20%;
-    height: 50px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    color: #fff;
-    text-align: center
-
-}
-
-.cajaInstructores{
-    background-color: #56F69A;
-    position: absolute;
-    top: 360px;
-    width: 20%;
-    height: 50px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    color: #fff;
-    text-align: center
-
-}
-
 /* .caja2{
     background-color: #56F69A; 
     position: absolute;    
@@ -98,12 +105,10 @@ body {
 
 .caja3{
     background-color:#F4F6F6;
-    position: absolute;
-    top: 80px;
-    width: 80%;
-    height: 570px;
-    left: 260px;
+    position: relative;
+    top: -73px;
+    width: 81%;
+    height: 505px;
+    left: 252px;
 
 }
-
-
