@@ -2,7 +2,7 @@ const selectElement= document.getElementById("sedes");
 getJSON("../data/cohorts.json", (err, json)=> {
   if(err){
     // algo salio mal...
-    return console.error(err);
+    return console.log(err);
   }
   const sedes= json;
   console.log(sedes);
