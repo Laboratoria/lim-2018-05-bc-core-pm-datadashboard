@@ -10,7 +10,7 @@ _Proyecto diseñado y elaborado por Debbie Miñano y Jhoselyn Mancilla para el  
 * **Flujo de trabajo** Revisa esta información para conocer como acceder y sacarle el máximo provecho a nuestro proyecto.
 
 ***
-Prueba nuestro demo aquí:
+Prueba nuestro demo aquí: https://debbievejarano.github.io/lim-2018-05-bc-core-pm-datadashboard/src/
 
 ## User experience design
 
