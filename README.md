@@ -31,22 +31,22 @@ Turno
 #### D. Vista  general (fijo)
 Cantidad de alumnas
 Número de cursos
-####Filtrar por 
-####Completitud total
-####Ejercicios 
+#### Filtrar por 
+#### Completitud total
+#### Ejercicios 
 Cantidad total de ejercicios
 Porcentaje promedio de  ejercicios avanzados por las alumnas
-####Lecturas
+#### Lecturas
 Cantidad total de lecturas
 Porcentaje promedio de  lecturas  avanzados por las alumnas
-####Quizzes	
+#### Quizzes	
 Cantidad total de quizzes
 Porcentaje promedio de  quizzes  avanzados por las alumnas
 
-##Ordenar por(order direction):
+## Ordenar por(order direction):
 Ascendente 
 Descendente
-####Por alumna:
+#### Por alumna:
 Progreso
 Ejercicios 
 Cantidad total de ejercicios
@@ -74,7 +74,9 @@ En primera instancia, se creó un prototipo en papel. Este contenía las funcion
 en la lista. Después de la entrevista con Ale, se quitaron algunas funciones y se organizaron mejor
 otras.
 
-![primer prototipo](https://img.buzzfeed.com/buzzfeed-static/static/2017-02/7/12/enhanced/buzzfeed-prod-fastlane-03/original-17515-1486490056-3.jpg?crop=2041:1068;80,248)
+![primer prototipo0](https://github.com/elment9/lim-2018-05-bc-core-pm-datadashboard/blob/develop/src/img/1.jpg)
+![primer prototipo1](https://github.com/elment9/lim-2018-05-bc-core-pm-datadashboard/blob/develop/src/img/2.jpg)
+![primer prototipo2](https://github.com/elment9/lim-2018-05-bc-core-pm-datadashboard/blob/develop/src/img/3.jpg)
 
 ## Segundo Prototipo
 
