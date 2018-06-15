@@ -1,0 +1,21 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+header {
+  
+    background-color: #ffc107;
+    padding: 20px 30px;
+    font-size: 28px;
+    
+}
+header .logo{
+    font-size: 20px;
+}
+.intro{
+    width:100%;
+    padding: 10% 40%;
+}
+#pageOne{
+    padding: 10% 40%;
+}
