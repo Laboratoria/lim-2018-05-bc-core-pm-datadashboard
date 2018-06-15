@@ -20,9 +20,9 @@ LMS (Learning Management System) de Laboratoria.
 
 ## 5. Contenido necesario
 
-### A. Nombre de user (training manager) y sede
+#### A. Nombre de user (training manager) y sede
 
-### B. Progreso general (Dashboard)
+#### B. Progreso general (Dashboard)
 
 #### C. Pestañas fijas de selección
 Sede 
@@ -63,7 +63,7 @@ Porcentaje total de quizzes completados por el usuario
 Puntaje total: Suma de puntaje de todos los quizzes completados
 Promedio de puntaje
 
-##Contenido como valor agregado
+## Contenido como valor agregado
 * Elegir tipo de gráfico con el que se visualizará data (barras, línea circular)
 * Ver el progreso de un grupo de alumnas (SQUAD)
 *  Seleccionar periodo de trabajo
