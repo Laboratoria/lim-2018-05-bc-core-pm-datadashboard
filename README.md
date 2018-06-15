@@ -19,34 +19,39 @@ El objetivo de este proyecto es permitirle al usuario acceder a la información 
 
 1. PROCESO
 
-  -ENTREVISTAS
+  - ENTREVISTAS
 
-   ![entrevista-Bea](ENTREVISTA1.jpg)
-   ![entrevista-Bea](ENTREVISTA2.jpg)
-   ![entrevista-Ale](ENTREVISTA-ALE1.jpg)
-   ![entrevista-Ale](ENTREVISTA-ALE2.jpg)
-   ![entrevista-Ale](ENTREVISTA-ALE3.jpg)
+   ![entrevista-Bea](img/entrevista-1.JPG)
+   ![entrevista-Bea](img/entrevista-2.JPG)
+   ![entrevista-Ale](img/entrevista-ale-1.JPG)
+   ![entrevista-Ale](img/entrevista-ale-2.JPG)
+   ![entrevista-Ale](img/entrevista-ale-3.JPG)
 
-  -PROTOTIPO DE BAJA FIDELIDAD
-  ![SKETCH](SKETCH1.jpg)
-  ![SKETCH](SKETCH2.jpg)
-  ![SKETCH](sketch3.jpg)
-  ![SKETCH](sketch4.jpg)
-  ![SKETCH](sketch5.jpg)
+  - PROTOTIPO DE BAJA FIDELIDAD
 
+   ![sketch](img/sketch-1.JPG)
+   ![sketch](img/sketch-2.JPG)
+   ![sketch](img/sketch3.JPG)
+   ![sketch](img/sketch4.JPG)
+   ![sketch](img/sketch5.JPG)
+   
+  - DIAGRAMA DE FLUJO
 
-![SKETCH](Diapositiva1.gif)
--PROTOTIPO DE ALTA FIDELIDAD
+   ![diagrama](img/diagrama.GIF)
+
+  - PROTOTIPO DE ALTA FIDELIDAD
+
+   ![alt text](img/LAB3.gif)
 
 ### DISEÑO WEB
 
 1. ASPECTOS GENERALES
 Las herramientas tecnológicas que serán utilizadas son:
--Javascript
--Node.js
--HTML
--CSS
--GITHUB, GITBASH.
+- Javascript
+- Node.js
+- HTML
+- CSS
+- GITHUB, GITBASH.
 
 
 
