@@ -1,20 +1,24 @@
 # Data Dashboard para Laboratoria version 1.0 15/06/2018
 
-##Descripcion general
+## Descripcion general
 
 Nuestro producto esta completamente enfocado en las necesidades y dificultades que tienen los Training Managers y Jedis para acceder a los progresos de las alumnas en la plataforma del LMS.
+Tuvimos conocimiento que las TMs ya habian tenido una forma de ver los datos del LMS, sin embargo el programa era muy pesado y le perdian interesa muy facilmente.
 Con esta problematica, desarrollamos una plataforma que muestra el avance y desarrollo de cada una de las alumnas de una determinada sede y cohort.
-
 
 ## Nuestro proceso de diseño
 
 1. Boceto en blanco y negro.
   Desarrollamos nuestra primera idea al terminar de leer el readme; con los datos que rescatamos hicimos un boceto en photoshop ya que para mi compañera era mas facil trabajar en esta aplicacion. Salimos a buscar feedback, nuestra TM Ale nos indico que debiamos centrarnos mas en las estudiantes de lima, que no era necesario la comparacion entre alumnas ya que en las distintas sedes estaban en momentos diferentes del bootcamp, y que era mas factible ver el progreso de las alumnas en general para poder compararlas con un determinado nivel esperado y, si en caso estaban por debajo, apoyarlas en su aprendizaje.
 
-    ![Primer boceto](/maqueta/4fotos.png "Primer PS")
+    ![Primer boceto](images/4fotos.png "Primer PS")
+    ![Segunda parte](images/cursos.png "Continuacion")
+    ![Tercera parte](images/ejercicios.png "Continuacion")
 
 2. Segundo boceto en Figma.
-  Desarrollamos el segundo boceto en la plataforma Figma, porque se pueden visualizar los logos e imagenes con mejor calidad.  
+  Desarrollamos el segundo boceto en la plataforma Figma, porque se pueden visualizar los logos e imagenes con mejor calidad. Apuntando a como queriamos que quedara nuestro producto final.
+
+    ![Figma genral](images/figmageneral.fig "Boceto general")
 
 
 ## Requisitos basicos de la aplicacion
@@ -25,19 +29,13 @@ Debes entrar a la carpeta `src/` y seleccionar el archivo `indexinit.html` para 
 
 ## Archivos incluidos
 
-  
-
-Para comenzar tendrás que hacer un _fork_ y _clonar_ este repositorio que
-contiene el _boilerplate_.
-
-El _boilerplate_ contiene una estructura de archivos como punto de partida así
-como toda la configuración de dependencias y tests de ejemplo:
-
+Al descargar la carpeta tendras acceso a estos archivos:  
 ```text
 ./
 ├── .editorconfig
 ├── .eslintrc
 ├── .gitignore
+├── images
 ├── README.md
 ├── data
 │   ├── cohorts
@@ -48,9 +46,11 @@ como toda la configuración de dependencias y tests de ejemplo:
 ├── package.json
 ├── src
 │   ├── data.js
-│   ├── index.html
+│   ├── indexinit.html
+│   ├── indexco.html
+│   ├── styleco.css
 │   ├── main.js
-│   └── style.css
+│   └── styleinit.css
 └── test
     ├── data.spec.js
     ├── fixtures.js
@@ -58,47 +58,8 @@ como toda la configuración de dependencias y tests de ejemplo:
     └── index.html
 ```
 
-La carpeta `data/` dentro del _boilerplate_ incluye un extracto de la data que
-podemos usar tanto en los tests como en la interfaz en sí.
 
 ## Entregables
-
-Los criterios mínimos de aceptación para considerar que has completado este
-proyecto son:
-
-### User Experience Design
-
-#### 1) Definición del producto
-
-En el `README.md` cuéntanos cómo pensaste y te acercaste a los usuarios al
-desarrollar tu producto (Tip: entrevistas) y cuál fue tu proceso para definir
-el producto final a nivel de experiencia y de interfaz. Es importante que
-detalles:
-
-* Quiénes son los principales usuarios de producto.
-* Cuáles son los objetivos de estos usuarios en relación con el producto.
-* Cuáles son los datos más relevantes que quieren ver en la interfaz y
-  por qué. Cómo los descubriste.
-* Cuándo revisan normalmente estos datos los usuarios.
-* Cómo crees que el producto les está resolviendo sus problemas.
-* Cómo fue tu proceso de diseño.
-
-#### 2) Sketch de la solución (prototipo de baja fidelidad)
-
-Debes hacer un _sketch_ (boceto) de tu solución usando papel y lápiz, tomarle
-una foto, subirla a tu repositorio y hacer mención del _sketch_ en tu `README.md`.
-
-#### 3) Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)
-
-Lo siguiente es diseñar tu Interfaz de Usuario (UI por sus siglas en inglés).
-Para eso debes aprender a utilizar alguna herramienta de diseño visual.
-Nosotros te recomendamos [Figma](https://www.figma.com/) que  es una herramienta
-que funciona en el navegador y, además, puedes crear una cuenta gratis. Sin
-embargo, eres libre de utilizar otros editores gráficos como
-Illustrator, Photoshop, PowerPoint, Keynote, etc.
-
-El diseño debe representar tu _ideal_ de solución. Digamos que es lo que
-desearías implementar si tuvieras tiempo ilimitado para hackear.
 
 Tu diseño debe seguir los fundamentos de _visual design_, como:
 contraste, alineación, jerarquía, entre otros. Tip: revisa el contenido de UX
@@ -119,7 +80,7 @@ Como mínimo, tu implementación debe:
      + Calcular porcentaje de completitud de todos los _cursos_.
      + Calcular grado de completitud de _lecturas_, _ejercicios autocorregidos_,
        y _quizzes_.
-   - Ordenar estudiantes por completitud _general_ (porcentaje consumido/completado
+   - Ordenar estudiantes por completitud _general_ (porcentaje consufhmido/completado
      de todos los cursos del cohort en cuestión), de _lecturas_, _ejercicios
      autocorregidos_ y _quizzes_.
    - Filtrar/buscar estudiantes por nombre.
