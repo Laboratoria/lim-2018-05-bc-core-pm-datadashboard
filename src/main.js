@@ -17,8 +17,10 @@
     infoAlumnas.innerHTML = output;
 });*/
 
+console.log(user);
+
 const fileUsers = '../data/cohorts/lim-2018-03-pre-core-pw/users.json';
-const infoAlumnas = document.getElementById('infoAlumnas');
+const infoAlumnas = document.querySelector('#listadoAlumnas');
 
 fetch(fileUsers).then(function(response) {
     return response.json();
@@ -35,4 +37,25 @@ fetch(fileUsers).then(function(response) {
         }  
     }
 });
+
+const selectElement = document.getElementById('sedes');
+
+
+fetch('../data/cohorts.json')
+ .then(response => response.json())
+ .then(json => {
+    const sedes = json;
+    console.log(sedes.length);
+    for(let i = 0; i < sedes.length; i ++) {
+        const optionElements = document.createElement('option');
+        const contenidoOption = document.createTextNode(sedes[i].id);
+        optionElements.appendChild(contenidoOption);
+        console.log(sedes[i].id);
+        selectElement.appendChild(optionElements);
+    }
+ })
+ .catch((err) => {
+   // algo salió mal...
+   console.error(err);
+ });
 

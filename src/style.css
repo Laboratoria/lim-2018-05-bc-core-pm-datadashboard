@@ -1,0 +1,110 @@
+*{
+    margin:0px;
+    padding: 0px;
+   font-family: - 'open', sans-serif;
+ }
+ body{
+    margin: 0;
+    padding: 0;
+ }
+ section{ display: flex;
+    flex-wrap: nowrap;
+ 
+  }
+ header{
+    flex: 1 1 auto;
+    margin: 0;
+    padding: 0;
+    background-color: #ffc107;
+    
+ 
+ }
+ p{   margin: 0;
+    padding: 0;
+     color: rgba(0, 0, 0, 0.87);
+    font-size: 1.3125rem;
+    font-weight: 700;
+    font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.16667em;
+    text-transform: uppercase;
+  }
+  footer{
+    flex: 1 1 auto;
+    margin: 0;
+    padding: 0;
+    background-color: #0f0f0f;
+    top: 90%;
+    left: auto;
+    right: 0;
+    position: fixed;
+    width: 100%;
+    height: 10%;
+  }
+ .logo1{
+      
+      position: relative;
+      width: 25%;
+      height: auto;
+      left: 0px;
+      display: flex;
+      flex-wrap: nowrap;
+ 
+  }
+  
+  
+    nav{
+        
+        flex: 1 1 auto;
+        margin: 0;
+        padding: 0;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 16px;
+        padding-right: 16px;
+        background-color: #bdbdbd;
+        width: 140px;
+        height: 100%;
+        display: flex;
+        position: fixed;
+        box-sizing: border-box;
+        text-align: left;
+        justify-content: flex-start;
+        text-decoration: none;
+        padding-left: 0;
+    }
+    article{
+        display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+     align-content: center;
+    
+    }
+   button{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    min-width: 100px; ;
+ }
+ .headerstyle{
+    margin: 10px;
+    padding: 20px;
+    border:10px;
+    
+  }
+ .filtros{
+     background-color: #f0f0f0;
+    padding-left: 0px;
+
+ 
+ }
+ .flechitas{
+    display: flex;
+       float:right;
+   }
+   #listadoAlumnas{
+       margin-left: 140px ;
+       margin-top: 65px;
+       padding: 4%;
+   }
+   
