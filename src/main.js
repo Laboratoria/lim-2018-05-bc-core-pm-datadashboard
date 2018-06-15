@@ -1,4 +1,3 @@
-
 const listStudents = document.querySelector("ul");
 var botonDeInicio = document.querySelector('button');
 
