@@ -3,11 +3,11 @@ _Proyecto diseñado y elaborado por Debbie Miñano y Jhoselyn Mancilla para el  
 
 ## Índice
 
-* **User experience design:** * En esta sección presentamos los pasos que recorrimos para  entregar un prototipo pensado en la experiencia de usuario.
+* **User experience design:** En esta sección presentamos los pasos que recorrimos para  entregar un prototipo pensado en la experiencia de usuario.
 
-* **Implementación de la interfaz de usuario:** * Aquí explicamos como llegamos, de manera lógica, a resolver este reto.
+* **Implementación de la interfaz de usuario:** Aquí explicamos como llegamos, de manera lógica, a resolver este reto.
 
-* **Flujo de trabajo** * Revisa esta información para conocer como acceder y sacarle el máximo provecho a nuestro proyecto.
+* **Flujo de trabajo** Revisa esta información para conocer como acceder y sacarle el máximo provecho a nuestro proyecto.
 
 ***
 Prueba nuestro demo aquí:
