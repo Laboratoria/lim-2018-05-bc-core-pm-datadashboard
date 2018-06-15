@@ -1,9 +1,22 @@
-<<<<<<< HEAD
-=======
+window.computeUserStats = (users, progress, courses) => {users, progress, courses}
+
+window.sortUsers = (users, orderBy, orderDirection) => {users, orderBy, orderDirection}
+
+window.filterUsers = (users, search) => {users, search}
+
+window.processCohortData = (options) => {options}
+
+//Users: es el arreglo de usuarios (estudiantes). Un array que contenga todos los objetos (estudiantes).  
+//Arreglo de objetos obtenido de la data en bruto.
+
+//progress: es un objeto de progreso en bruto (o sea los datos de progreso de cada uno de los estudiantes) 
+// objeto progress debe tener los siguientes atributos: uid (el id de cada alumno). Asi se relaciona el alumno
+// con todo el proceso (de todos los cursos)
+
+//courses: arreglo de strings con los id de los cursos del cohort en cuestion
+
 // seleccionando elementos del html
-
 const selectElement = document.getElementById('sedes');
-
 
 fetch('../data/cohorts.json')
   .then(response => response.json())
@@ -24,4 +37,3 @@ fetch('../data/cohorts.json')
   });
 
 
->>>>>>> 0708a33675406c825362996638c646885b8f2f1c
