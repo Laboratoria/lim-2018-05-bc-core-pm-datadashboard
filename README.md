@@ -93,20 +93,22 @@ se pretende presentar una version de las 2 vistas juntas con graficas(barras ,do
 
 * tomamos como prohibido usar lo que nosotros queremos o deseamos para la pagina y tomamos en cuenta las necesidades del usuario,debido a esto creamos uuna "verison 2.0" del boceto
 
-![1](https://user-images.githubusercontent.com/39390011/41488042-a24edc68-70b0-11e8-890c-c408cc680fb9.jpg)
+
+![1](https://user-images.githubusercontent.com/39390011/41488515-342ce6e2-70b2-11e8-9eee-e277f93e6132.jpg)
+
+![2](https://user-images.githubusercontent.com/39390011/41488516-3457353c-70b2-11e8-9bd0-56dd993de7c7.jpg)
+
+![3](https://user-images.githubusercontent.com/39390011/41488518-3484922a-70b2-11e8-8b1a-484fc2154ccb.jpg)
+
+![4](https://user-images.githubusercontent.com/39390011/41488519-349fec00-70b2-11e8-89ad-db51cce99c48.jpg)
+
+![5](https://user-images.githubusercontent.com/39390011/41488520-34da0ce6-70b2-11e8-9fd2-f994c11f3168.jpg)
+
+![6](https://user-images.githubusercontent.com/39390011/41488513-33d546a8-70b2-11e8-9df0-668af0416019.jpg)
+
+![7](https://user-images.githubusercontent.com/39390011/41488514-34022a9c-70b2-11e8-9664-675e67d5be20.jpg)
 
 
-![2](https://user-images.githubusercontent.com/39390011/41488043-a283d36e-70b0-11e8-9f73-3db79ca93367.jpg)
-
-![3](https://user-images.githubusercontent.com/39390011/41488045-a2aea5f8-70b0-11e8-82ed-d399d718c149.jpg)
-
-![4](https://user-images.githubusercontent.com/39390011/41488046-a2d8fe7a-70b0-11e8-91aa-9b5c02567b46.jpg)
-
-![5](https://user-images.githubusercontent.com/39390011/41488047-a309ba24-70b0-11e8-85f3-1bd3982abdaf.jpg)
-
-![6](https://user-images.githubusercontent.com/39390011/41488040-a1e6f454-70b0-11e8-87d2-f176deec5003.jpg)
-
-![7](https://user-images.githubusercontent.com/39390011/41488041-a214eec2-70b0-11e8-8bff-ea5b91547a70.jpg)
 
 ### Entrevistas📝
 Hicimos 2 entrevistas en la primera presentamos un bosquejo de la pagina:
@@ -148,39 +150,39 @@ Los trainning manager de cada sede 🌎 (lima,santiago,sao paulo,guadalajara y c
 Debes hacer un _sketch_ (boceto) de tu solución usando papel y lápiz, tomarle
 una foto, subirla a tu repositorio y hacer mención del _sketch_ en tu `README.md`.
 
-vista 1:
+* vista 1:
 
 ![1](https://user-images.githubusercontent.com/39390011/41486838-b7ec5a8c-70ab-11e8-8dae-e62276cc7cb0.jpg)
 
-vista 2:
+* vista 2:
 
 ![2](https://user-images.githubusercontent.com/39390011/41486839-b8205ada-70ab-11e8-9171-d90c0ec79bea.jpg)
 
-vista 3:
+* vista 3:
 
 ![3](https://user-images.githubusercontent.com/39390011/41486841-b8611d54-70ab-11e8-978c-b5026bb972bc.jpg)
 
-vista 4:
+* vista 4:
 
 ![4](https://user-images.githubusercontent.com/39390011/41486842-b88ef206-70ab-11e8-962a-c8881d1083b3.jpg)
 
-vista 5:
+* vista 5:
 
 ![5](https://user-images.githubusercontent.com/39390011/41486836-b78e5400-70ab-11e8-838b-3fa8c6dab348.jpg)
 
-vista 6:
+* vista 6:
 
 ![6](https://user-images.githubusercontent.com/39390011/41486837-b7bcb7e6-70ab-11e8-8fe2-88f77b802371.jpg)
 
-vista 7:
+* vista 7:
 
 ![7](https://user-images.githubusercontent.com/39390011/41486857-bdae9106-70ab-11e8-8d75-02ef53895e43.jpg)
 
-vista 8:
+* vista 8:
 
 ![8](https://user-images.githubusercontent.com/39390011/41486858-bdcc2c98-70ab-11e8-8b25-bab82e4974ef.jpg)
 
-vista 9:
+* vista 9:
 
 ![9](https://user-images.githubusercontent.com/39390011/41486856-bd8bc2ca-70ab-11e8-9607-88a4e3c10d52.jpg)
 
