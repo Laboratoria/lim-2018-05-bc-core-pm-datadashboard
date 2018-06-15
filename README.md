@@ -91,11 +91,22 @@ se pretende presentar una version de las 2 vistas juntas con graficas(barras ,do
 
 ![logo](https://user-images.githubusercontent.com/39390011/41486589-bb145bf2-70aa-11e8-9db0-622c51b65dfa.png)
 
-* tomamos como prohibido usar lo que nosotros queremos o deseamos para la pagina y se tomo la decision de tomar e n cuenta las necesidades del usuario
+* tomamos como prohibido usar lo que nosotros queremos o deseamos para la pagina y tomamos en cuenta las necesidades del usuario,debido a esto creamos uuna "verison 2.0" del boceto
+
+![1](https://user-images.githubusercontent.com/39390011/41488042-a24edc68-70b0-11e8-890c-c408cc680fb9.jpg)
 
 
+![2](https://user-images.githubusercontent.com/39390011/41488043-a283d36e-70b0-11e8-9f73-3db79ca93367.jpg)
 
+![3](https://user-images.githubusercontent.com/39390011/41488045-a2aea5f8-70b0-11e8-82ed-d399d718c149.jpg)
 
+![4](https://user-images.githubusercontent.com/39390011/41488046-a2d8fe7a-70b0-11e8-91aa-9b5c02567b46.jpg)
+
+![5](https://user-images.githubusercontent.com/39390011/41488047-a309ba24-70b0-11e8-85f3-1bd3982abdaf.jpg)
+
+![6](https://user-images.githubusercontent.com/39390011/41488040-a1e6f454-70b0-11e8-87d2-f176deec5003.jpg)
+
+![7](https://user-images.githubusercontent.com/39390011/41488041-a214eec2-70b0-11e8-8bff-ea5b91547a70.jpg)
 
 ### Entrevistas📝
 Hicimos 2 entrevistas en la primera presentamos un bosquejo de la pagina:
@@ -108,20 +119,20 @@ Los trainning manager de cada sede 🌎 (lima,santiago,sao paulo,guadalajara y c
 
 * Cuáles son los datos más relevantes que quieren ver en la interfaz y
   por qué. Cómo los descubriste.
-  mediante la entrevista con ale👩🏻‍💻(trainnig manager sede lima),menciono la gran importancia de ver los avances de los ejercios y quizzes,ademas de poder obtener un promedio general por avance del aula
+  => Mediante la entrevista con ale👩🏻‍💻(trainnig manager sede lima),menciono la gran importancia de ver los avances de los ejercios y quizzes,ademas de poder obtener un promedio general por avance del aula
 
 * Cuándo revisan normalmente estos datos los usuarios.
-segun la informacion proporcionada por ale👩🏻‍💻(trainnig manager sede lima),actualmente se utiliza un excel ,para administrar y visualizar los datos,esa vista de datos es abrumadora. 
+=> Segun la informacion proporcionada por ale👩🏻‍💻(trainnig manager sede lima),actualmente se utiliza un excel ,para administrar y visualizar los datos,esa vista de datos es abrumadora. 
 
 * Cómo crees que el producto les está resolviendo sus problemas.
-simplica la obtencion de datos y ademas reduce el tiempo de trabajo debido a que la informacion esta organizada de tal manera que la visualizacion y obtencion de datos es realmente una experencia grata ,apoyandonos en la base de la creacion de una interfaz ligera.
+=> Simplica la obtencion de datos y ademas reduce el tiempo de trabajo debido a que la informacion esta organizada de tal manera que la visualizacion y obtencion de datos es realmente una experencia grata ,apoyandonos en la base de la creacion de una interfaz ligera.
 
 * Cómo fue tu proceso de diseño.
-fue un proceso de prueba y error,por que teniamos ideas pero no se adecuaban a la necesidad del usuario ,tuvimos que reconsiderar algunos aspectos y regresar al prototipado.
+=> Fue un proceso de prueba y error,por que teniamos ideas pero no se adecuaban a la necesidad del usuario ,tuvimos que reconsiderar algunos aspectos y regresar al prototipado.
 
 #### Preguntas de la entrevista💭
  - ¿Quisiera saber en que herramienta trabajas para poder obtener y manejar el grado de completitud de las alumnas en la plataforma (LMS)
-  Utilizo Excel,se me hace pesado trabajar con demasiada informacion en excel por que esa forma me organizacion es abrumadora,pero me gusta tener todos los datos a la mano 
+ => Utilizo Excel,se me hace pesado trabajar con demasiada informacion en excel por que esa forma de organizacion es abrumadora,pero me gusta tener todos los datos a la mano 
   - ¿Cuanto tiempo trabajas en esta heramienta?
     => Un dia completo cada 3 semanas
  
