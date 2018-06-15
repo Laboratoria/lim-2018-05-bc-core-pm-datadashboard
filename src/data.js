@@ -12,9 +12,16 @@ fetch('../data/cohorts/lim-2018-03-pre-core-pw/users.json')
     const idAndNames = json;
 
     console.log(idAndNames);
-    for(let i=0; i<idAndNames.length; i ++){
-        const pruebaRecepcion = document.getElementById("pruebaRecepcion");
-        const names = document.createTextNode(idAndNames[i].id);
+     for(let i=0; i < idAndNames.length; i++){
+         const pruebaRecepcion = document.getElementById("pruebaRecepcion");
+         const nameList = document.getElementById("nameList");
+/*         const names = document.createTextNode(idAndNames[i].id); */ 
+        const show= idAndNames[i].name;
+        
+        pruebaRecepcion.addEventListener("click", () => {
+            nameList.innerHTML += show;
+        } )
+
     }
     
 });
