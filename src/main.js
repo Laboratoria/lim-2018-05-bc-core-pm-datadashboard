@@ -46,7 +46,7 @@ const tableUser = () => {
             // Crea un elemento <table> y un elemento <tbody>
             let tabla = document.createElement("table");
             let tblBody = document.createElement("tbody");
-
+            
             // Crea las celdas
             for (let i = 0; i < dataUser.length; i++) {
                 // Crea las hileras de la tabla
@@ -84,6 +84,7 @@ const tableUser = () => {
                 tblBody.appendChild(celda5);
                 tblBody.appendChild(fila);
             }
+            
 
             // posiciona el <tbody> debajo del elemento <table>
             tabla.appendChild(tblBody);
