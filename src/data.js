@@ -1,33 +1,22 @@
-// fetch('http://127.0.0.1:5500/data/cohorts.json')
-//   .then(function(response) {
-//     return response.json();
-//   })
-//   .then(function(data) {
-//     console.log(data);
-//     console.log(data[0].id)
-//   });
-const travel = (data) => {
-    for(let i = 0; i < data.length; i++){
-        return data[i];
-    }
-}
-const loadJson = (file, funcion) => {
-    const XHR = new XMLHttpRequest();
+const fileCohort = '../data/cohorts.json';
+const fileProgress = '../data/cohorts/lim-2018-03-pre-core-pw/progress.json';
+//const fileUsers = '../data/cohorts/lim-2018-03-pre-core-pw/users.json';
 
-    XHR.onreadystatechange = function(){
-        let data;
-        if(XHR.readyState == 4 && XHR.status ==200){
-            data = JSON.parse(XHR.responseText);    
-            funcion(data);    
-        }
-        else{
-        console.log('Hay un problema en el servidor');
-        }
+let courses = [];
+
+const cohorts = fetch(fileCohort).then(function(response) {
+    return response.json();
+})
+.then(function(data){
+    for (let i = 0; i < data.length; i++) {
+        courses.push(data[i].coursesIndex);   
     }
-    XHR.open('GET',file);
-    XHR.send(); 
-}
-const cohort = () => {
-    return loadJson('http://127.0.0.1:5500/data/cohorts.json', travel);
-}
- 
+});
+
+const progress = fetch(fileProgress).then(function(response) {
+    return response.json();
+});
+
+const users = fetch(fileUsers).then(function(response) {
+    return response.json();
+});
