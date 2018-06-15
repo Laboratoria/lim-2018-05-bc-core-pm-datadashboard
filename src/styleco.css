@@ -1,9 +1,16 @@
+html {
+    font-family: 'Bitter', serif; 
+}
 .list {
     display: flex;
     justify-content: left;
 }
 
 h2 {
-text-align: left;
+    text-align: left;
+    
 }
 
+img {
+    width : 20%;
+}
