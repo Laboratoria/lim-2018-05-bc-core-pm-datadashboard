@@ -11,14 +11,17 @@ Con esta problematica, desarrollamos una plataforma que muestra el avance y desa
 1. Boceto en blanco y negro.
   Desarrollamos nuestra primera idea al terminar de leer el readme; con los datos que rescatamos hicimos un boceto en photoshop ya que para mi compañera era mas facil trabajar en esta aplicacion. Salimos a buscar feedback, nuestra TM Ale nos indico que debiamos centrarnos mas en las estudiantes de lima, que no era necesario la comparacion entre alumnas ya que en las distintas sedes estaban en momentos diferentes del bootcamp, y que era mas factible ver el progreso de las alumnas en general para poder compararlas con un determinado nivel esperado y, si en caso estaban por debajo, apoyarlas en su aprendizaje.
 
-    ![Primer boceto](images/4fotos.png "Primer PS")
-    ![Segunda parte](images/cursos.png "Continuacion")
-    ![Tercera parte](images/ejercicios.png "Continuacion")
+    ![Primer boceto](images/bocetoinit.jpg)
+    ![Segunda parte](images/cursos.jpeg "Continuacion")
+    ![Tercera parte](images/ejercicios.jpeg "Continuacion")
 
 2. Segundo boceto en Figma.
   Desarrollamos el segundo boceto en la plataforma Figma, porque se pueden visualizar los logos e imagenes con mejor calidad. Apuntando a como queriamos que quedara nuestro producto final.
 
-    ![Figma genral](images/figmageneral.fig "Boceto general")
+    ![Figma index](images/iniciolab.jpg "Index")
+    ![Figma cohort](images/cohortlab.jpg "Cohort")
+    ![Figma progreso general](images/progresolab.jpg "ProgresoGeneral")
+    ![Figma progresoporalumna](images/alumnas.jpg "Alumnas")
 
 
 ## Requisitos basicos de la aplicacion

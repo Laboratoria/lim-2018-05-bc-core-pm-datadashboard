@@ -1,7 +1,3 @@
-const form = document.getElementById("search-form");
-const searchField = document.getElementById("search-keyword");
-const resultBox = document.getElementById("container");
-let searchedForText;
 
 const listStudents = document.querySelector("ul");
 var botonDeInicio = document.querySelector('button');
