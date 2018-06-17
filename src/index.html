@@ -8,38 +8,43 @@
 </head>
 
 <body>
-  <div class="containerDashboard">
-    <div class="sideDashboard">
-      <div class="user">
-        <img class="sideUser" src="img/user.png">
+  <section>
+    <aside class="side-dashboard">
+      <article class="user">
+        <img class="side-user" src="img/user.png">
         <p>Nombre</p>
         <p>Training Manager</p>
-      </div>
-      <ul class="nav">
-        <li class="nav-item">
-          <img src="img/view.png">
-          <a href="">Vista General</a>
-        </li>
-        <li class="nav-item">
-          <img src="img/student.png">
-          <a href="">Alumnas</a>
-        </li>
-        <li class="nav-item">
-          <img src="img/course.png">
-          <a href="">Cursos</a>
-        </li>
-      </ul>
-    </div>
-    <div class="principalDashboard">
-      <div class="banner">
-        <img class="bannerLogo" src="img/banner.png">
-      </div>
-      <div class="menu" id="menu">
+      </article>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item">
+            <img src="img/view.png">
+            <a href="#" id="viewGeneral">Vista General</a>
+          </li>
+          <li class="nav-item">
+            <img src="img/student.png">
+            <a href="#" id="student">Alumnas</a>
+          </li>
+          <li class="nav-item">
+            <img src="img/course.png">
+            <a href="#" id="courses">Cursos</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <section class="principal-dashboard">
+      <header class="banner">
+        <img class="banner-logo" src="img/banner.png">
+      </header>
+      <article class="menu-principal" id="menu">
         <label>Sedes </label>
         <select name="sedes" id="sedes"></select>
-      </div>
-    </div>
-  </div>
+      </article>
+      <article class="menu-graphicos">
+        
+      </article>
+    </section>
+  </section>
   <script src="data.js"></script>
   <script src="main.js"></script>
 </body>
