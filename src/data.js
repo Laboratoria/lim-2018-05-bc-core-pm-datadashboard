@@ -1,14 +1,13 @@
 //Creando el objeto data
 window.data = {
   //Creando la funcion computeUserStats
-  computeUserStats : (users, progress, courses) =>{
-  },
+  computeUserStats: (users, progress, courses) => { },
   //Creando la funcion sortUsers
-  sortUsers : (users, orderBy,orderDirection) =>{},
+  sortUsers: (users, orderBy, orderDirection) => { },
   //Creando la funcion filterUsers
-  filterUsers : (users, search) =>{},
+  filterUsers: (users, search) => { },
   //Creando la funcion processCohortData
-  processCohortData : (options) =>{}
+  processCohortData: (options) => { }
 };
 
 //Users: es el arreglo de usuarios (estudiantes). Un array que contenga todos los objetos (estudiantes).  
@@ -20,25 +19,5 @@ window.data = {
 
 //courses: arreglo de strings con los id de los cursos del cohort en cuestion
 
-// seleccionando elementos del html
-const selectElement = document.getElementById('sedes');
-
-fetch('../data/cohorts.json')
-  .then(response => response.json())
-  .then(json => {
-     const sedes = json; 
-     console.log(sedes.length);
-     for(let i = 0; i < sedes.length; i ++) {
-         const optionElements = document.createElement('option');
-         const contenidoOption = document.createTextNode(sedes[i].id);
-         optionElements.appendChild(contenidoOption);
-         console.log(sedes[i].id);
-         selectElement.appendChild(optionElements);
-     }
-  })
-  .catch((err) => {
-    // algo salió mal...
-    console.error(err);
-  });
 
 
