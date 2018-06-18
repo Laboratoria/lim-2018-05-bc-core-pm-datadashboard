@@ -20,29 +20,40 @@ function show(e){
   if (tabSeleccionado === 'tabLogin'){
     signUp.style.display='none';
     signIn.style.display='block';
-    let username=document.getElementById("username").value;
-    let password=document.getElementById("password").value;
-    if(username==='Bea'&& password==='lab'){
-     pageOne.style.display='block';
-    }else if(username==='Ale'&& password==='lab'){
-     pageOne.style.display='block';
-    }else{
-     alert('Incorrecto. Intentalo de nuevo.');
-     pageOne.style.display='none';
-     signIn.style.display='block';
-    }
   }else if ( tabSeleccionado === 'tabRegister'){
     signIn.style.display='none';
     signUp.style.display='block';
-    let btn=document.getElementById('btn');
-    btn.addEventListener('click', back);
-    function back(){
-      signIn.style.display='block';
-      signUp.style.display='none';
-    }
+    
   
   }
 }
+//click de botones
+let button=document.getElementById('button');
+button.addEventListener('click', login);
+function login() {
+ let username=document.getElementById("username").value;
+ let password=document.getElementById("password").value;
+ let content=document.getElementById('content');
+ content.style.display='none';
+
+ if(username==='Bea'&& password==='lab'){
+    pageOne.style.display='block';
+  }else if(username==='Ale'&& password==='lab'){
+    pageOne.style.display='block';
+  }else{
+   pageOne.style.display='none';
+   signIn.style.display='block';
+  }
+}
+let btn=document.getElementById('btn');
+btn.addEventListener('click', register);
+function register(){
+ signIn.style.display='block';
+ signUp.style.display='none';
+
+}
+
+
 //page one
 
 var lista2 = document.getElementById('cohorts');
