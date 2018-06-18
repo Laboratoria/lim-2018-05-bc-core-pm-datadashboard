@@ -1,6 +1,6 @@
 const listStudents = document.querySelector("ul");
 var botonDeInicio = document.querySelector('button');
-
+const menu = document.getElementById("listCo")
 
 botonDeInicio.onclick = function () {
 fetch("../data/cohorts/lim-2018-03-pre-core-pw/users.json")
@@ -25,20 +25,30 @@ fetch("../data/cohorts/lim-2018-03-pre-core-pw/users.json")
 3 (interactivo) o ( solicitud de procesamiento )
 4 (completo) o ( solicitud finalizada y la respuesta está lista )
 */ 
-fetch ("../data/cohorts/lim-2018-03-pre-core-pw/progress.json" )
+/*fetch ("../data/cohorts/lim-2018-03-pre-core-pw/progress.json" )
         .then(function(progress){
         return progress.json();
         })
         .then(function(progress){
             console.log(progress);
         });
+*/
 
 fetch ("../data/cohorts.json")
         .then(function(cohorts){
         return cohorts.json();
         })
-        .then(function(cohorts){
-        console.log(cohorts);
+        .then(function(list){
+        const promo = list;
+        console.log(promo.length);
+        for (let i = 0; i<promo.length; i++ ){
+            const options = document.createElement("option");
+            const containOp = document.createTextNode(promo[i].id);
+            options.appendChild(containOp);
+            console.log(promo[i].id);
+            menu.appendChild(options);
+
+        }
         });
 
 /*form.addEventListener("submit", function(e){
