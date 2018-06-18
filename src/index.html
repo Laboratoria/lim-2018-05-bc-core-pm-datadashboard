@@ -2,68 +2,82 @@
 <html>
   <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Dashboard</title>
+    <title>Laboratoria LMS</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-        <img src="imagenes/fondomapa.png" width="1500" height="700" alt="Mapamundi" usemap="#planetmap">
+    <div class="Init" id:"Init" background:blue;>
+      <div>
+        <h2> < Laboratoria > </h2>
+      </div>
+      <div>
+<p> ALEJANDRA</p><p>CURSO</p><p>COHORTS</p><p>ESTADÍSTICAS</p><p>CONFIGURACIÓN</p>
+      </div>
+    </div>
+    <div class="Map">
+      <img src="imagenes/fondomapa.png" width="1500" height="700" alt="Mapamundi" usemap="#planetmap">
+      <map name="planetmap">
+       <area shape="circle" coords="700,50,12" alt="Guadalajara" href="sun.htm">
+       <area shape="circle" coords="730,70,12" alt="CDMX" href="mercur.htm">
+       <area shape="circle" coords="880,310,12" alt="Lima" href="venus.htm">
+       <area shape="circle" coords="1070,410,12" alt="SaoPaulo" href="venus.htm">
+       <area shape="circle" coords="910,500,12" alt="SantiagoDeChile" href="venus.htm">
+      </map>
+    </div>
+     <select id="sedes"> </select>
+     <select id="alumn"> </select>
+     <div class="ind-Cohorts">
+       <div>
+         <h2>COHORTES LIMA</h2>poppp+9
+       </div>
+       <div>
+         <p>LIMA 2018 II</p><select>
+         <option value="AM">Turno Mañana</option>
+         <option value="PM">Turno Tarde</option>
+         </select>
+         <p>LIMA 2018 I</p>
+         <select>
+             <option value="AM">Turno Mañana</option>
+             <option value="PM">Turno Tarde</option>
+         </select>
+         <p>LIMA 2017 II</p>
+         <select>
+             <option value="AM">Turno Mañana</option>
+             <option value="PM">Turno Tarde</option>
+         </select>
+         <p>LIMA 2017 I</p>
+         <select>
+             <option value="AM">Turno Mañana</option>
+             <option value="PM">Turno Tarde</option>
+         </select>
+         <p>LIMA 2016 II</p>
+         <select>
+             <option value="AM">Turno Mañana</option>
+             <option value="PM">Turno Tarde</option>
+         </select>
+         <p>LIMA 2016 I</p>
+         <select>
+             <option value="AM">Turno Mañana</option>
+             <option value="PM">Turno Tarde</option>
+         </select>
+         <p>LIMA 2015 II</p>
+         <select>
+             <option value="AM">Turno Mañana</option>
+             <option value="PM">Turno Tarde</option>
+         </select>
+         <p>LIMA 2015 I</p>
+         <select>
+             <option value="AM">Turno Mañana</option>
+             <option value="PM">Turno Tarde</option>
+         </select>
+         <p>LIMA 2014 </p>
+         <select>
+             <option value="AM">Turno Mañana</option>
+             <option value="PM">Turno Tarde</option>
+         </select>
+       </div>
+     </div>
 
-        <map name="planetmap">
-         <area shape="circle" coords="700,50,12" alt="Guadalajara" href="sun.htm">
-         <area shape="circle" coords="730,70,12" alt="CDMX" href="mercur.htm">
-         <area shape="circle" coords="880,310,12" alt="Lima" href="venus.htm">
-         <area shape="circle" coords="1070,410,12" alt="SaoPaulo" href="venus.htm">
-         <area shape="circle" coords="910,500,12" alt="SantiagoDeChile" href="venus.htm">
-        </map>
-        
-           <select id="sedes"> </select>
-    <h2>COHORTES LIMA</h2>
-
-      <p>LIMA 2018 II</p>
-      <select>
-          <option value="AM">Turno Mañana</option>
-          <option value="PM">Turno Tarde</option>
-      </select>
-      <p>LIMA 2018 I</p>
-      <select>
-          <option value="AM">Turno Mañana</option>
-          <option value="PM">Turno Tarde</option>
-      </select>
-      <p>LIMA 2017 II</p>
-      <select>
-          <option value="AM">Turno Mañana</option>
-          <option value="PM">Turno Tarde</option>
-      </select>
-      <p>LIMA 2017 I</p>
-      <select>
-          <option value="AM">Turno Mañana</option>
-          <option value="PM">Turno Tarde</option>
-      </select>
-      <p>LIMA 2016 II</p>
-      <select>
-          <option value="AM">Turno Mañana</option>
-          <option value="PM">Turno Tarde</option>
-      </select>
-      <p>LIMA 2016 I</p>
-      <select>
-          <option value="AM">Turno Mañana</option>
-          <option value="PM">Turno Tarde</option>
-      </select>
-      <p>LIMA 2015 II</p>
-      <select>
-          <option value="AM">Turno Mañana</option>
-          <option value="PM">Turno Tarde</option>
-      </select>
-      <p>LIMA 2015 I</p>
-      <select>
-          <option value="AM">Turno Mañana</option>
-          <option value="PM">Turno Tarde</option>
-      </select>
-      <p>LIMA 2014 </p>
-      <select>
-          <option value="AM">Turno Mañana</option>
-          <option value="PM">Turno Tarde</option>
-      </select>
       <!--Make sure the form has the autocomplete function switched off:-->
 
       <h2>ALUMNAS</h2>

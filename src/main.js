@@ -16,3 +16,22 @@ getJSON("../data/cohorts.json", (err, json)=> {
     console.log(sedes[i].id);
   }
 })
+
+const selectElement2= document.getElementById("alumn");
+get2JSON("../data/cohorts.lim-2018-03-pre-core-pw.users.json", (err, json)=> {
+  if(err){
+    // algo salio mal...
+    return console.log(err);
+  }
+  const users= json;
+  console.log(Users);
+  console.log(users.length);
+
+  for(let i =0; i< users.length; i++){
+    const optionsElemnts2=document.createElement("option2");
+    const contenidoOptions2= document.createTextNode(users[i].id);
+    optionsElemnts.appendChild(contenidoOptions2);
+    selectElement.appendChild(optionsElemnts2);
+    console.log(users[i].id);
+  }
+})

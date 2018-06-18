@@ -7,14 +7,22 @@
     .right {
       width: 100%;
     }
- 
+
  @media only screen and (max-width:500px) {
     /* Para celulares: */
     .menu, .main, .right {
       width: 100%;
     }
     }
- 
+
  body{
     text-align:center;
+ }
+ #Init {
+background: blue;
+ }
+
+ .Map {
+   float: left;
+
  }

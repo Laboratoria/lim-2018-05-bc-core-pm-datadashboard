@@ -15,14 +15,26 @@ xhr.send();
 };
 
 
+const get2JSON=(url, callback)=>{
+const xhr2 = new XMLHttpRequest();
+xhr2.onload = ()=> {
+ if (xhr2.readyState === 4){
+   if (xhr2.status !== 200 ) {// Success!
+  return callback(new Error(`HTTP error: ${xhr2.status}`));
+}
+try{
+   callback(null,JSON.parse(xhr2.responseText));
+ } catch(err) {// We reached our target server, but it returned an error
+   callback(err);
+ }}};
+xhr2.open("GET", url);
+xhr2.send();
+};
 
-
-
-
-/*var header = document.querySelector('header');
-var section = document.querySelector('section');
-var requestURL ="https://github.com/YennyCastillo/lim-2018-05-bc-core-pm-datadashboard/blob/master/data/cohorts/lim-2018-03-pre-core-pw/users.json" ;
-var request = new XMLHttpRequest();
+/*const header = document.querySelector('header');
+const section = document.querySelector('section');
+let requestURL ="../data/cohorts.json" ;
+let request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.onload = function () {
 if (request.status >= 200 && request.status < 400) {// Success!
@@ -32,6 +44,20 @@ if (request.status >= 200 && request.status < 400) {// Success!
 }};
 request.send();*/
 
+/*function iden(){
+  var list = json;
+
+  var imprimirId= document.querySelector("sedes");
+  imprimirId.innerHTML="";
+
+  for(var i=0; list.length; i++){
+    var row = imprimirId.insertRow(i);
+    var id1= row.insertCell(0);
+    id1.innerHTML=list(i).id
+
+    imprimirId.appendChild(row);
+  }
+}*/
 
 /*request.onload = function() {
 var superHeroes = request.response;
