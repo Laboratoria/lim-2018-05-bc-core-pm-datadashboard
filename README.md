@@ -5,32 +5,29 @@ Laboratoria Lima
 
 ## 2. Usuarix
 Training managers (TMs) de Laboratoria. Son las personas encargadas de analizar
- y evaluar el avance de las alumnas de Laboratoria para que así puedan mejorar
- su aprendizaje. 
+ y evaluar el avance de las alumnas de Laboratoria, para que así puedan preparar una estrategia adecuada para mejorar su aprendizaje. 
 
 ## 3. Definición del problema
-
 Este proyecto busca crear una interfaz que permita que las training managers 
 puedan visualizar y usar la data del progreso de las alumnas con respecto al
 LMS (Learning Management System) de Laboratoria. 
 
-
-
 ## 4. Diseño del producto
+Para diseñar el producto, primero se definió el contenido necesario y posteriormente
+funciones que serían un valor agregado para las TM's.
 
-## 5. Contenido necesario
+### 4.1. Contenido necesario
 
 #### A. Nombre de user (training manager) y sede
 
 #### B. Progreso general (Dashboard)
 
 #### C. Pestañas fijas de selección
-* Sede 
-* Generación
+* Sede y generación
 * Turno
 #### D. Vista  general (fijo)
 * Cantidad de alumnas
-Número de cursos
+* Número de cursos
 #### Filtrar por 
 #### Completitud total
 #### Ejercicios 
@@ -42,7 +39,6 @@ Número de cursos
 #### Quizzes	
 * Cantidad total de quizzes
 * Porcentaje promedio de  quizzes  avanzados por las alumnas
-
 #### Ordenar por(order direction):
 * Ascendente 
 * Descendente
@@ -63,8 +59,7 @@ Número de cursos
 * Puntaje total: Suma de puntaje de todos los quizzes completados
 * Promedio de puntaje
 
-## 6. Contenido como valor agregado
-
+## 4.2. Contenido como valor agregado
 * Elegir tipo de gráfico con el que se visualizará data (barras, línea circular)
 * Ver el progreso de un grupo de alumnas (SQUAD)
 *  Seleccionar periodo de trabajo
@@ -90,6 +85,11 @@ cierto dinamismo, que simula la interación con el usuario.
 
 Pueden ver el avance [AQUÍ](https://marvelapp.com/177cdbf6/screen/44209192)
 
+## 5. Desarrollo del producto
+
+Para entender a plenitud el proyecto(funciones y procesos) se graficó el flujo que se muestra a continuación:
+
+![mendoza y silva _ flujo funciones](https://user-images.githubusercontent.com/39272944/41561243-f9b8a17c-730e-11e8-81cb-75d921d16891.jpg)
 
 
 
