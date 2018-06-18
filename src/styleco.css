@@ -17,3 +17,8 @@ img {
 option {
     font-style : italic;
 }
+
+#button {
+    display: inline-block;
+
+}
