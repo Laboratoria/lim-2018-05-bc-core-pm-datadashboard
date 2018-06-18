@@ -2,7 +2,11 @@
     {
         "id": "aqp-2018-03-jp-core-talento",
         "start": "2018-03-28",
+<<<<<<< HEAD
         "coursesIndex": {},
+=======
+        "cours esIndex": {},
+>>>>>>> 47271697f38a534417e0b4f5521cf762a282d8c9
         "end": "2018-04-30",
         "usersCount": 7
     },
