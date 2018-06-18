@@ -56,7 +56,7 @@ function register(){
 
 //page one
 
-var lista2 = document.getElementById('cohorts');
+/*const selectElement = document.getElementById('cohorts');
 var option = "";
 fetch('http://127.0.0.1:5500/data/cohorts.json').then((response) => {
   if(response.status == 200){
@@ -74,7 +74,25 @@ fetch('http://127.0.0.1:5500/data/cohorts.json').then((response) => {
     
   }
  
-}); 
+}); */
+
+const selectElement = document.getElementById('cohorts');
+
+fetch('http://127.0.0.1:5500/data/cohorts.json')
+.then(response => response.json())
+.then(json => {
+  const cohorts = json;
+  for(let i=0; i< cohorts.length; i++){
+    const optionElements = document.createElement('option');
+    const contenidoOption = document.createTextNode(cohorts[i].id);
+    optionElements.appendChild(contenidoOption);
+    selectElement.appendChild(optionElements);
+  }
+})
+.catch((err) => {
+  console.error(err);
+});
+
 
 
 
