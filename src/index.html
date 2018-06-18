@@ -6,25 +6,25 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!--<button id="cargar"> Cargar alumnas</button>-->
-
-    <div id="infoAlumnas"></div>
-
-    <!--
+    <select name="" id="users">
+        <option value="student">Estudiantes</option>
+        <option value="instructor">Instructores</option>
+    </select>
+    <button id="cargar"> Cargar alumnas</button>
     <div>
-      <table id="alumnas">
+      <table id="students">
         <thead>
           <tr>
-            <th>Alumnas</th>
+            <th>Id</th>
+            <th>Nombre</th>
           </tr>
         </thead>
-        <tbody id="infoAlumnas">
-        
+        <tbody id="listStudents">
+          
         </tbody>
       </table>
     </div>
-    -->
-    <script src="data.js"></script>
     <script src="main.js"></script>
+    <script src="data.js"></script>
   </body>
 </html>
