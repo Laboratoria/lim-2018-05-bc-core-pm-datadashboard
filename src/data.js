@@ -1,10 +1,15 @@
-window.computeUserStats = (users, progress, courses) => {users, progress, courses}
-
-window.sortUsers = (users, orderBy, orderDirection) => {users, orderBy, orderDirection}
-
-window.filterUsers = (users, search) => {users, search}
-
-window.processCohortData = (options) => {options}
+//Creando el objeto data
+window.data = {
+  //Creando la funcion computeUserStats
+  computeUserStats : (users, progress, courses) =>{
+  },
+  //Creando la funcion sortUsers
+  sortUsers : (users, orderBy,orderDirection) =>{},
+  //Creando la funcion filterUsers
+  filterUsers : (users, search) =>{},
+  //Creando la funcion processCohortData
+  processCohortData : (options) =>{}
+};
 
 //Users: es el arreglo de usuarios (estudiantes). Un array que contenga todos los objetos (estudiantes).  
 //Arreglo de objetos obtenido de la data en bruto.
