@@ -7,10 +7,6 @@ let cohorts = [];
 let progress = [];
 let users = [];
 
-/* for(let i = 0; i < urls.length; i++){
-    fetch(urls[i]);
-} */
-
 const loadStudents = () => {
     //Promise.all espera que todos los fetch terminen
     Promise.all(
@@ -56,7 +52,7 @@ const loadStudents = () => {
                     row.appendChild(cellId);
                     row.appendChild(cellName);
 
-                    infoAlumnas.appendChild(row);
+                    listStudents.appendChild(row);
                 }
             );
         }
@@ -105,15 +101,16 @@ const loadStats = () => {
 
 const computeUsersStats = (users, progress, courses) => {
     let usersWithStats = {};
-    /*users.map(
+    users.map(
         user => {
             let id = user.id;
             let courseName = courses
+            //Primero declarar el objeto stats y luego trabajar con sus valores
             let stats = {
                 percent: progress[id].intro.percent
             };
             
         }
-    );*/
+    );
 }
 

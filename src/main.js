@@ -1,8 +1,7 @@
-const infoAlumnas = document.getElementById('listStudents');
-const cargar = document.getElementById('cargar');
-const selectUsers = document.getElementById('users');
+const listStudents = document.getElementById('listStudents');
+const botonAlumna = document.getElementById('botonalumna');
 
-cargar.addEventListener('click', () => {
+botonAlumna.addEventListener('click', () => {
     loadStudents();
 });
 
