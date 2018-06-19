@@ -1,40 +1,30 @@
 <!DOCTYPE html>
 <html>
- <head>
-   <meta charset="utf-8">
-   <title>Data Dashboard</title>
-   <link rel="stylesheet" href="style.css" />
- </head>
- <body>
-   <header id="menu">
-      <div class="headerstyle" >
-        <div>
-          <img class="logo1" src="imagenes/Laboratoria_RGB_logo-04.png"/>
-        </div>
-          <p>grupo</p>
-          <select id="sedes" class="sedes"></select>
-        <div>
-          <p>Bienvenida!</p>
-        </div>
-      </div>
-    </header>
-   <nav>
-       <ul class="espacioboton">
-         <section class.filtros> <p>filtros</p> </section>
-     <section><img/><button>curso</button></section>
-     <section><button>alumnas</button></section>
-   </nav>
- </ul>
- 
-    
-    <div id="listadoAlumnas">
+  <head>
+    <meta charset="utf-8">
+    <title>Data Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <select name="" id="users">
+        <option value="student">Estudiantes</option>
+        <option value="instructor">Instructores</option>
+    </select>
+    <button id="cargar"> Cargar alumnas</button>
+    <div>
+      <table id="students">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+          </tr>
+        </thead>
+        <tbody id="listStudents">
+          
+        </tbody>
+      </table>
     </div>
-    
-   
-   <aside></aside>
-   <footer><img class="logo1" src=""/></footer>
-      <script src="data.js"></script>
-      <script src="main.js"></script>
-
- </body>
+    <script src="main.js"></script>
+    <script src="data.js"></script>
+  </body>
 </html>
