@@ -1,11 +1,19 @@
-/* console.log(idAndNames);
- */// console.log(idAndNames[0].id);
+const containerList = document.getElementById("caja3");
 
-/* const alumnas = document.getElementById("alumnas");
-
-alumnas.addEventListener("click", () =>{
-    idAndNames();
+pruebaRecepcion.addEventListener("click", () => {
+  for (let i = 0; i < userArray.length; i++) {
+    let name = document.createElement('div')
+    name.textContent = userArray[i].name;
+    name.className = 'names';
+    containerList.appendChild(name);
+  }
 });
-
-
- */
+/*
+const percentforid = () => {
+  console.log("lhsjh");
+  for (let i = 0; i < userArray.length; i++) {
+    idPos = userArray[i].id;
+    console.log(idPos)
+    console.log(percentObject[idPos].intro.percent)
+  }
+}*/
