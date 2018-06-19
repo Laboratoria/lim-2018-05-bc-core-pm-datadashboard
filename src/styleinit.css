@@ -1,0 +1,37 @@
+img {
+    display : block;
+    margin : auto;
+}
+
+.bt {
+    color : #000000;
+    font-family: 'Bitter', serif;
+    text-decoration: none;
+    padding: 30px 40px;
+    font-weight: 600;
+    font-size: 20px;
+    background-color: #FFE521;
+    border-radius: 14px;
+    border: 2px solid #FFE521;
+    margin: 20px 230px 40px 230px ;
+    display : inline-block;
+    width : 10%;
+    text-align : center;
+}
+
+main {
+    width: 100%;
+}
+
+#izq {
+
+}
+
+#der {
+    position : right;
+}
+
+#ambos {
+    display : block;
+    margin : auto;
+}
