@@ -108,7 +108,17 @@ se pretende presentar una version de las 2 vistas juntas con graficas(barras ,do
 
 ![7](https://user-images.githubusercontent.com/39390011/41488514-34022a9c-70b2-11e8-9664-675e67d5be20.jpg)
 
+luego avanzamos con el diseño de la pagina ,el header originalmente fue negro
 
+![capturabarra](https://user-images.githubusercontent.com/39390011/41674197-e88b293e-7484-11e8-8149-56fc3371fcc7.PNG)
+
+pero ahora elegimos el caracteristico color amarillo de la marca
+:
+ademas en la barra de navegacion que originalmente era amarilla 
+
+![capturanav](https://user-images.githubusercontent.com/39390011/41674279-2aa4721c-7485-11e8-8808-aa5284d8f6cc.PNG)
+
+decidimos invertir el orden de los colores,ahora esta barra sera negra:
 
 ### Entrevistas📝
 Hicimos 2 entrevistas en la primera presentamos un bosquejo de la pagina:
