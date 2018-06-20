@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <script src="main.js"></script>
-  </body>
+ <head>
+   <meta charset="utf-8">
+   <title>Data Dashboard</title>
+   <link rel="stylesheet" href="style.css" />
+ </head>
+ <body>
+   <header id="menu">
+     
+     <section class="headerstyle" >
+         <button class="botonnav" btn-lg type="button">filtrado</button>
+         <img class="logo1" src="imagen/logo1.png"/>
+         <div class="sedes">
+         <label class="text">Grupo</label>
+          <select id="sedes"></select>
+         <span class="text" id="name"></span>
+         </div>
+       </section>
+       
+   </header>
+   <div id='oculto' style='display:none'>
+   <nav>
+       <ul class="espacioboton">
+         <section class ="filtros"> <p class="text" >Filtros</p> </section>
+     <section>
+        <button class="botoncurso">Curso</button>
+     </section>
+     <section>
+       <button id="botonalumna" >Alumnas</button>
+     </section>
+   </nav>
+ </ul>
+ </div>
+    <main >
+     <table id="students">
+       <thead>
+         <tr>
+           <th>Id</th>
+           <th>Nombre</th>
+         </tr>
+       </thead>
+       <tbody id="listStudents">
+         
+       </tbody>
+     </table>
+   </main>
+     
+   <aside></aside>
+   
+      <script src="data.js"></script>
+      <script src="main.js"></script>
+
+ </body>
 </html>
