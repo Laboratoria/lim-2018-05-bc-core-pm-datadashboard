@@ -82,14 +82,19 @@ const loadStats = () => {
             users = JSON.parse(response[2]);
 
             let courses = [];
+
             cohorts.map(
-                cohort => {
+                (cohort) => {
                     if(cohort.id == 'lim-2018-03-pre-core-pw'){
-                        courses.push(cohort.coursesIndex);
+                        //courses.push(cohort.coursesIndex);
+                        for(key in cohort.coursesIndex){
+                            courses.push(key);
+                        }
                     }
                 }
             );
-            console.log(courses);
+
+            //console.log(courses);
             computeUsersStats(users, progress, courses);
         }
     )
@@ -104,13 +109,15 @@ const computeUsersStats = (users, progress, courses) => {
     users.map(
         user => {
             let id = user.id;
-            let courseName = courses
             //Primero declarar el objeto stats y luego trabajar con sus valores
+
+            //map
+
             let stats = {
-                percent: progress[id].intro.percent
+               percent: progress[id][courses[0]].percent
             };
             
         }
     );
 }
-
+//loadStats();
