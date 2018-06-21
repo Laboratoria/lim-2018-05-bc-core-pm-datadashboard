@@ -76,22 +76,57 @@ fetch('http://127.0.0.1:5500/data/cohorts.json').then((response) => {
  
 }); */
 
-const selectElement = document.getElementById('cohorts');
+let selection = document.getElementById('cohorts');
+let listauser = document.getElementById('lista');
 
-fetch('http://127.0.0.1:5500/data/cohorts.json')
+fetch('https://api.laboratoria.la/cohorts')
 .then(response => response.json())
 .then(json => {
   const cohorts = json;
-  for(let i=0; i< cohorts.length; i++){
+  for (let i = 0; i < cohorts.length; i++) {
     const optionElements = document.createElement('option');
     const contenidoOption = document.createTextNode(cohorts[i].id);
     optionElements.appendChild(contenidoOption);
-    selectElement.appendChild(optionElements);
+    optionElements.setAttribute('value',cohorts[i].id);
+    selection.appendChild(optionElements);
   }
+
 })
 .catch((err) => {
   console.error(err);
 });
+
+
+
+
+fetch('https://api.laboratoria.la/cohorts/lim-2018-03-pre-core-pw/users')
+.then(response => response.json())
+.then(json => {
+  const users = json;
+  
+  for(let i=0; i< users.length; i++){
+    listausuarios=(users[i].signupCohort);
+    
+    selection.addEventListener('change', carga);
+    function carga(){
+     if(selection.value === listausuarios){
+       const optionlist=document.createElement('li');
+       const contenidolista=document.createTextNode(users[i].name);
+       optionlist.appendChild(contenidolista)
+       listauser.appendChild(optionlist);
+      }
+    }
+ }
+ 
+     
+     
+})
+.catch((err) => {
+ console.error(err);
+});
+ 
+  
+
 
 
 
