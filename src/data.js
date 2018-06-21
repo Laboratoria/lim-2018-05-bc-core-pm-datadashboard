@@ -1,4 +1,23 @@
-const getJSON=(url, callback)=>{
+import { url } from "inspector";
+
+let cargarJSON (url) => {
+  fetch ("../data/cohorts.json")
+  .then ((res) => {
+    return  res.json ();
+
+  .then ((data) => {
+    console.log(data);
+  })
+  try {(err) => {
+    console.error (err);
+  }
+  }
+  finally (c of c of data);{
+    console.log (c);
+  }
+}
+
+/*const getJSON=(url, callback)=>{
 const xhr = new XMLHttpRequest();
 xhr.onload = ()=> {
  if (xhr.readyState === 4){
@@ -28,10 +47,10 @@ try{
    callback(err);
  }}};
 xhr2.open("GET", url);
-xhr2.send();
+xhr2.send2();
 };
 
-/*const header = document.querySelector('header');
+const header = document.querySelector('header');
 const section = document.querySelector('section');
 let requestURL ="../data/cohorts.json" ;
 let request = new XMLHttpRequest();
