@@ -1,4 +1,86 @@
-const elementMain = document.getElementById('main');
+const resultCohortElement = document.getElementById('resultado');
+const buttonElement = document.getElementById('boton');
+
+
+const data = (idCohort) => {
+    const dataCohortUrl = 'https://raw.githubusercontent.com/GabyMarapi/lim-2018-05-bc-core-pm-datadashboard/master/data/cohorts.json';
+    const dataUserUrl = 'https://raw.githubusercontent.com/GabyMarapi/lim-2018-05-bc-core-pm-datadashboard/master/data/cohorts/' + idCohort + '/users.json';
+    const dataProgressUrl = 'https://raw.githubusercontent.com/GabyMarapi/lim-2018-05-bc-core-pm-datadashboard/master/data/cohorts/' + idCohort + '/progress.json';
+
+    fetch(dataCohortUrl).then(response => {
+        const responseCohort = response.json()
+        fetch(dataUserUrl).then(response => {
+            const responseUser = response.json()
+            fetch(dataProgressUrl).then(response => {
+                const responseProgress = response.json()
+
+                Promise.all([responseCohort, responseUser, responseProgress])
+                    .then(value => {
+
+                        const responseCohortValue = value[0];
+                        const responseUserValue = value[1];
+                        const responseProgressValue = value[2];
+
+
+                        const option = {
+                            cohort: responseCohortValue,
+                            cohortData: {
+                                users: responseUserValue,
+                                progress: responseProgressValue
+                            },
+                            orderBy: 'asc',
+                            search: 'desc'
+                        }
+                        console.log(responseCohortValue);
+                        console.log(responseUserValue);
+                        console.log(responseProgressValue);
+
+
+                        const exercisesTotal = 0;
+                        const exercisesCompleted = 0;
+                        const exercisesPercent = 0;
+                        const exercisesReads = 0;
+
+                       
+                        console.log(responseProgressValue[responseUserValue[0].id]);
+
+                        
+                        /*
+                        let stats = {
+                             percent: '',
+                            exercises: {    
+                                total: 0,
+                                completed: 0,
+                                percent: 0,
+                                reads: 0,
+                            } */
+
+                        
+/*
+                        const signupCohort = responseUserValue[0].signupCohort;
+                        
+                        for (let value in responseCohortValue) {
+                            console.log(value);
+                            if (value.id == signupCohort) {
+                                const arregloStrinCourses = value.coursesIndex;
+                               
+                            }
+                        }*/
+
+
+
+                        // processCohortData(option);
+
+                    })
+
+            })
+        })
+    })
+};
+
+
+
+
 
 const dataCohort = () => {
     fetch('http://127.0.0.1:5500/data/cohorts.json')
@@ -7,16 +89,16 @@ const dataCohort = () => {
         })
         .then(json => {
 
-            const cohort = json;
+            const cohortJson = json;
 
-            for (let i = 0; i < cohort.length; i++) {
+            for (let i = 0; i < cohortJson.length; i++) {
 
                 const cohortContent = document.createElement('div');
                 const paragraphContent = document.createElement('div');
                 const buttonContent = document.createElement('div');
                 const paragraph = document.createElement('p');
                 const button = document.createElement('button');
-                const paragraphText = document.createTextNode(cohort[i].id);
+                const paragraphText = document.createTextNode(cohortJson[i].id);
                 const buttonText = document.createTextNode('Ingresar')
 
                 paragraph.appendChild(paragraphText);
@@ -27,88 +109,23 @@ const dataCohort = () => {
                 buttonContent.appendChild(button);
                 cohortContent.appendChild(buttonContent);
 
-                elementMain.appendChild(cohortContent);
+                resultCohortElement.appendChild(cohortContent);
+                button.id = cohortJson[i].id;
 
             }
+
         })
+
+
 
 }
 
-const tableUser = () => {
-    fetch('http://127.0.0.1:5500/data/cohorts/lim-2018-03-pre-core-pw/users.json')
-        .then(response => {
-            return response.json();
-        })
-        .then(json => {
 
-            const dataUser = json;
+buttonElement.addEventListener('click', () => { dataCohort(); });
 
-            // Crea un elemento <table> y un elemento <tbody>
-            let tabla = document.createElement("table");
-            let tblBody = document.createElement("tbody");
-            
-            // Crea las celdas
-            for (let i = 0; i < dataUser.length; i++) {
-                // Crea las hileras de la tabla
-                const fila = document.createElement('tr');
-
-                const celda1 = document.createElement("td");
-                const celda2 = document.createElement("td");
-                const celda3 = document.createElement("td");
-                const celda4 = document.createElement("td");
-                const celda5 = document.createElement("td");
-
-
-                const textoCelda1 = document.createTextNode(dataUser[i].name);
-                celda1.appendChild(textoCelda1);
-
-                const textoCelda2 = document.createTextNode(dataUser[i].id);
-                celda2.appendChild(textoCelda2);
-
-                const textoCelda3 = document.createTextNode(dataUser[i].signupCohort);
-                celda3.appendChild(textoCelda3);
-
-                const textoCelda4 = document.createTextNode(dataUser[i].locale);
-                celda4.appendChild(textoCelda4);
-
-                const textoCelda5 = document.createTextNode(dataUser[i].timezone);
-                celda5.appendChild(textoCelda5);
-
-
-
-
-                tblBody.appendChild(celda1);
-                tblBody.appendChild(celda2);
-                tblBody.appendChild(celda3);
-                tblBody.appendChild(celda4);
-                tblBody.appendChild(celda5);
-                tblBody.appendChild(fila);
-            }
-            
-
-            // posiciona el <tbody> debajo del elemento <table>
-            tabla.appendChild(tblBody);
-            // appends <table> into <body>
-            elementMain.appendChild(tabla);
-            // modifica el atributo "border" de la tabla y lo fija a "2";
-            tabla.setAttribute("border", "1");
-        });
-};
-
-
-
-// const dataUserId = (dataUser) => {
-//     return console.log(dataUser[0].id);
-// }
-
-btnBoton = document.getElementById('boton');
-
-btnBoton.addEventListener('click', () => {
-    dataCohort();
+resultCohortElement.addEventListener('click', (event) => {
+    const idCohort = event.target.id;
+    resultCohortElement.style.display = 'none'
+    data(idCohort);
 });
 
-btnBoton1 = document.getElementById('boton1');
-
-btnBoton1.addEventListener('click', () => {
-    tableUser();
-});
