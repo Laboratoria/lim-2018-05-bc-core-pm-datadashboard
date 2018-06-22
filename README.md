@@ -28,7 +28,7 @@ En base a la entrevista realizada al TM de Lima se obtuvo los siguientes puntos 
 
   * Considera que el nombre del cohort debería considerarse y ubircarse en la parte superior
   * En la primera columna nombre deberia llamarse estudiantes.
-  * Lo mas importante es el progreso de los ejercios, la ubicacion debería ser a la izquierda del nombre del estudiante.
+  * Lo mas importante es el progreso de los ejercicios, la ubicacion debería ser a la izquierda del nombre del estudiante.
   El progreso total podría ubicarse al final.
 
 
@@ -43,4 +43,4 @@ Se diseñaron los siguientes prototipos de alta fidelidad.
 
 ![](https://fotos.subefotos.com/d022cd32638efc3e554a139cc6485b0fo.jpg)
 
-![](https://fotos.subefotos.com/d022cd32638efc3e554a139cc6485b0fo.jpg)
+![](https://fotos.subefotos.com/c8e01dbaec6c02689b54c0d01b46f664o.jpg)
