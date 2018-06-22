@@ -52,3 +52,128 @@ function register(){
  signUp.style.display='none';
 
 }
+
+
+//page one
+
+/*const selectElement = document.getElementById('cohorts');
+var option = "";
+fetch('http://127.0.0.1:5500/data/cohorts.json').then((response) => {
+  if(response.status == 200){
+    return response.json();
+  }else{
+    throw new Error("la llamada a la API falló");
+  }
+}).then ((data) => {
+
+  for(let i=0;i<data.length; i++){
+  
+  option = document.createElement('option');
+  option.text = data[i].id;
+  lista2.add(option);
+    
+  }
+ 
+}); */
+
+let selection = document.getElementById('cohorts');
+let listauser = document.getElementById('lista');
+
+fetch('https://api.laboratoria.la/cohorts')
+.then(response => response.json())
+.then(json => {
+  const cohorts = json;
+  for (let i = 0; i < cohorts.length; i++) {
+    const optionElements = document.createElement('option');
+    const contenidoOption = document.createTextNode(cohorts[i].id);
+    optionElements.appendChild(contenidoOption);
+    optionElements.setAttribute('value',cohorts[i].id);
+    selection.appendChild(optionElements);
+  }
+
+})
+.catch((err) => {
+  console.error(err);
+});
+
+
+
+
+fetch('https://api.laboratoria.la/cohorts/lim-2018-03-pre-core-pw/users')
+.then(response => response.json())
+.then(json => {
+  const users = json;
+  
+  for(let i=0; i< users.length; i++){
+    listausuarios=(users[i].signupCohort);
+    
+    selection.addEventListener('change', carga);
+    function carga(){
+     if(selection.value === listausuarios){
+      
+       const optionlist=document.createElement('li');
+       const contenidolista=document.createTextNode(users[i].name);
+       optionlist.appendChild(contenidolista)
+       listauser.appendChild(optionlist);
+      }
+    }
+ }
+ 
+     
+     
+})
+.catch((err) => {
+ console.error(err);
+});
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*var lista = document.getElementById('lista');
+var Uno = "";
+
+fetch('http://127.0.0.1:5500/data/cohorts.json').then((response) => {
+  if(response.status == 200){
+    return response.json();
+  }else{
+    throw new Error("la llamada a la API falló");
+  }
+}).then ((data) => {
+
+  for(let i=0;i<data.length; i++){
+  var uno = data[i].id;
+  console.log(data[i].id);
+  lista.innerHTML += data[i].id+"<p>";
+  
+    
+  }
+ 
+});*/
+
+
+/*-------------------------------------------------------------------------
+const llamadas = [];
+llamadas.push(fetch('http://127.0.0.1:5500/data/cohorts.json'));
+//llamadas.push(fetch(url2));
+//llamadas.push(fetch(url3));
+
+Promise.all(llamadas).then((responses)=>{
+    return responses.map(response => response.json()); 
+    //En caso de que sean llamadas a api
+}).then((jsonResponses)=>{
+    //Código que maneja las múltiples llamdas y sus respuestas en JSON
+}).catch((error)=>{
+    //Código que maneja errores
+});*/
