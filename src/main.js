@@ -1,8 +1,8 @@
 const selectElement= document.getElementById("sedes");
-cohortJSON("../data/cohorts.json", (err, json)=> {
+getJSON("../data/cohorts.json", (err, json)=> {
   if(err){
     // algo salio mal...
-    return console.log();(err);
+    return console.error(err);
   }
   const sedes= json;
   console.log(sedes);
@@ -17,53 +17,21 @@ cohortJSON("../data/cohorts.json", (err, json)=> {
   }
 })
 
-
-const selectElementU= document.getElementById("users");
-usersJSON("../data/cohorts/lim-2018-03-pre-core-pw/users.json", (err, jsonU)=> {
+const selectElement2= document.getElementById("alumn");
+get2JSON("../data/cohorts.lim-2018-03-pre-core-pw.users.json", (err, json)=> {
   if(err){
     // algo salio mal...
-    return console.error(err);
+    return console.log(err);
   }
-  let users= jsonU;
+  const users= json;
   console.log(users);
   console.log(users.length);
 
   for(let i =0; i< users.length; i++){
-    const optionsElemntsU=document.createElement("option");
-    const contenidoOptionsU= document.createTextNode(users[i].name);
-    optionsElemntsU.appendChild(contenidoOptionsU);
-    selectElementU.appendChild(optionsElemntsU);
+    const optionsElemnts2=document.createElement("option");
+    const contenidoOptions2= document.createTextNode(users[i].name);
+    optionsElemnts.appendChild(contenidoOptions2);
+    selectElement.appendChild(optionsElemnts2);
     console.log(users[i].name);
   }
 })
-
-
-const selectElementP= document.getElementById("progress");
-progressJSON("../data/cohorts/lim-2018-03-pre-core-pw/users.json", (err, jsonP)=> {
-  if(err){
-    // algo salio mal...
-    return console.error(err);
-  }
-  const progress= jsonP;
-  console.log(progress);
-  console.log(progress.length);
-
-  for(let i =0; i< progress.length; i++){
-    const optionsElemntsP=document.createElement("option");
-    const contenidoOptionsP= document.createTextNode(progress[i].name);
-    optionsElemntsP.appendChild(contenidoOptionsP);
-    selectElementP.appendChild(optionsElemntsP);
-    console.log(progress[i].name);
-  }
-})
-
-
-/*cohortJSON("../data/cohorts.json")
-//const sedes= json;
-
-const optionsElemnts=document.createElement("option");
-const contenidoOptions= document.createTextNode(sedes[i].id);
-optionsElemnts.appendChild(contenidoOptions);
-//selectElement.appendChild(optionsElemnts);
-console.log(sedes[i].id);
-document.getElementById("sedes").appendChild(optionsElemnts);*/

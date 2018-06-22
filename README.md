@@ -16,14 +16,12 @@ Nos dijo que preferiría que esta información esté acoplada en el LMS (en la l
 En la página que sigue después de filtrar la alumna, le presentamos con el nombre de la alumna y el id, nos sugirió que retiremos el id porque es un texto que le confundía, así que era suficiente con el nombre y apellido de la estudiante.
 Referente a los gráficos de completitud del Data Dashboard, prefirió que sean tablas en vez de círculos ya que se puede distinguir mejor en cada columna un porcentaje total en cada uno de los temas (Ejercicios autocompletados, Quiz, Lectura).
 Le preguntamos también sobre cada cuanto revisaría la información del Data Dashboard, lo que nos dijo es que lo revisaría al final de cada Sprint para ver cual fue el avance semanal de los estudios de los temas y comparar con el avance del proyecto, para evaluar mejor los cambios respecto a un proyecto anterior lo revisaría a fin de cada proyecto.
-
 #### 2) Sketch de la solución (prototipo de baja fidelidad)
 - Realizado a mano alzada con lápiz y papel.
 ![sketch](https://github.com/PatriciaVidal/lim-2018-05-bc-core-pm-datadashboard/blob/ProyectoData/src/imagenes/sketch.gif?raw=true"title")
 
 #### 3) Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)
 - Prototipo creado en ai (Adobe Illustrator). Utilizamos los archivos que enviaron actualizados de la línea gráfica de Laboratoria. 
-Click en la imagen para ver el gif:
 
 ![prototipo](https://github.com/PatriciaVidal/lim-2018-05-bc-core-pm-datadashboard/blob/ProyectoData/src/imagenes/prototipo.gif?raw=true"title")
 
@@ -47,5 +45,5 @@ Con el sistema Kanvan realizamos un Planificador de tareas, hecho en papelógraf
 
 
 Gracias!
-##### Patricia Vidal & Yenny Castillo
+##### Patricia Vidal y Yenny Castillo
  
