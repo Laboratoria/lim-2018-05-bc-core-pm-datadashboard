@@ -110,6 +110,7 @@ fetch('https://api.laboratoria.la/cohorts/lim-2018-03-pre-core-pw/users')
     selection.addEventListener('change', carga);
     function carga(){
      if(selection.value === listausuarios){
+      
        const optionlist=document.createElement('li');
        const contenidolista=document.createTextNode(users[i].name);
        optionlist.appendChild(contenidolista)

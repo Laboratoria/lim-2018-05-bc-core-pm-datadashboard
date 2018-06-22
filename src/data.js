@@ -1,9 +1,9 @@
-window.data={
-  computeUsersStats:(users, progress, courses)=>{},
+window.computeUsersStats=(users, progress, courses)=>{
 
-  sortUsers:(users, orderBy, orderDirection)=>{},
+};
 
-  filterUsers:(users, search)=>{},
+window.sortUsers=(users, orderBy, orderDirection)=>{};
 
-  processCohortData:(options)=>{}
-}
+window.filterUsers=(users, search)=>{};
+
+window.processCohortData=(options)=>{}
