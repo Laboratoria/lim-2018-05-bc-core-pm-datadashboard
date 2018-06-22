@@ -23,6 +23,7 @@ Le preguntamos también sobre cada cuanto revisaría la información del Data Da
 
 #### 3) Diseño de la Interfaz de Usuario (prototipo de alta fidelidad)
 - Prototipo creado en ai (Adobe Illustrator). Utilizamos los archivos que enviaron actualizados de la línea gráfica de Laboratoria. 
+Click en la imagen para ver el gif:
 
 ![prototipo](https://github.com/PatriciaVidal/lim-2018-05-bc-core-pm-datadashboard/blob/ProyectoData/src/imagenes/prototipo.gif?raw=true"title")
 
@@ -46,5 +47,5 @@ Con el sistema Kanvan realizamos un Planificador de tareas, hecho en papelógraf
 
 
 Gracias!
-##### Patricia Vidal y Yenny Castillo
+##### Patricia Vidal & Yenny Castillo
  
