@@ -1,5 +1,4 @@
 const selectElement= document.getElementById("sedes");
-debugger
 getJSON("../data/cohorts.json", (err, json)=> {
   if(err){
     // algo salio mal...
