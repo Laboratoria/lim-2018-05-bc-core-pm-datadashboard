@@ -1,8 +1,9 @@
 const selectElement= document.getElementById("sedes");
+debugger
 getJSON("../data/cohorts.json", (err, json)=> {
   if(err){
     // algo salio mal...
-    return console.log(err);
+    return console.error(err);
   }
   const sedes= json;
   console.log(sedes);
@@ -24,14 +25,14 @@ get2JSON("../data/cohorts.lim-2018-03-pre-core-pw.users.json", (err, json)=> {
     return console.log(err);
   }
   const users= json;
-  console.log(Users);
+  console.log(users);
   console.log(users.length);
 
   for(let i =0; i< users.length; i++){
-    const optionsElemnts2=document.createElement("option2");
-    const contenidoOptions2= document.createTextNode(users[i].id);
+    const optionsElemnts2=document.createElement("option");
+    const contenidoOptions2= document.createTextNode(users[i].name);
     optionsElemnts.appendChild(contenidoOptions2);
     selectElement.appendChild(optionsElemnts2);
-    console.log(users[i].id);
+    console.log(users[i].name);
   }
 })
