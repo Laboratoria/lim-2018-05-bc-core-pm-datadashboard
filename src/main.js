@@ -1,5 +1,5 @@
-const selectElement= document.getElementById("sedes");
-cohortJSON("../data/cohorts.json", (err, json)=> {
+const selectElement= document.getElementById("Cohorts");
+extraerJSON("../data/cohorts.json", (err, json)=> {
   if(err){
     // algo salio mal...
     return console.log();(err);
@@ -9,22 +9,23 @@ cohortJSON("../data/cohorts.json", (err, json)=> {
   console.log(sedes.length);
 
   for(let i =0; i< sedes.length; i++){
-    const optionsElemnts=document.createElement("option");
+    if(i>16 && i< 34){
+    const optionsElemnts=document.createElement("p");
     const contenidoOptions= document.createTextNode(sedes[i].id);
     optionsElemnts.appendChild(contenidoOptions);
     selectElement.appendChild(optionsElemnts);
     console.log(sedes[i].id);
-  }
+  }}
 })
 
 
 const selectElementU= document.getElementById("users");
-usersJSON("../data/cohorts/lim-2018-03-pre-core-pw/users.json", (err, jsonU)=> {
+extraerJSON("../data/cohorts/lim-2018-03-pre-core-pw/users.json", (err, json)=> {
   if(err){
     // algo salio mal...
-    return console.error(err);
+    return console.log();(err);
   }
-  let users= jsonU;
+  const users= json;
   console.log(users);
   console.log(users.length);
 
@@ -39,7 +40,7 @@ usersJSON("../data/cohorts/lim-2018-03-pre-core-pw/users.json", (err, jsonU)=> {
 
 
 const selectElementP= document.getElementById("progress");
-progressJSON("../data/cohorts/lim-2018-03-pre-core-pw/users.json", (err, jsonP)=> {
+extraerJSON("../data/cohorts/lim-2018-03-pre-core-pw/progress.json", (err, jsonP)=> {
   if(err){
     // algo salio mal...
     return console.error(err);
@@ -50,20 +51,25 @@ progressJSON("../data/cohorts/lim-2018-03-pre-core-pw/users.json", (err, jsonP)=
 
   for(let i =0; i< progress.length; i++){
     const optionsElemntsP=document.createElement("option");
-    const contenidoOptionsP= document.createTextNode(progress[i].name);
+    const contenidoOptionsP= document.createTextNode(progress[i].id.intro.units.parts.exercises.completed);
     optionsElemntsP.appendChild(contenidoOptionsP);
     selectElementP.appendChild(optionsElemntsP);
-    console.log(progress[i].name);
+    console.log(progress[i].id.intro.units.parts.exercises.completed);
   }
 })
 
 
-/*cohortJSON("../data/cohorts.json")
-//const sedes= json;
+/*extractJSON("../data/cohorts.json")
+
+extractJSON("../data/cohorts/lim-2018-03-pre-core-pw/users.json")
+
+extractJSON("../data/cohorts/lim-2018-03-pre-core-pw/progress.json")
+const sedes= json;
 
 const optionsElemnts=document.createElement("option");
 const contenidoOptions= document.createTextNode(sedes[i].id);
 optionsElemnts.appendChild(contenidoOptions);
-//selectElement.appendChild(optionsElemnts);
+selectElement.appendChild(optionsElemnts);
 console.log(sedes[i].id);
-document.getElementById("sedes").appendChild(optionsElemnts);*/
+document.getElementById("sedes").appendChild(optionsElemnts);
+*/
