@@ -21,6 +21,7 @@
 
  .Map {
    float: left;
+   display: none;
 }
 .map {
 display: none;
