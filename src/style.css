@@ -21,4 +21,5 @@
 
  .Map {
    float: left;
+   display: none;
 }

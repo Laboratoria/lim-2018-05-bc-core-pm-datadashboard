@@ -1,129 +1,84 @@
-const cohortJSON=(url, callback)=>{
-<<<<<<< HEAD
-  const xhr = new XMLHttpRequest();
-  xhr.onload = ()=> {
-    if (xhr.readyState === 4){
-      if (xhr.status !== 200 ) {// Success!
-        return callback(new Error(`HTTP error: ${xhr.status}`));
-      }
-      try{
-        callback(null,JSON.parse(xhr.responseText));
-      } catch(err) {// We reached our target server, but it returned an error
-        callback(err);
-      }}};
-      xhr.open("GET", url);
-      xhr.send();
-    };
+const selectElement = document.getElementById("Cohorts");
+extraerJSON("../data/cohorts.json", (err, json) => {
+ if (err) {
+   // algo salio mal...
+   return console.log(); (err);
+ }
+ const sedes = json;
+ console.log(sedes);
+ 
+  for(let i =0; i< sedes.length; i++){
+   
+   
+   const liElemnts=document.createElement("li");
+   liElements.textContent= sedes[i].id;
+   selectElement.appendChild(liElemnts);
+  }
 
+ const selectElementU = document.getElementById("users");
+ extraerJSON("../data/cohorts/lim-2018-03-pre-core-pw/users.json", (err, json) => {
+   if (err) {
+     // algo salio mal...
+     return console.log(); (err);
+   }
+   const users = json;
+   console.log(users);
+      for(let i =0; i< users.length; i++){
+       const optionsElemntsU=document.createElement("option");
+       const contenidoOptionsU= document.createTextNode(users[i].name);
+       optionsElemntsU.appendChild(contenidoOptionsU);
+       selectElementU.appendChild(optionsElemntsU);
+         
+         }
 
-    const usersJSON =(url, callback)=>{
-      const xhrU = new XMLHttpRequest();
-      xhrU.onload = ()=> {
-        if (xhrU.readyState === 4){
-          if (xhrU.status !== 200 ) {// Success!
-            return callback(new Error(`HTTP error: ${xhrU.status}`));
-          }
-          try{
-            callback(null,JSON.parse(xhrU.responseText));
-          } catch(err) {// We reached our target server, but it returned an error
-            callback(err);
-          }}};
-          xhrU.open("GET", url);
-          xhrU.send();
-        };
-
-        const progressJSON=(url, callback)=>{
-          const xhrP = new XMLHttpRequest();
-          xhrP.onload = ()=> {
-            if (xhrP.readyState === 4){
-              if (xhrP.status !== 200 ) {// Success!
-                return callback(new Error(`HTTP error: ${xhrP.status}`));
-              }
-              try{
-                callback(null,JSON.parse(xhrP.responseText));
-              } catch(err) {// We reached our target server, but it returned an error
-                callback(err);
-              }}};
-              xhrP.open("GET", url);
-              xhrP.send();
-            };
+   const selectElementP = document.getElementById("progress");
+   extraerJSON("../data/cohorts/lim-2018-03-pre-core-pw/progress.json", (err, jsonP) => {
+     if (err) {
+       // algo salio mal...
+       // return console.error(err);
+     }
+     const progress = jsonP;
+     console.log(progress);
+     console.log(progress.length);
 
 
 
+     for (let i = 0; i < 5; i++) {
+
+/*         const optionsElemntsP=document.createElement("li");
+       const contenidoOptionsP= document.createTextNode(progress[[i].id].intro.units.parts[6].exercises.completed);
+       optionsElemntsP.appendChild(contenidoOptionsP);
+       selectElementP.appendChild(optionsElemntsP);
+       console.log(progress[i].id.intro.units.parts.exercises.completed); */
+       console.log(progress[users[i].id].intro.units["02-variables-and-data-types"].parts["04-guided-exercises"].completed);
+       
+
+
+     }
+   })
+
+ })
+
+})
 
 
 
-/*let cohortJSON= (url) => {
-  fetch (url)
-  .then((res)=> {
-    return res.json() })
-  .then((data) => {
-    for (c of data){
-        console.log (c);}
-return data;
-})}*/
-=======
-    const xhr = new XMLHttpRequest();
-    xhr.onload = ()=> {
-      if (xhr.readyState === 4){
-        if (xhr.status !== 200 ) {// Success!
-          return callback(new Error(`HTTP error: ${xhr.status}`));
-        }
-        try{
-          callback(null,JSON.parse(xhr.responseText));
-        } catch(err) {// We reached our target server, but it returned an error
-          callback(err);
-        }}};
-        xhr.open("GET", url);
-        xhr.send();
-      };
-  
-  
-      const usersJSON =(url, callback)=>{
-        const xhrU = new XMLHttpRequest();
-        xhrU.onload = ()=> {
-          if (xhrU.readyState === 4){
-            if (xhrU.status !== 200 ) {// Success!
-              return callback(new Error(`HTTP error: ${xhrU.status}`));
-            }
-            try{
-              callback(null,JSON.parse(xhrU.responseText));
-            } catch(err) {// We reached our target server, but it returned an error
-              callback(err);
-            }}};
-            xhrU.open("GET", url);
-            xhrU.send();
-          };
-  
-          const progressJSON=(url, callback)=>{
-            const xhrP = new XMLHttpRequest();
-            xhrP.onload = ()=> {
-              if (xhrP.readyState === 4){
-                if (xhrP.status !== 200 ) {// Success!
-                  return callback(new Error(`HTTP error: ${xhrP.status}`));
-                }
-                try{
-                  callback(null,JSON.parse(xhrP.responseText));
-                } catch(err) {// We reached our target server, but it returned an error
-                  callback(err);
-                }}};
-                xhrP.open("GET", url);
-                xhrP.send();
-              };
-  
-  
-  
-  
-  
-  
-  /*let cohortJSON= (url) => {
-    fetch (url)
-    .then((res)=> {
-      return res.json() })
-    .then((data) => {
-      for (c of data){
-          console.log (c);}
-  return data;
-  })}*/
-  
->>>>>>> 895117c1454064967a09c2f81dbf761099c404b2
+
+
+
+
+
+/*extractJSON("../data/cohorts.json")
+
+extractJSON("../data/cohorts/lim-2018-03-pre-core-pw/users.json")
+
+extractJSON("../data/cohorts/lim-2018-03-pre-core-pw/progress.json")
+const sedes= json;
+
+const optionsElemnts=document.createElement("option");
+const contenidoOptions= document.createTextNode(sedes[i].id);
+optionsElemnts.appendChild(contenidoOptions);
+selectElement.appendChild(optionsElemnts);
+console.log(sedes[i].id);
+document.getElementById("sedes").appendChild(optionsElemnts);
+*/
