@@ -1,3 +1,4 @@
+
 const selectElement = document.getElementById("Cohorts");
 extraerJSON("../data/cohorts.json", (err, json) => {
   if (err) {
@@ -6,12 +7,13 @@ extraerJSON("../data/cohorts.json", (err, json) => {
   }
   const sedes = json;
   console.log(sedes);
+  
    for(let i =0; i< sedes.length; i++){
+     
     
-    const optionsElemnts=document.createElement("p");
-    const contenidoOptions= document.createTextNode(sedes[i].id);
-    optionsElemnts.appendChild(contenidoOptions);
-    selectElement.appendChild(optionsElemnts);
+    const liElemnts=document.createElement("li");
+    liElements.textContent= sedes[i].id;
+    selectElement.appendChild(liElemnts);
    } 
 
   const selectElementU = document.getElementById("users");
@@ -23,10 +25,11 @@ extraerJSON("../data/cohorts.json", (err, json) => {
     const users = json;
     console.log(users);
        for(let i =0; i< users.length; i++){
-           const optionsElemntsU=document.createElement("option");
-           const contenidoOptionsU= document.createTextNode(users[i].name);
-           optionsElemntsU.appendChild(contenidoOptionsU);
-           selectElementU.appendChild(optionsElemntsU);
+        const optionsElemntsU=document.createElement("option");
+        const contenidoOptionsU= document.createTextNode(users[i].name);
+        optionsElemntsU.appendChild(contenidoOptionsU);
+        selectElementU.appendChild(optionsElemntsU);
+          
           } 
 
     const selectElementP = document.getElementById("progress");
@@ -43,7 +46,7 @@ extraerJSON("../data/cohorts.json", (err, json) => {
 
       for (let i = 0; i < 5; i++) {
 
-/*         const optionsElemntsP=document.createElement("option");
+/*         const optionsElemntsP=document.createElement("li");
         const contenidoOptionsP= document.createTextNode(progress[[i].id].intro.units.parts[6].exercises.completed);
         optionsElemntsP.appendChild(contenidoOptionsP);
         selectElementP.appendChild(optionsElemntsP);
