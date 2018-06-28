@@ -2,74 +2,10 @@
 
 ## Preámbulo
 
-En Laboratoria, las Training Managers (TMs) hacen un gran trabajo al analizar la
-mayor cantidad de datos posibles respecto al progreso de las estudiantes para
-apoyarlas en su aprendizaje.
+TMs quisieran visualizar para tener un mejor entendimiento de cómo va cada estudiante en su proceso de aprendizaje.
 
-La principal medida de progreso de una estudiante en Laboratoria es su avance
-completando los proyectos de la [Ruta de Aprendizaje](https://docs.google.com/spreadsheets/d/1AoXQjZnZ5MTPwJPNEGDyvn5vksiOUoPr932TjAldTE4/edit#gid=536983970)
-y su desempeño en función a la [Rúbrica de Niveles Esperados](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkQy1waRpQ-16sn7VogiDTy-Fz5e7OSZSYUCiHC_bkLAKYewr4L8pWJ_BG210PeULe-TjLScNQQT_x/pubhtml).
-Sin embargo, para completar estos proyectos las estudiantes acceden a contenidos
-de aprendizaje (lecturas, videos, ejercicios y quizzes) en un sistema que
-llamamos LMS (Learning Management System). El LMS acumula data sobre quién
-leyó qué, qué ejercicios se han completado, los resultados de los quizzes, etc.
+Así, el reto de este proyecto es crear una interfaz donde las TMs puedan ver y usar la data de progreso del LMS. Para ello, proponemos crear un data dashboard(_tablero de visualización de datos).
 
-A pesar de que la data de progreso del LMS (ej. lecturas leídas, ejercicios
-  completados, nota en quizzes, etc.) no impacta directamente en la evaluación
-  de una estudiante, sí es una pieza de información relevante que las TMs
-  quisieran visualizar para tener un mejor entendimiento de cómo va cada
-  estudiante en su proceso de aprendizaje.
-
-Así, el reto de este proyecto es crear una interfaz donde las TMs puedan
-_ver_ y _usar_ la data de progreso del LMS. Para ello, proponemos crear un
-**data dashboard** (_tablero de visualización de datos_).
-
-## Introducción
-
-Según un [estudio de IBM](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=WRL12345USEN),
-el 90% de la data que existe hoy ha sido creada en los últimos dos años.
-Cada día generamos 2.5 trillones de bytes de datos, una cifra sin precedentes.
-
-Sin embargo, los datos por sí solos son de poca utilidad. Para transformar datos
-en **información** necesitamos procesarlos y entenderlos. Una manera muy
-sencilla de hacerlo es creando _visualizaciones_. Las
-empresas líderes de hoy generan visualizaciones dinámicas de su data
-que les permiten entender mejor su negocio y tomar decisiones apropiadas.
-
-En este proyecto tendrás tu primer acercamiento a transformar data en
-información creando tu primer **data dashboard**.
-
-Si pensamos en un _dashboard_ podemos pensar en el tablero de control de un auto
-o el de un avión. Un espacio desde el cual un usuario puede tener acceso a la
-información y controles más relevantes, en este caso, del vehículo que está
-utilizando. El _dashboard_ de un auto le permite a quien conduce saber a qué
-velocidad está yendo, qué cambio/velocidad está utilizando, cuánto combustible
-tiene disponible, cuál es la temperatura del motor, cuántas revoluciones por
-minuto dan las ruedas, cuánta distancia ha recorrido, etc.
-
-![car dashboard](https://img.buzzfeed.com/buzzfeed-static/static/2017-02/7/12/enhanced/buzzfeed-prod-fastlane-03/original-17515-1486490056-3.jpg?crop=2041:1068;80,248)
-
-## Aplicaciones en el mundo real
-
-En el mundo de la web es muy común el uso de _dashboards_. De hecho, [wikipedia](https://goo.gl/P7PF4y)
-nos dice que un _dashboard_ puede ser un resumen gráfico de varias piezas de
-información importante, generalmente utilizadas para dar una visión general de
-una empresa o de un servicio. Así, tenemos dashboards como los de:
-
-* [Google Analytics](https://assets.econsultancy.com/images/resized/0003/3813/mobile_commerce_dashboard-blog-full.png)
-  para visualizar la data de tráfico de sitios web.
-
-* [Mailchimp](https://blog.mailchimp.com/wp-content/uploads/2016/11/Dashboard-view-3-Copy-1008x768.jpg)
-  para visualizar el desempeño de campañas de mercadeo digital por correo
-  electrónico.
-
-* [Quickbooks](https://quickbooks.intuit.com/content/dam/intuit/quickbooks/branding/make-organization-easy-visual.png)
-  para visualizar la información financiera de una empresa.
-
-Seguramente, a lo largo de tu carrera como diseñadora o desarrolladora, te
-tocará crear un _data dashboard_. Quizás sea para visualizar la data de un
-negocio de delivery de comida, o las rutas históricas de un negocio de
-transporte, o simplemente los indicadores clave de tu propio emprendimiento ;)
 
 ## Objetivos de aprendizaje
 
