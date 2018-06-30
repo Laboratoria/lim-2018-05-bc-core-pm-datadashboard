@@ -18,15 +18,7 @@
  body{
     text-align:center;
  }
- #Init {
-background: blue;
- }
 
  .Map {
    float: left;
-
- }
- .Cohorts {
-   position: relative;
-   left:0;
- }
+}
