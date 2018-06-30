@@ -1,0 +1,55 @@
+<html>
+ <head>
+   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Laboratoria LMS</title>
+   <link rel="stylesheet" href="style.css" />
+ </head>
+ <body>
+   <div align="center" class="init" id="init">
+      <h1 class="tittle"><img style="float:center" src="imagenes/Laboratoria_RGB_logo-06.png" width="250" height="70" alt="Logo"></h1>
+   </div>
+  <div id="container">
+    <div align="center" class="lista" id="lista">
+        <p>ALEJANDRA</p>
+        <p>alejandra@laboratoria.la</p>
+          <ul>
+            <li class="item" target="_blank"> CURSOS
+            <li class="item" target="_blank"> COHORTS
+            <li class="item" target="_blank"> ESTADÍSTICAS
+            <li class="item" target="_blank"> CONFIGURACIÓN
+          </ul>
+    </div>
+
+   <div class="Map" id="map">
+    <img style="float:right" src="imagenes/fondomapa.png" width=1200px height="auto" max-width:"100%" alt="" usemap="#map">
+    <map name="map">
+      <area shape="circle" coords="550,50,10"/>
+      <area shape="circle" coords="580,75,10"/>
+      <area shape="circle" coords="720,290,10"/>
+      <area shape="circle" coords="890,377,10"/>
+      <area shape="circle" coords="750,460,10"/>
+    </map>
+   </div>
+
+   <div id="principal">
+      <h3>COHORTS</h3>
+    </div>
+   
+    <div id="secundario">
+      <h3>ALUMNAS</h3>
+        <form autocomplete="off" action="/action_page.php">
+          <div class="autocomplete" style="width:700px;">
+            <input id="myInput" type="text" name="myName" placeholder="Elige un nombre"><br><br>
+            <input type="button" value="Buscar">
+          </div>
+        </form>
+      <script src="data.js"></script>
+      <script src="main.js"></script>
+      </div>
+    </div>
+
+    <div><select id="cohorts"></select></div>
+    <div id="users">uuuu</div>
+
+    </body>
+  </html>
