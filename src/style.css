@@ -34,8 +34,6 @@ display: none;
 nav{
 width:200px;
 }
-<<<<<<< HEAD
-=======
 
 .item {
   padding: 15px;
@@ -49,11 +47,9 @@ input{
   padding: 10px;
   font-weight: 200;
   font-size: 12px;
-  cursor: pointer;  
+  cursor: pointer;
   }
 
   #container {
   float: inherit;
   }
-
->>>>>>> ce3ec2aef2a3012047eb95d0e642e1c8df8049ec
