@@ -54,29 +54,79 @@ function register(){
 }
 
 
-//page one
 
-/*const selectElement = document.getElementById('cohorts');
-var option = "";
-fetch('http://127.0.0.1:5500/data/cohorts.json').then((response) => {
-  if(response.status == 200){
-    return response.json();
-  }else{
-    throw new Error("la llamada a la API falló");
-  }
-}).then ((data) => {
 
-  for(let i=0;i<data.length; i++){
-  
-  option = document.createElement('option');
-  option.text = data[i].id;
-  lista2.add(option);
-    
-  }
- 
-}); */
 
+
+
+
+const getData = (process) => {
+  fetch ('https://api.laboratoria.la/cohorts')
+  .then (resCohorts=>
+    fetch ('https://api.laboratoria.la/cohorts/lim-2018-03-pre-core-pw/users')
+    .then (resUsers=> 
+      fetch ('https://api.laboratoria.la/cohorts/lim-2018-03-pre-core-pw/users')
+      .then (resProgress=>
+        Promise.all([ resCohorts.json(), resUsers.json(), resProgress.json()])
+        .then(data =>process(data))
+      )
+    )
+  )
+}
 let selection = document.getElementById('cohorts');
+let listauser = document.getElementById('lista');
+getData( (data) =>{
+  //arreglo de objetos del archivo cohorts 
+ const dataCohorts=data[0];
+ //arreglo de objetos del archivo lim-201-03-pre-core-pw(users)
+ const dataUsers=data[1];
+ //objeto del archivo lim-201-03-pre-core-pw(progress)
+ const dataProgress=data[2];
+
+  //arreglo cohorts
+  const cohorts=dataCohorts.map(cohort=>cohort.id);
+  //mostrando la lista de cohorts 
+  cohorts.forEach(cohort=>{
+    selection.innerHTML+=`<option value=${cohort}>${cohort}</option>`
+  }); 
+  
+  selection.addEventListener('change',selected);
+  //mostrando lista de estudiantes
+  function selected(){
+    if(selection.value==='lim-2018-03-pre-core-pw'){
+      const users= dataUsers.map(user =>{ user.name
+        listauser.innerHTML+=`<li id=${user.name}><a href=${user.name}>${user.name}</a></li>`;
+      });
+     
+    }
+  } 
+  const users= dataUsers.map(user => user.name);
+  console.log(cohorts);
+  
+ 
+  
+});
+
+
+
+/*
+const functionfilter=(texto)=>{
+  return Array.filter((element)=>element.name.indexOf(texto)!== -1)
+};
+
+//
+const functionfilter=(texto)=>{
+  return Array.filter((element)=>element.name===texto)
+};*/
+
+/*selection.addEventListener('click',change);
+function change(e){
+  if(e.target.value===)
+
+}*/
+
+///////////////////////////////////////////////////////
+/*let selection = document.getElementById('cohorts');
 let listauser = document.getElementById('lista');
 
 fetch('https://api.laboratoria.la/cohorts')
@@ -125,7 +175,7 @@ fetch('https://api.laboratoria.la/cohorts/lim-2018-03-pre-core-pw/users')
 .catch((err) => {
  console.error(err);
 });
- 
+ */
   
 
 
