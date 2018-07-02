@@ -1,18 +1,9 @@
 window.computeUsersStats = (users, progress, courses) => {
-  let stats;
-  let statsPercent = 0;
-  let statsTotal = 0;
-  let exercisesTotal = 0;
-  let exercisesComplete = 0;
-  let quizzesTotal = 0;
-  let quizzesComplete = 0;
-  let scoreSum = 0;
-  let readsTotal = 0;
-  let readsComplete = 0;
-
-  let usersWithStats = users.map(
+  let usersWithStats = [];
+  
+  users.map(
     user => {
-      stats = {
+      let stats = {
         percent: 0,
         total: 0,
         exercises: {
@@ -33,68 +24,67 @@ window.computeUsersStats = (users, progress, courses) => {
           percent: 0
         }
       }
-      let userID = user.id;
-      let progressUser = progress[userID];
-      
-      courses.forEach(course => {
+
+      courses.map(course => {
+        let userID = user.id;
+        let progressUser = progress[userID];
 
         if (progressUser && progressUser[course]) {
-          statsPercent += statsPercent + progressUser[course].percent;
-          statsTotal++;
+          stats.percent += progressUser[course].percent;
+          stats.total++;
 
           let units = progressUser[course].units
           for (unit in units) {
             let parts = units[unit].parts
             for (part in parts) {
-              let exercises = parts[part].exercises;
 
-              for (exercise in exercises) {
-                exercisesTotal++;
-                if (exercises[exercise].completed === 1) {
-                  exercisesComplete++
+              if (parts[part].type === 'practice') {
+                stats.exercises.total++;
+                if (parts[part].completed === 1) {
+                  stats.exercises.completed++;
                 }
               }
 
               if (parts[part].type === 'quiz') {
-                quizzesTotal++;
+                stats.quizzes.total++;
                 if (parts[part].completed === 1 && parts[part].hasOwnProperty('score')) {
-                  scoreSum += scoreSum + parts[part].score;
-                  quizzesComplete++;
+                  stats.quizzes.scoreSum += stats.quizzes.scoreSum + parts[part].score;
+                  stats.quizzes.completed++;
                 }
               }
 
               if (parts[part].type === 'read') {
-                readsTotal++;
+                stats.reads.total++;
                 if (parts[part].completed === 1) {
-                  readsComplete++;
+                  stats.reads.completed++;
                 }
               }
             }
 
             // Se calculan los promedios basados en los totales y acumuladores
-            if (exercisesTotal > 0) {
-              stats.exercises.percent = Math.round((exercisesComplete / exercisesTotal) * 100);
+            if (stats.exercises.total > 0) {
+              stats.exercises.percent = Math.round((stats.exercises.completed / stats.exercises.total) * 100);
             }
             else {
               stats.exercises.percent = 0;
             }
 
-            if (quizzesTotal > 0) {
-              stats.quizzes.percent = Math.round((quizzesComplete / quizzesTotal) * 100);
+            if (stats.quizzes.total > 0) {
+              stats.quizzes.percent = Math.round((stats.quizzes.completed / stats.quizzes.total) * 100);
             }
             else {
               stats.quizzes.percent = 0;
             }
 
-            if (quizzesComplete > 0) {
-              stats.quizzes.scoreAvg = Math.round(scoreSum / quizzesComplete);
+            if (stats.quizzes.completed > 0) {
+              stats.quizzes.scoreAvg = Math.round(stats.quizzes.scoreSum / stats.quizzes.completed);
             }
             else {
               stats.quizzes.scoreAvg = 0;
             }
 
-            if (readsTotal > 0) {
-              stats.reads.percent = Math.round((readsComplete / readsTotal) * 100);
+            if (stats.reads.total > 0) {
+              stats.reads.percent = Math.round((stats.reads.completed / stats.reads.total) * 100);
             }
             else {
               stats.reads.percent = 0;
@@ -103,17 +93,17 @@ window.computeUsersStats = (users, progress, courses) => {
           }
         }
 
-        if (statsTotal > 0) {
-          statsPercent = Math.round(statsPercent / statsTotal);
+        if (stats.total > 0) {
+          stats.percent = Math.round(stats.percent / stats.total);
         }
         else {
-          statsPercent = 0
+          stats.percent = 0
         }
         user.stats = stats;
-        return user
       })
-      return usersWithStats;
+      usersWithStats.push(stats);
     })
+    return usersWithStats;
 };
 
 //Creando la funcion sortUsers
@@ -209,12 +199,18 @@ window.filterUsers = (users, search) => {
 
 //Creando la funcion processCohortData
 window.processCohortData = (options) => {
-  let courses = [];
-  for (course in options.cohort.coursesIndex) {
-    courses.push(course);
-  }
-  computeUser = computeUsersStats(options.cohortData.users, options.cohortData.progress, courses);
-  sortUser = sortUsers(computeUser, options.orderBy, options.orderDirection);
-  filterUser = filterUsers(sortUser, options.search);
-  return filterUser;
+  // let courses = [];
+  // for (course in options.cohort.coursesIndex) {
+  //   courses.push(course);
+  // }
+
+  usersWithStats = computeUsersStats(
+    options.cohortData.users,
+    options.cohortData.progress,
+    options.cohort
+  )
+
+sortUsers(usersWithStats, options.orderBy, options.orderDirection);
+filterUsers(usersWithStats, options.search);
+  return usersWithStats
 };

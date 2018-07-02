@@ -22,22 +22,25 @@
             </div>
             <form>
                 <div class="inputLab">
-                    <input name="usuario" type="text" id="email" placeholder="Email">
+                    <input type="text" id="email" placeholder="Email">
                     <span>
                         <i class="fas fa-user-circle" aria-hidden="true"></i>
                     </span>
                 </div>
                 <div class="inputLab">
-                    <input id="password" name="password" type="password" >
+                    <input id="password" name="password" type="password">
                     <span>
                         <i class="fas fa-lock" aria-hidden="true"></i>
                     </span>
                 </div>
-                <input id= "submit" type="submit"  value="INICIAR SESIÓN">
+                <input id="btnIngresar" type="button" value="INICIAR SESIÓN" onclick="validar()">
                 <a href="#">Restaurar Contraseña</a>
             </form>
         </div>
     </div>
+    <script src="login.js"></script>
+    <script src="data.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
