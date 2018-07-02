@@ -126,7 +126,7 @@ cierto dinamismo, que simula la interación con el usuario.
 
 Pueden ver el avance [AQUÍ](https://marvelapp.com/177cdbf6/screen/44209192)
 
-### Tercer Prototipo
+### Prototipo ideal
 Login
 ![login](https://user-images.githubusercontent.com/39272944/42144312-096dfbaa-7d80-11e8-9457-a441c6fecd86.png)
 
