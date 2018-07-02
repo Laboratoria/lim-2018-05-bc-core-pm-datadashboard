@@ -11,25 +11,30 @@
   <div id="container">
     <div align="center" class="lista" id="lista">
         <p>ALEJANDRA</p>
+        <p>alejandra@laboratoria.la</p>
           <ul>
-            <li class="item" target="_blank">CURSOS</li>
-            <li class="item" target="_blank">COHORTS</li>
-            <li class="item" target="_blank">ESTADÍSTICAS</li>
-            <li class="item" target="_blank">CONFIGURACIÓN</li>
+            <li class="item" target="_blank"> CURSOS
+            <li class="item" target="_blank"> COHORTS
+            <li class="item" target="_blank"> ESTADÍSTICAS
+            <li class="item" target="_blank"> CONFIGURACIÓN
           </ul>
     </div>
 
    <div class="Map" id="map">
-     <img style="float:right" src="imagenes/fondomapa.png" width="1200" height="750" alt="Mapamundi">
+    <img style="float:right" src="imagenes/fondomapa.png" width=1200px height="auto" max-width:"100%" alt="" usemap="#map">
+    <map name="map">
+      <area shape="circle" coords="550,50,10"/>
+      <area shape="circle" coords="580,75,10"/>
+      <area shape="circle" coords="720,290,10"/>
+      <area shape="circle" coords="890,377,10"/>
+      <area shape="circle" coords="750,460,10"/>
+    </map>
    </div>
-    <div id="cohorts">
-      <h3>COHORTS LIMA</h3>
-      <p></p>
+
+   <div id="principal">
+      <h3>COHORTS</h3>
     </div>
-
-      <select id="users"> </select><br>
-      <select id="progress"> </select><br>
-
+   
     <div id="secundario">
       <h3>ALUMNAS</h3>
         <form autocomplete="off" action="/action_page.php">
@@ -42,5 +47,9 @@
       <script src="main.js"></script>
       </div>
     </div>
+
+    <div><select id="cohorts"></select></div>
+    <div id="users">uuuu</div>
+
     </body>
   </html>
