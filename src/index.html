@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
@@ -10,24 +10,24 @@
 <body>
   <section>
     <aside class="side-dashboard">
-      <article class="user">
+      <section class="user">
         <img class="side-user" src="img/user.png">
         <p>Nombre</p>
         <p>Training Manager</p>
-      </article>
+      </section>
       <nav>
         <ul class="nav">
           <li class="nav-item">
             <img src="img/view.png">
-            <a href="#" id="viewGeneral">Vista General</a>
+            <button id="btnGeneral">Vista General</button>
           </li>
           <li class="nav-item">
             <img src="img/student.png">
-            <a href="#" id="student">Alumnas</a>
+            <button id="btnStudent">Alumnas</button>
           </li>
           <li class="nav-item">
             <img src="img/course.png">
-            <a href="#" id="courses">Cursos</a>
+            <button id="btnProgress">Progreso</button>
           </li>
         </ul>
       </nav>
@@ -36,20 +36,84 @@
       <header class="banner">
         <img class="banner-logo" src="img/banner.png">
       </header>
-      <article class="menu-principal" id="menu">
-        <label>Sedes: </label>
-        <select id="sede">
-          
-        </select>
-        <div id="listStudent">
+      <section class="menu-principal">
+        <section id="menuSede" class="menu-sede">
+          <h1>SEDES</h1>
+          <section id="one" class="sede-fila">
+            <button id="sedeLima" class="button-sede">Lima</button>
+            <button id="sedeCiudadMexico" class="button-sede">Ciudad de Mexico</button>
+            <button id="sedeGuadalajara" class="button-sede">Guadalajara</button>
+          </section>
+          <section id="two" class="sede-fila">
+            <button id="sedeSantiagoChile" class="button-sede">Santiago de Chile</button>
+            <button id="sedeSaoPaulo" class="button-sede">Sao Paulo</button>
+          </section>
+        </section>
 
-        </div>
-      </article>
-      <article class="menu-graphicos">
-        
-      </article>
+        <section id="menuPromo" class="menu-promo" style="display: none;">
+          <section id="sedeDetalles">
+            <h2>Selecciona el año y la Promocion</h2>
+            <select id="sedePromo"></select>
+          </section>
+          <section id="imgPromo">
+            <img class="img-promo" src="img/promo.png">
+          </section>
+        </section>
+
+        <section id="menuGeneral" class="menu-general" style="display: none">
+          <h3>Proceso General</h3>
+          <section id="menuProceso" class="menu-proceso">
+            <h4>Detalles</h4>
+            <article id="numAlumnas" class="num-alumnas"></article>
+            <article id="numCursos" class="num-cursos">Cursos</article>
+          </section>
+          <section id="menuGrafico">
+          </section>
+        </section>
+
+        <section id="menuProgress" class="menu-student" style="display: none">
+          <h3>Progreso de Alumnas</h3>
+          <section class="details-student">
+            <h4>Opciones</h4>
+
+            <label>Buscar</label>
+            <input id="searchUser" type="text">
+
+            <label>Filtrar por:</label>
+            <select id="orderBy">
+              <option value="nameUser">Nombre</option>
+              <option value="percent">Porcentaje de Completitud</option>
+              <option value="exercisesPercent">Porcentaje de Ejercicios completados</option>
+              <option value="quizzPercent">Porcentaje de Quizzes completados</option>
+              <option value="quizzScore">Puntuacion Promedio de Quizzes completados</option>
+              <option value="readsPercent">Porcentaje de lecturas completados</option>
+            </select>
+
+            <label>Ordenar por:</label>
+            <select id="orderDirection">
+              <option value="ASC">Ascendente</option>
+              <option value="DESC">Descendente</option>
+            </select>
+
+            <button id="btnSort">Ordenar</button>
+          </section>
+
+          <section id="infoStudent">
+            <table id="tableStudent">
+            </table>
+          </section>
+        </section>
+
+        <section id="menuStudent" style="display: none">
+          <h3>Listado de Alumna</h3>
+          <div id="studentContainer" class="student-container">
+          </div>
+        </section>
+      </section>
+
     </section>
   </section>
+  <script src="login.js"></script>
   <script src="data.js"></script>
   <script src="main.js"></script>
 </body>
