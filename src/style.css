@@ -36,14 +36,14 @@ header label {
 }
 
 header img {
-    width: 70%;
+    width: 20%;
     height: auto; 
     margin: auto;
 }
 
 
 h2 {
-    font-size: 150%;
+    font-size: 15%;
     font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
     display: flex;      
     padding-top: 8px;
@@ -72,14 +72,17 @@ nav section { /*Ale*/
     margin: 0;
     display: fixed;
 
+    padding-left: 60px;
 }
 
-nav section img {
-    width: 60%;
+.user-tm {
+    width: 150px;
     height: auto;
-    padding: 7% 20% 5%; 
+    padding-top: 20px;
+    
+  
     position: block;
-    border-radius: 100%;
+    border-radius: 50%;
 }
 
 hr {
@@ -143,7 +146,6 @@ main {
     margin: 0%;
     width: 140%;
     height: 100%;    
-    
 }
 
 main p {
@@ -267,14 +269,14 @@ main p {
     }
 
     nav section {
-        height: 38%;
+        height: 33%;
         
     }
 
     nav section img { /*Ale*/
-        width: 60%;
+        width: 50%;
         height: auto;
-        padding: 5% 19% 5%; 
+        padding: 5% 25% 5%; 
     }
 
 
@@ -289,11 +291,11 @@ main p {
     
     .logo-content {
         width: 99.5%;
-        height: 15.5%;
+        height: 10%;
         display: flex;
         
         padding-left: 0px;
-        padding-top: 20px;
+        padding-top: 12px;
     }
 
     .logo {
@@ -322,11 +324,12 @@ main p {
  
 
 }
-<<<<<<< HEAD
+
+/* <<<<<<< HEAD
 /* .sede-fila {
     background-color: aquamarine;
 } */
-.menu-proceso {
+/* .menu-proceso {
     background-color: lightcyan;
     margin: 0px;
     padding: 5px;
@@ -354,10 +357,6 @@ main p {
     display: inline-block;
     box-sizing: border-box;
 } */
-p {
+/* p {
     font-size: 12px;
-}
-=======
-
-
->>>>>>> d0d28981b7c80f080d4bdff62c90c55015ed6a96
+} */
