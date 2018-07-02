@@ -251,7 +251,6 @@ btnsortDescElement01.addEventListener('click', () => {
     btnsortDescElement01.style.display = 'none';
     btnsortAscElement01.style.display = 'block';
 
- showProcessedData(resultProcessedData)
 
     data(idCohort, orderBy, orderDirection, search);
 });
