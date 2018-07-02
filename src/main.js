@@ -107,6 +107,77 @@ getData( (data) =>{
   
 });
 
+/*seleccionecohort.addEventListener('change',(event)=>{
+
+  getData((data)=>{
+    const cohortsGeneral=data[0];
+    const usersGeneral=data[1];
+    const progressGeneral=data[2];
+
+    let cohortSelected=cohortsGeneral.filter(function( cohort ) {
+      return cohort.id == event.target.value;
+    });
+  
+    let usersOfCohortSelected=usersGeneral.filter(function( users ) {
+      return users.signupCohort == event.target.value;
+    });
+
+    let studentSelected=usersOfCohortSelected.filter(function( user ) {
+      return user.role === 'student';
+
+    });
+    let studentSelectedId=studentSelected.filter(function( user ) {
+      return user.id ;
+
+    });
+    console.log(studentSelectedId);
+    let progressSelected=Object.keys(progressGeneral[user.id]).forEach((ele)=>{
+      if(progress[user.id].intro.hasOwnProperty('percent')){
+        let answer=progress[user.id].intro;
+        
+        
+      }
+         
+       
+       
+     
+   
+    //console.log(usersGeneral);
+    //console.log(usersOfCohortSelected);
+    //console.log(studentOfcohortSelected);
+    const options={
+      cohort:cohortSelected,
+      cohortData:{
+        users:studentSelected,
+        progress:progressSelected
+      },
+      orderBy:'',
+      orrderDirection:'',
+      search:''
+
+    }
+
+    
+    let studentOfCohortSelected=Object.keys(progressGeneral);function( progress ) {
+      return progress.role == 'student';
+    });
+    console.log(studentOfCohortSelected);
+    
+
+    
+    
+    
+  })
+  
+});
+*/
+
+const sort=document.getElementById('sort');
+sort.addEventListener('click',()=>{
+
+
+})
+
 
 
 /*

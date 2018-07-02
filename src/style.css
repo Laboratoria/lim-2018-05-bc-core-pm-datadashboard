@@ -56,6 +56,33 @@ img{
 #pageOne{
     padding: 10% 40%;
 }
-.list{
+.selectCo{
+    
+    text-align: left;
+    font-size:18px;
+}
+.selectCo select{
+    text-align: center;
+    margin:auto;
+    font-size:15px;
+}
+.list {
+    list-style-type: none;
     padding: 0% 20%;
+    margin: 0;
+}
+  
+.list li a {
+    border: 1px solid #ddd;
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #e6e34d;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block
+}
+  
+.list li a:hover:not(.header) {
+    background-color: #eee;
 }
