@@ -12,25 +12,20 @@
     overflow: hidden;
 }
 
+/*Box-login*/
 
-/*Logo*/
-.logohome{
-    text-align: center;
+.container{
+    width: 700px;
+    height: 400px;
+    padding: 220px 350px;
 }
 
+/*Logo*/
 .logohome img{
     width: 400px;
     height: 70px;
     margin: 30px 70px;
     float: left;
-}
-
-/*Box-login*/
-
-.container{
-    width: 800px;
-    height: 400px;
-    margin: 200px 350px;
 }
 
 .container .login img{
@@ -45,7 +40,7 @@
     width: 300px;
     height: 320px;
     float: left;
-    background:  rgba(0,0,0, .5);  
+    background:  rgba(0,0,0, .6);  
     border-radius: 20px 0px 0px 20px;
 }
 
@@ -68,18 +63,20 @@
     height: 20px;
     background: transparent;
     border: none;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
     margin: 5px 60px;
 }
 .login input[type=text]{
     padding-left: 20px;
+    color: #FFFFFF;
+    font-size: 17px;
 }
 
 .login i{
     margin-left: 60px;
     position: relative;
     top: -25px;
-    left: 5px;
+    left: 4px;
 }
 .login #buttonenter{
     background-color: #FFE521;
@@ -108,46 +105,41 @@
     padding: 50px 30px;
 }
 
-
-
 /*Data*/
-.containerdata{
-    width: 100%;
-    overflow: hidden;
-}
 
-.menu{
+.main{
     background-color: #b8b8b8;
     color: #000000;
     font-weight: bold;
     text-align: center;
-    width: 180px;
+    width: 193px;
     height: 612px;
     float: left;
-  
 }
 
 .logo{
     background-color: #000000;
     text-align: center;
-    width: 180px;
+    width: 193px;
     height: 62px;
 }
 
 .logo img{
     width: 160px;
     height: 30px;
-    padding-top: 20px;
+    padding-top: 15px;
 }
 
 .image{
     width: 140px;
     margin-top: 20px;
+    margin-bottom: 20px;
     border-radius: 50%;
 }
 
 nav{
     margin-top: 20px;
+    font-size: 18px;
 }
 
 nav a{
@@ -164,39 +156,16 @@ nav .exit{
 
 .title{
     width: 100%;
-    height: 62px; 
+    height: 62px;
     background-color: #FFE521;
 }
 
-.title h2{
-    color: #000000;
-    font-size: 30px;
-    font-weight: bold;
+.title p{
+    font-size: 32px;
+    font-weight: bolder;
     padding-top: 15px;
-    padding-left: 30px;
+    padding-left: 40px;
 }
-
-th, td{
-    padding: 10px 20px;
-}
-
-thead{
-    background-color: #808080;
-    border-bottom: solid 3px #000000 ;
-}
-
-.containerTable{
-    margin-left: 300px;
-    margin-top: 20px;
-}
-
-table{
-    width: 400px;
-    border-collapse: collapse;
-    left: 250px;
-    margin-top: 20px;
-}
-
 
 footer{
     width: 100%;
@@ -213,48 +182,182 @@ footer{
 }
 
 
-/*Sedes*/
+/*ContainerSedes*/
+#containerdata{
+    width: 100%;
+    height: 612px;
+    
+}
+
 .containersedes{
-    /*height: 612px;*/
     overflow: hidden;
 }
-.container2{
+
+
+#imgmap{
     width: 100%;
-}
-
-.imgmapa{
+    height: 550px;
     float: left;
+    background: rgb(241, 241, 241);
 }
 
-.imgmapa img{
-    width: 400px;
+#imgmap img{
+    width: 450px;
     margin-top: 50px;
-    margin-bottom: 50px;
     margin-left: 100px;
+    border: #000000 dashed 1.2px;
 }
 
-.btn-countries{
-    float: right;
-    margin-top: 50px;
-    margin-right: 250px;
-    padding: 50px 50px;
-    border: #000000 2px dotted;
+#btn-sedes{
+    width: 30%;
+    padding: 40px 120px;
     text-align: center;
+    float: right;
+    margin-top: -500px;
 }
 
-.btn-countries h2{
+#btn-sedes h2{
     padding-bottom: 20px;
+    text-align: center;
+    font-weight: bolder;
 }
 
-.btn-countries .buttonLima, .buttonAqp, .buttonSdc, .buttonCdm, .buttonSpl{ 
+#btn-sedes .buttonLima, .buttonAqp, .buttonSdc, .buttonCdm, .buttonSpl{ 
     width: 150px;
     height: 40px;
     background-color: #FFE521;
-    color: #000000;
     font-size: 15px;
     font-weight: bold;;
     border: none;
-    border-radius: 10px;
+    border-radius: 7px;
     cursor: pointer;
 }
+#conteinerCohorts{
+    width: 100%;
+    display: none;
+}
+#cohortsSelected{
+    width: 100%;
+    background: #E3E3E1;
+    height: 550px;
+    overflow-y: scroll;
+}
+#table{
+    width: 100%;
+    height: 550px;
+    overflow-y: scroll;
+}
 
+#cohorts{ 
+    background-color: #ffffff;
+    width: 85%;
+    height: 12%;
+    margin: 30px 100px;
+    border-radius: 10px;
+}
+
+#buttonCohort button{
+    width: 100px;
+    height: 30px;
+    background-color: #FFE521;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+    margin-right: 30px;
+    margin-top: 0px;
+}
+#input{
+    width: 40%;
+    height: 25px;
+    margin-left: 50%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+#filter{
+    width: 70px;
+    height: 25px;
+    background-color: #FFE521;
+    font-size: 17px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+    margin-right: 30px;
+    margin-top: 0px;
+    padding: 5px 5px;
+}
+
+#textCohort{
+    padding: 0px 20px;
+    font-size: 20px;
+}
+/*table css*/
+
+#containerTable{
+    display: none;
+    height: 612px
+}
+.tableUserStats{
+    padding: 1px;
+    width: 100%;
+    height: 550px;
+    overflow-y: scroll;
+}
+
+table {
+
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+
+}
+ thead{
+    width: 100%;   
+ }
+ tbody{
+    width: 100%;  
+ }
+
+.columnName{
+    width: 30%;  
+}
+.columnExercises{
+    width: 15%;
+}
+.columnReads{
+    width: 15%;
+}
+.columnQuizzes{
+    width: 15%;
+}
+.columnGeneral{
+    width: 15%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+
+}
+
+th:nth-child(even){
+    background-color: #ffff;
+}
+th button{
+    background-color: transparent;
+    float: right;
+    margin-right: 10px;
+    border: transparent;
+}
+th button::after{
+    content: url('https://thumb.ibb.co/jZXaWd/sort_arrows_couple_pointing_up_and_down.png');  
+}
+.sortAsc{
+    display: block;
+}
+.sortDesc{
+    display: none;
+}
