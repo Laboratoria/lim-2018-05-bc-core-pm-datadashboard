@@ -1,151 +1,199 @@
-const cohortsSelectedElement = document.getElementById('cohortsSelected');
-const btnLima = document.getElementById("buttonLima");
-const btnArequipa = document.getElementById("buttonAqp");
-const btnChile = document.getElementById("buttonSdc");
-const btnSaoPaulo = document.getElementById("buttonSpl");
-const btnMexico = document.getElementById("buttonCdm");
+const resultCohortElement = document.getElementById('resultado');
+const resultUserElement = document.getElementById('tabla');
+const buttonElement = document.getElementById('boton');
+const buttonElementFiltro = document.getElementById('filtro');
+const inputElement = document.getElementById('input');
+const buttonElementOrdenar = document.getElementById('sort');
 
-const dataCohort = (sede) => {
-    fetch('http://127.0.0.1:5500/data/cohorts.json')
-        .then(response => {
-            return response.json();
-        })
-        .then(json => {
-            const cohort = json;
-            console.log(cohort)
-            for (let i = 0; i < cohort.length; i++) {
-                const cohortId = cohort[i].id;
-
-                const arrIdCohort = cohortId.split('-');
-                console.log(arrIdCohort[0] === sede)
-
-                if (arrIdCohort[0] === sede) {
-                    const cohortContent = document.createElement('div');
-                    const paragraphContent = document.createElement('div');
-                    const paragraph = document.createElement('p');
-                    const buttonContent = document.createElement('div');
-                    const button = document.createElement('button');
-                    const paragraphText = document.createTextNode(cohortId);
-                    const buttonText = document.createTextNode('Entrar');
-
-                    button.dataset.cohort = cohortId;
-                    paragraph.appendChild(paragraphText);
-                    paragraphContent.appendChild(paragraph);
-                    cohortContent.appendChild(paragraphContent);
-
-                    button.appendChild(buttonText);
-                    buttonContent.appendChild(button);
-                    cohortContent.appendChild(buttonContent);
-
-                    cohortsSelectedElement.appendChild(cohortContent);
-
-                    button.id = cohortId;
-                    console.log(cohortId)
-                }
-            }
-        })
-}
-
-const data = (idCohort) => {
-    const dataCohortUrl = 'https://api.laboratoria.la/cohorts/';
-    const dataUserUrl = 'https://api.laboratoria.la/cohorts/' + idCohort + '/users';
-    const dataProgressUrl = 'https://api.laboratoria.la/cohorts/' + idCohort + '/progress';
-
-    fetch(dataCohortUrl).then(response => {
-        const responseCohort = response.json()
-        fetch(dataUserUrl).then(response => {
-            const responseUser = response.json()
-            fetch(dataProgressUrl).then(response => {
-                const responseProgress = response.json()
-                Promise.all([responseCohort, responseUser, responseProgress])
-                    .then(value => {
-
-                        const responseCohortValue = value[0];
-                        const responseUserValue = value[1];
-                        const responseProgressValue = value[2];
-
-                        const cohortSelected = responseCohortValue.filter(value => {
-                            return value.id == idCohort
-                        })
-                        const dataCohortSelected = cohortSelected[0];
-
-                        const courses = Object.keys(dataCohortSelected.coursesIndex);
-
-                        console.log(courses)
-                        const userStudent = user.filter(value => {
-                            return value.role == 'student'
-                        })
+let orderBy = '';
+let orderDirection = '';
+let search = '';
+let idCohort = '';
 
 
-                        const option = {
-                            cohort: courses,
-                            cohortData: {
-                                users: userStudent,
-                                progress: responseProgressValue
-                            },
-                            orderBy: 'asc',
-                            search: 'desc'
-                        }
-                        //console.log(responseCohortValue);
-                        //console.log(responseUserValue);
-                        //console.log(responseProgressValue);
-                        //computeUserStats(responseUserValue,responseProgressValue,courses)
-                        computeUserStats = (users, progress, courses) => {
-                            const userStudent = user.filter(value => {
-                                return value.role == 'student'
-                            })
+const showProcessedData = (resultProcessedData) => {
 
-                            userStudent.map()
 
-                        }
-                    })
-            })
-        })
-    })
+ for (objetUser of resultProcessedData) {
+ const tabla = document.createElement("table");
+ const tblBody = document.createElement("tbody");
+
+ if (objetUser.role === 'student') {
+
+
+ const fila = document.createElement('tr');
+
+ const celda1 = document.createElement("td");
+ const celda2 = document.createElement("td");
+ const celda3 = document.createElement("td");
+ const celda4 = document.createElement("td");
+ const celda5 = document.createElement("td");
+
+
+ const textoCelda1 = document.createTextNode(objetUser.name);
+ celda1.appendChild(textoCelda1);
+
+ const textoCelda2 = document.createTextNode(objetUser.stats.exercises.percent);
+ celda2.appendChild(textoCelda2);
+
+ const textoCelda3 = document.createTextNode(objetUser.stats.reads.percent);
+ celda3.appendChild(textoCelda3);
+
+ const textoCelda4 = document.createTextNode(objetUser.stats.quizzes.percent);
+ celda4.appendChild(textoCelda4);
+
+ const textoCelda5 = document.createTextNode(objetUser.stats.percent);
+ celda5.appendChild(textoCelda5);
+
+
+ tblBody.appendChild(celda1);
+ tblBody.appendChild(celda2);
+ tblBody.appendChild(celda3);
+ tblBody.appendChild(celda4);
+ tblBody.appendChild(celda5);
+ tblBody.appendChild(fila);
+
+ // fila.className('fileClass');
+ }
+
+ tabla.appendChild(tblBody);
+
+ resultUserElement.appendChild(tabla);
+
+ tabla.setAttribute("border", "1");
+ }
+
 };
 
 
-btnLima.addEventListener('click', () => {
-    const valueBtnLima = btnLima.value;
+const data = (idCohort, orderBy, orderDirection, search) => {
 
-    dataCohort(valueBtnLima)
-    document.getElementById('containersedes').style = 'display:none';
-})
+ fetch('https://api.laboratoria.la/cohorts/').then(responseCohort => {
 
-btnArequipa.addEventListener('click', () => {
-    const valueBtnArequipa = btnArequipa.value;
-    dataCohort(valueBtnArequipa)
-    document.getElementById('containersedes').style = 'display:none';
-})
+ fetch('https://api.laboratoria.la/cohorts/' + idCohort + '/users').then(responseUser => {
 
-btnMexico.addEventListener('click', () => {
-    const valueBtnMexico = btnMexico.value;
-    dataCohort(valueBtnMexico)
-    document.getElementById('containersedes').style = 'display:none';
-})
-btnChile.addEventListener('click', () => {
-    const valueBtnChile = btnChile.value;
-    dataCohort(valueBtnChile)
-    document.getElementById('containersedes').style = 'display:none';
-})
-btnSaoPaulo.addEventListener('click', () => {
-    const valueBtnSaoPaulo = btnSaoPaulo.value;
-    dataCohort(valueBtnSaoPaulo)
-    document.getElementById('containersedes').style = 'display:none';
-})
+ fetch('https://api.laboratoria.la/cohorts/' + idCohort + '/progress').then(responseProgress => {
 
-cohortsSelectedElement.addEventListener('click', (event) => {
-    if (event.target.nodeName === "BUTTON") {
-        const idCohort = event.target.id;
-        console.log(event.target.id);
-        resultCohortElement.style.display = 'none'
-        data(idCohort);
-    }
- });
+ Promise.all([responseCohort.json(), responseUser.json(), responseProgress.json()])
+ .then(value => {
+ const responseCohortValue = value[0];
+ const responseUserValue = value[1];
+ const responseProgressValue = value[2];
 
 
-//const redirection = document.getElementById('buttonenter');
-//redirection.addEventListener('click', () => {
- //   window.location = "sedes.html";
-//})
+ console.log(responseCohortValue);
+ console.log(responseUserValue);
+ console.log(responseProgressValue);
 
+ const dataCohortSelected = responseCohortValue.filter(cohort => cohort.id == idCohort)[0];
+ console.log(dataCohortSelected)
+
+ const options = {
+ cohort: dataCohortSelected,
+ cohortData: {
+ users: responseUserValue,
+ progress: responseProgressValue
+ },
+ orderBy: orderBy,
+ orderDirection: orderDirection,
+ search: search
+ };
+
+ const resultProcessedData = processCohortData(options);
+
+ console.log(resultProcessedData)
+
+ showProcessedData(resultProcessedData)
+
+ /*
+ const userStudent = user.filter(value => {
+ return value.role == 'student'
+ })
+ 
+ 
+ }*/
+
+
+ })
+
+ })
+ })
+ })
+};
+
+
+const dataCohort = () => {
+ fetch('https://api.laboratoria.la/cohorts/')
+ .then(response => {
+ return response.json();
+ })
+ .then(json => {
+
+ const cohortJson = json;
+
+ for (let i = 0; i < cohortJson.length; i++) {
+
+ const cohortContent = document.createElement('div');
+ const paragraphContent = document.createElement('div');
+ const buttonContent = document.createElement('div');
+ const paragraph = document.createElement('p');
+ const button = document.createElement('button');
+ const paragraphText = document.createTextNode(cohortJson[i].id);
+ const buttonText = document.createTextNode('Ingresar')
+
+ paragraph.appendChild(paragraphText);
+ paragraphContent.appendChild(paragraph);
+ cohortContent.appendChild(paragraphContent);
+
+ button.appendChild(buttonText);
+ buttonContent.appendChild(button);
+ cohortContent.appendChild(buttonContent);
+
+ resultCohortElement.appendChild(cohortContent);
+ button.id = cohortJson[i].id;
+ }
+ })
+}
+
+
+buttonElement.addEventListener('click', () => { dataCohort(); });
+
+resultCohortElement.addEventListener('click', (event) => {
+
+ if (event.target.nodeName === "BUTTON") {
+ console.log(event);
+
+ idCohort = event.target.id;
+
+ console.log(event.target.id);
+ resultCohortElement.style.display = 'none'
+
+ orderBy = 'name';
+ orderDirection = 'ASC'
+
+ data(idCohort, orderBy, orderDirection, search);
+ }
+});
+
+buttonElementFiltro.addEventListener('click', () => {
+
+ 
+ 
+ orderBy = 'name';
+ orderDirection = 'ASC';
+ search = inputElement.value;
+ resultUserElement.innerHTML = '';
+
+
+ data(idCohort, orderBy, orderDirection, search);
+});
+
+buttonElementOrdenar.addEventListener('click', () => {
+
+ orderBy = 'percent';
+ orderDirection = 'DESC';
+ search = inputElement.value;
+ resultUserElement.innerHTML = '';
+
+ data(idCohort, orderBy, orderDirection, search);
+});
