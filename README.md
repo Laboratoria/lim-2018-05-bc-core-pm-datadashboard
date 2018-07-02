@@ -4,65 +4,106 @@
 Laboratoria Lima
 
 ## 2. Usuarix
+
 Training managers (TMs) de Laboratoria. Son las personas encargadas de analizar
  y evaluar el avance de las alumnas de Laboratoria, para que así puedan preparar una estrategia adecuada para mejorar su aprendizaje. 
 
 ## 3. Definición del problema
+
 Este proyecto busca crear una interfaz que permita que las training managers 
 puedan visualizar y usar la data del progreso de las alumnas con respecto al
 LMS (Learning Management System) de Laboratoria. 
 
 ## 4. Diseño del producto
-Para diseñar el producto, primero se definió el contenido necesario y posteriormente
-funciones que serían un valor agregado para las TM's.
 
-### 4.1. Contenido necesario
+### 4.1. Entrevistas
 
-#### A. Nombre de user (training manager) y sede
+Antes de definir el 'contenido necesario' se realizaron tres entrevistas a la TM de Laboratoria Lima. 
 
-#### B. Progreso general (Dashboard)
+#### 4.1.1.Preguntas
 
-#### C. Pestañas fijas de selección
-* Sede y generación
-* Turno
-#### D. Vista  general (fijo)
-* Cantidad de alumnas
-* Número de cursos
-#### Filtrar por 
-#### Completitud total
-#### Ejercicios 
-* Cantidad total de ejercicios
-* Porcentaje promedio de  ejercicios avanzados por las alumnas
-#### Lecturas
-* Cantidad total de lecturas
-* Porcentaje promedio de  lecturas  avanzados por las alumnas
-#### Quizzes	
-* Cantidad total de quizzes
-* Porcentaje promedio de  quizzes  avanzados por las alumnas
-#### Ordenar por(order direction):
-* Ascendente 
-* Descendente
-#### Por alumna:
-####   Progreso
-* Ejercicios 
-* Cantidad total de ejercicios
-* Cantidad total de ejercicios completados por el usuario
-* Porcentaje total de ejercicios completados por el usuario
-####  Lecturas
-* Cantidad total de lecturas
-* Cantidad total de lecturas completadas por el usuario
-* Porcentaje total de  lecturas completadas por el usuario
-####  Quizzes	
-* Cantidad total de quizzes
-* Cantidad total de quizzes completados por el usuario
-* Porcentaje total de quizzes completados por el usuario
-* Puntaje total: Suma de puntaje de todos los quizzes completados
-* Promedio de puntaje
+#### Primera entrevista (Sketch)
 
-## 4.2. Contenido como valor agregado
-* Elegir tipo de gráfico con el que se visualizará data (barras, línea circular)
-* Ver el progreso de un grupo de alumnas (SQUAD)
-*  Seleccionar periodo de trabajo
+**Motivaciones:** Identificando metas y motivaciones (¿Qué les importa a tus usuarios o  qué los motiva?)
+¿Cuáles son tus metas como T.M.?
+
+**Frustraciones:** Identificando frustraciones (¿Que frustra a tus usuarios?
+
+¿Cómo T.M. tienes alguna necesidad que no está siendo satisfecha? (Perspectiva no digital).
+
+**Interacciones:** Interacción entre negocio y usuario (Ambiente: Dashboard)
+
+¿Qué es interesante acerca de la manera en que tú (como T.M.) interactúas con el Data Dashboard actual?
+
+**RESPUESTA**
+
+* Alejandra indicó que actualemente no cuenta con una interfaz gráfica que le permita ver la data de las alumnas en el LMS. Solo cuenta con una especie de excel. Esto le dificulta ver el avance de las alumnas y en consecuencia, implementa estrategias para mejorar el aprendizaje de ellas.  
+
+#### Segunda entrevista (Prototipo 1)
+* ¿Qué contenido es más importante para ti?
+* ¿Qué dispositivos usas para observar esta información?
+* ¿Qué no te agrada de esta aplicación?
+* ¿Qué mejorarías?
+
+**CONCLUSIONES:**
+* Priorizar el avance de los ejercicios.
+* Crear un iUsa solo laptop, pero le agradaría ver los datos en un dispositivo móvil. 
+* Implementar la opciónd de squads, ya que le parece útil.
+* Eliminar select sede y generación, ya que resulta redundante. Colocar solo sede.
+* Desarrollar opción para usar distintos tipos de gráficos y otra forma de seleccionar squad. 
+
+
+### 4.2. Contenido necesario
+
+Esta lista se elaboró en base a lo mencionado por la TM en las entrevistas realizadas. Es importante aclarar, que no se han habilitado todas las opciones en este proyecto, por temas de tiempo. No obstante, lo mostramos como solución al problema planteado.
+
+#### A. General
+
+Pestaña que contiene la estadística general de las alumnas en cuanto a Ejercicios, lecturas y quizzes. Esta pestaña puede filtrar de acuerdo a cohort que el o la TM solicite.
+Lo ideal es que cuado el usuario ingrese muestre, de manera predefinida, los datos de la sede a la que pertenece. 
+
+
+Posee siguientes criterios de filtrado:
+
+  ##### a.1. Sede y Cohort
+
+  ##### a.2. Turno
+
+  ##### a.3. Muestra
+  * Cantidad de alumnas
+  * Total de cursos
+
+ #### B. Alumnas
+
+ Pestaña que muestra el desempeño de las estudiantes. Brinda más opciones de filtrado y brinda la opción de ver la data de de cada usuario por separado. 
+
+  Contiene los siguientes criterios de filtrado:
+
+  ##### b.1. Filtrado por
+
+  * Completitud total
+  * Ejercicios
+  * Lecturas
+  * Quizzes
+
+  ##### b.2. Ordenar en
+
+  * Descendente
+  * Ascendente
+
+ #### C.Curso
+
+ Ofrece detalles sobre cursos (unidades, avance)
+
+ #### D.Squad (contenido brinda valor agregado)
+
+ Como su nombre lo dice, ofrece la posibilidad de organizar a las alumnas por squads. Dado que los equipos cambian constantemente, no se han asignado grupos de forma predeterminada, el usuario podrá organizarlos dándole un número(de equipo) a cada alumna.Por ejemplo: Asignan a Ana y Juana con el número 2, y María y Luisa número 1. Al hacer clic en 'ver resultados' aparecerán dos cuadros: estadísticas del squad 1 y 2.
+
+
+### 4.3. Contenido como valor agregado
+
+* Ver el progreso de un grupo de alumnas (SQUAD).
+*  Seleccionar periodo de trabajo (calendario).
 * Exportar  informe en PDF
 
 ## 7. Prototipado
@@ -85,15 +126,34 @@ cierto dinamismo, que simula la interación con el usuario.
 
 Pueden ver el avance [AQUÍ](https://marvelapp.com/177cdbf6/screen/44209192)
 
+### Tercer Prototipo
+![login](https://user-images.githubusercontent.com/39272944/42144312-096dfbaa-7d80-11e8-9457-a441c6fecd86.png)
+
+![Cargando](https://user-images.githubusercontent.com/39272944/42144325-1528c24a-7d80-11e8-8f46-ea84fb8eb5ca.png)
+
+![Menú](https://user-images.githubusercontent.com/39272944/42144339-242cbdaa-7d80-11e8-9966-d767caeb80dc.png)
+
+
+![Gral](https://user-images.githubusercontent.com/39272944/42144374-55c9c970-7d80-11e8-84b7-e0d64e7ea11d.png)
+
+
+![Estudiantes](https://user-images.githubusercontent.com/39272944/42144359-390e8d48-7d80-11e8-9bf3-9a1b1a84d97f.png)
+
+
+![Estudiantes 2](https://user-images.githubusercontent.com/39272944/42144411-82c6e4f8-7d80-11e8-9b58-74e033095622.png)
+
+![Estudiantes 3](https://user-images.githubusercontent.com/39272944/42144427-92a0ab98-7d80-11e8-93d1-0cfda2415263.png)
+
+
+![Squad](https://user-images.githubusercontent.com/39272944/42144442-a7a22972-7d80-11e8-9bda-a5f825303592.png)
+
+![Resultado squad](https://user-images.githubusercontent.com/39272944/42144450-b5fcb74e-7d80-11e8-9dbd-56dfdd44b33e.png)
+
 ## 5. Desarrollo del producto
 
 Para entender a plenitud el proyecto(funciones y procesos) se graficó el flujo que se muestra a continuación:
 
 ![mendoza y silva _ flujo funciones](https://user-images.githubusercontent.com/39272944/41561243-f9b8a17c-730e-11e8-81cb-75d921d16891.jpg)
-
-
-
-
 
 
 
