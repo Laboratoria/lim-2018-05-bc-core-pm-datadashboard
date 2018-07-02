@@ -148,7 +148,7 @@ const showInfo = (cohorts) => {
 const showStudent = (users) => {
       users = users.filter(users => users.role === 'student')
       for (user of users) {
-            let containerStudent = document.createElement('div');
+            let containerStudent = document.createElement('article');
             let photoStudent = document.createElement('img');
             let nameStudent = document.createElement('h6');
             let img = 'img/girl.png';
@@ -177,5 +177,6 @@ btnGeneral.addEventListener('click', () => {
 
 btnProgress.addEventListener('click', () => {
       menuStudent.style.display = 'none';
+      menuGeneral.style.display = 'none';
       menuProgress.style.display = 'block';
 })
