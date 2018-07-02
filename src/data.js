@@ -1,3 +1,4 @@
+
 window.computeUsersStats = (users, progress, courses) => {
   let stats;
   let statsPercent = 0;
@@ -114,6 +115,7 @@ window.computeUsersStats = (users, progress, courses) => {
       })
       return usersWithStats;
     })
+
 };
 
 //Creando la funcion sortUsers
@@ -159,31 +161,7 @@ window.sortUsers = (users, orderBy, orderDirection) => {
     }
   }
 
-  if (orderBy === 'Porcentaje de Quizzes completados') {
-    if (orderDirection === 'ASC') {
-      sorted = users.sort((a, b) => {
-        a.stats.quizzes.percent - b.stats.quizzes.percent
-      })
-    }
-    if (orderDirection === 'DESC') {
-      sorted = users.sort((a, b) => {
-        a.stats.quizzes.percent - b.stats.quizzes.percent
-      }).reverse();
-    }
-  }
 
-  if (orderBy === 'Puntuacion Promedio de Quizzes completados') {
-    if (orderDirection === 'ASC') {
-      sorted = users.sort((a, b) => {
-        a.stats.quizzes.scoreAvg - b.stats.quizzes.scoreAvg
-      })
-    }
-    if (orderDirection === 'DESC') {
-      sorted = users.sort((a, b) => {
-        a.stats.quizzes.scoreAvg - b.stats.quizzes.scoreAvg
-      }).reverse();
-    }
-  }
 
   if (orderBy === 'Porcentaje de lecturas completados') {
     if (orderDirection === 'ASC') {
