@@ -3,7 +3,7 @@ function validar() {
   let password = document.getElementById('password').value;
 
   if (usuario === 'alejandra' && password === 'admin') {
-    window.location='index.html';
+    return window.location='index.html'
   }
   else {
     alert ('Verifique sus datos');

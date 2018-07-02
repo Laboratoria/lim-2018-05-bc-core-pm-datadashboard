@@ -170,9 +170,9 @@ img.banner-logo {
     height: 85%;
     position: absolute;
 }
-.sede-fila {
+/* .sede-fila {
     background-color: aquamarine;
-}
+} */
 .menu-proceso {
     background-color: lightcyan;
     margin: 0px;
@@ -190,7 +190,7 @@ img.banner-logo {
     width: 98%;
 }
 
-/* div {
+div {
     width: 30%;
     margin: 10px;
     padding: 10px;
@@ -199,7 +199,7 @@ img.banner-logo {
     border: 0.5px solid #666666;
     display: inline-block;
     box-sizing: border-box;
-} */
+}
 p {
     font-size: 12px;
 }
