@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="utf-8">
   <title>Data Dashboard</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
   <section>
     <aside class="side-dashboard">
@@ -49,7 +47,6 @@
             <button id="sedeSaoPaulo" class="button-sede">Sao Paulo</button>
           </section>
         </section>
-
         <section id="menuPromo" class="menu-promo" style="display: none;">
           <section id="sedeDetalles">
             <h2>Selecciona el año y la Promocion</h2>
@@ -59,7 +56,6 @@
             <img class="img-promo" src="img/promo.png">
           </section>
         </section>
-
         <section id="menuGeneral" class="menu-general" style="display: none">
           <h3>Proceso General</h3>
           <section id="menuProceso" class="menu-proceso">
@@ -70,15 +66,12 @@
           <section id="menuGrafico">
           </section>
         </section>
-
         <section id="menuProgress" class="menu-student" style="display: none">
           <h3>Progreso de Alumnas</h3>
           <section class="details-student">
             <h4>Opciones</h4>
-
             <label>Buscar</label>
             <input id="searchUser" type="text">
-
             <label>Filtrar por:</label>
             <select id="orderBy">
               <option value="nameUser">Nombre</option>
@@ -88,34 +81,28 @@
               <option value="quizzScore">Puntuacion Promedio de Quizzes completados</option>
               <option value="readsPercent">Porcentaje de lecturas completados</option>
             </select>
-
             <label>Ordenar por:</label>
             <select id="orderDirection">
               <option value="ASC">Ascendente</option>
               <option value="DESC">Descendente</option>
             </select>
-
             <button id="btnSort">Ordenar</button>
           </section>
-
           <section id="infoStudent">
             <table id="tableStudent">
             </table>
           </section>
         </section>
-
         <section id="menuStudent" style="display: none">
           <h3>Listado de Alumna</h3>
           <div id="studentContainer" class="student-container">
           </div>
         </section>
       </section>
-
     </section>
   </section>
   <script src="login.js"></script>
   <script src="data.js"></script>
   <script src="main.js"></script>
 </body>
-
 </html>

@@ -178,4 +178,5 @@ btnGeneral.addEventListener('click', () => {
 btnProgress.addEventListener('click', () => {
       menuStudent.style.display = 'none';
       menuProgress.style.display = 'block';
-})
+})s
+ 
