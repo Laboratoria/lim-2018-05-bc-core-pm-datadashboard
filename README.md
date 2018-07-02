@@ -127,14 +127,8 @@ cierto dinamismo, que simula la interación con el usuario.
 Pueden ver el avance [AQUÍ](https://marvelapp.com/177cdbf6/screen/44209192)
 
 ### Prototipo ideal
-Login
-![login](https://user-images.githubusercontent.com/39272944/42144312-096dfbaa-7d80-11e8-9457-a441c6fecd86.png)
 
-Bienvenida
-![Cargando](https://user-images.githubusercontent.com/39272944/42144325-1528c24a-7d80-11e8-8f46-ea84fb8eb5ca.png)
-
-Menú
-![Menú](https://user-images.githubusercontent.com/39272944/42144339-242cbdaa-7d80-11e8-9966-d767caeb80dc.png)
+Este prototipo se desarrolló con las recomendaciones dadas por Alejandra. Pueden ver el desarrollo completo del mismo [AQUÍ](https://www.figma.com/proto/bV4vyCBlhShlAh9yqVelot/Data-dashboard-III?scaling=min-zoom&node-id=61%3A415)
 
 Datos generales (salón)
 ![Gral](https://user-images.githubusercontent.com/39272944/42144750-783e9a10-7d82-11e8-8774-4ae119b6fdf7.png)
