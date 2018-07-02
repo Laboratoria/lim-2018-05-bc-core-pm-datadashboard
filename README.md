@@ -16,42 +16,41 @@ LMS (Learning Management System) de Laboratoria.
 
 ## 4. Diseño del producto
 
-### 4.1. Entrevistas
+  ### 4.1. Entrevistas
 
-Antes de definir el 'contenido necesario' se realizaron tres entrevistas a la TM de Laboratoria Lima. 
+      Antes de definir el 'contenido necesario' se realizaron tres entrevistas a la TM de Laboratoria Lima. 
 
-#### 4.1.1.Preguntas
+      #### 4.1.1.Preguntas
 
-#### Primera entrevista (Sketch)
+      #### Primera entrevista (Sketch)
 
-**Motivaciones:** Identificando metas y motivaciones (¿Qué les importa a tus usuarios o  qué los motiva?)
-¿Cuáles son tus metas como T.M.?
+      **Motivaciones:** Identificando metas y motivaciones (¿Qué les importa a tus usuarios o  qué los motiva?)
+      ¿Cuáles son tus metas como T.M.?
 
-**Frustraciones:** Identificando frustraciones (¿Que frustra a tus usuarios?
+      **Frustraciones:** Identificando frustraciones (¿Que frustra a tus usuarios?
 
-¿Cómo T.M. tienes alguna necesidad que no está siendo satisfecha? (Perspectiva no digital).
+      ¿Cómo T.M. tienes alguna necesidad que no está siendo satisfecha? (Perspectiva no digital).
 
-**Interacciones:** Interacción entre negocio y usuario (Ambiente: Dashboard)
+      **Interacciones:** Interacción entre negocio y usuario (Ambiente: Dashboard)
 
-¿Qué es interesante acerca de la manera en que tú (como T.M.) interactúas con el Data Dashboard actual?
+      ¿Qué es interesante acerca de la manera en que tú (como T.M.) interactúas con el Data Dashboard actual?
 
-**RESPUESTA**
+      **RESPUESTA**
 
-* Alejandra indicó que actualemente no cuenta con una interfaz gráfica que le permita ver la data de las alumnas en el LMS. Solo cuenta con una especie de excel. Esto le dificulta ver el avance de las alumnas y en consecuencia, implementa estrategias para mejorar el aprendizaje de ellas.  
+      * Alejandra indicó que actualemente no cuenta con una interfaz gráfica que le permita ver la data de las alumnas en el LMS. Solo cuenta con una especie de excel. Esto le dificulta ver el avance de las alumnas y en consecuencia, implementa estrategias para mejorar el aprendizaje de ellas.  
 
-#### Segunda entrevista (Prototipo 1)
-* ¿Qué contenido es más importante para ti?
-* ¿Qué dispositivos usas para observar esta información?
-* ¿Qué no te agrada de esta aplicación?
-* ¿Qué mejorarías?
+  #### Segunda entrevista (Prototipo 1)
+      * ¿Qué contenido es más importante para ti?
+      * ¿Qué dispositivos usas para observar esta información?
+      * ¿Qué no te agrada de esta aplicación?
+      * ¿Qué mejorarías?
 
-**CONCLUSIONES:**
-* Priorizar el avance de los ejercicios.
-* Crear un iUsa solo laptop, pero le agradaría ver los datos en un dispositivo móvil. 
-* Implementar la opciónd de squads, ya que le parece útil.
-* Eliminar select sede y generación, ya que resulta redundante. Colocar solo sede.
-* Desarrollar opción para usar distintos tipos de gráficos y otra forma de seleccionar squad. 
-
+      **CONCLUSIONES:**
+      * Priorizar el avance de los ejercicios.
+      * Crear un iUsa solo laptop, pero le agradaría ver los datos en un dispositivo móvil. 
+      * Implementar la opciónd de squads, ya que le parece útil.
+      * Eliminar select sede y generación, ya que resulta redundante. Colocar solo sede.
+      * Desarrollar opción para usar distintos tipos de gráficos y otra forma de seleccionar squad. 
 
 ### 4.2. Contenido necesario
 
