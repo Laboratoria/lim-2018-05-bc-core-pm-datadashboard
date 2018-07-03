@@ -43,7 +43,7 @@ header img {
 
 
 h2 {
-    font-size: 16px;
+    font-size: 15%;
     font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
     display: flex;      
     padding-top: 8px;
@@ -51,6 +51,10 @@ h2 {
     vertical-align: center;
 }
 
+p {
+    font-size: 12px;
+    font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
+}
 
 nav {
     position: absolute;
@@ -235,10 +239,10 @@ main p {
         
     }
 
-    h2{
+    /* h2{
         font-size: 16px;
         padding-left: 25px;
-    }
+    } */
 
     nav {        
         width: 20%;
@@ -251,9 +255,7 @@ main p {
         background: white;
         height: 80px;
         border-radius: 0;
-        display: block;
-
-       
+        display: block;  
     }
     
     #laboratoria img{
@@ -278,13 +280,18 @@ main p {
 
 
     nav section h2 {
+        margin: 5px;
         
-        padding-top: 0;
-        padding-left: 24%;
-        font-size: 100%;
+        /* padding-top: 0; */
+        /* padding-left: 10px; */
+        font-size: 16px;
     }
 
-
+    p {
+        font-size: 12px;
+        font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
+        text-align: center;
+    }
     
     .logo-content {
         width: 99.5%;
@@ -356,4 +363,4 @@ main p {
 } */
 /* p {
     font-size: 12px;
-} */
+} */ */
