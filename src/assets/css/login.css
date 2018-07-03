@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Bitter');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+.containerLogin {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 320px;
+    border-radius: 5px;
+    border: 10px solid rgba(255, 255, 255, .2);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, .5);
+}
+.imgLab {
+    float: left;
+    width: 250px;
+    height: 320px;
+    overflow: hidden;
+}
+.imgLab img {
+    width: 100%;
+    height: 100%;
+}
+
+.loginLab {
+    float: right;
+    width: 250px;
+    height: 320px;
+    box-sizing: border-box;
+    padding: 50px;
+    background: rgba(255, 255, 255, .8);
+    font-family: 'Bitter', serif;
+}
+.form-log {
+    margin: auto;
+    padding: auto;
+}
+
+.imgLogo img {
+    margin: auto;
+    padding: 10px;
+}
+
+.loginLab input {
+    width: 100%;
+    margin-bottom: 0px 20px;
+    margin: 10px;
+}
+.loginLab input[type="text"], .loginLab input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #262626;
+    outline: none;
+    height: 35px;
+    color: #262626;
+    background: transparent;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+::placeholder {
+    color: rgba(0, 0, 0, .5);
+}
+.inputLab {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
+.inputLab span {
+    position: absolute;
+    top: 25px;
+    left: -15px;
+    color: #262626;
+}
+
+.loginLab input[type="button"] {
+    border: none;
+    outline: none;
+    height: 30px;
+    font-size: 10px;
+    background: #ffc107;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.loginLab a {
+    color: #262626;
+    font-size: 10px;
+    text-decoration: none;
+    margin: auto;
+    padding: 10px;
+}

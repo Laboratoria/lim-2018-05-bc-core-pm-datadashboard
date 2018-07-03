@@ -51,6 +51,10 @@ h2 {
     vertical-align: center;
 }
 
+p {
+    font-size: 12px;
+    font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
+}
 
 nav {
     position: absolute;
@@ -72,17 +76,14 @@ nav section { /*Ale*/
     margin: 0;
     display: fixed;
 
-    padding-left: 60px;
 }
 
-.user-tm {
-    width: 150px;
+nav section img {
+    width: 60%;
     height: auto;
-    padding-top: 20px;
-    
-  
+    padding: 7% 20% 5%; 
     position: block;
-    border-radius: 50%;
+    border-radius: 100%;
 }
 
 hr {
@@ -238,10 +239,10 @@ main p {
         
     }
 
-    h2{
-        font-size: 150%;
+    /* h2{
+        font-size: 16px;
         padding-left: 25px;
-    }
+    } */
 
     nav {        
         width: 20%;
@@ -254,9 +255,7 @@ main p {
         background: white;
         height: 80px;
         border-radius: 0;
-        display: block;
-
-       
+        display: block;  
     }
     
     #laboratoria img{
@@ -274,20 +273,25 @@ main p {
     }
 
     nav section img { /*Ale*/
-        width: 50%;
+        width: 70px;
         height: auto;
         padding: 5% 25% 5%; 
     }
 
 
     nav section h2 {
+        margin: 5px;
         
-        padding-top: 0;
-        padding-left: 24%;
-        font-size: 100%;
+        /* padding-top: 0; */
+        /* padding-left: 10px; */
+        font-size: 16px;
     }
 
-
+    p {
+        font-size: 12px;
+        font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
+        text-align: center;
+    }
     
     .logo-content {
         width: 99.5%;
@@ -324,39 +328,3 @@ main p {
  
 
 }
-
-/* <<<<<<< HEAD
-/* .sede-fila {
-    background-color: aquamarine;
-} */
-/* .menu-proceso {
-    background-color: lightcyan;
-    margin: 0px;
-    padding: 5px;
-}
-.num-alumnas, .num-cursos, .details-student{
-    background-color: rgb(212, 214, 214);
-    border-radius: 2px;
-    margin: 5px;
-    padding: 5px;
-    display: inline-block;
-}
-.student-container {
-    background-color: rgb(212, 214, 214);
-    width: 98%;
-}
-
-/* article {
-    width: 30%;
-    margin: 10px;
-    padding: 10px;
-    background-color: #fafafa;
-    
-    border-radius: 5px;
-    border: 0.5px solid #666666;
-    display: inline-block;
-    box-sizing: border-box;
-} */
-/* p {
-    font-size: 12px;
-} */
