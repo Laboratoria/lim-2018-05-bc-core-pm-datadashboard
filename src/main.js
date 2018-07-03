@@ -1,34 +1,52 @@
-const sedeCohort = document.getElementById('sede');
-fetch('../data/cohorts.json')
-  .then(response => response.json())
-  .then(json => {
-    const sedes = json;
-    // console.log(sedes.length);
-    for (let i = 0; i < sedes.length; i++) {
-      const optionElements = document.createElement('option');
-      const contenidoOption = document.createTextNode(sedes[i].id);
-      optionElements.appendChild(contenidoOption);
-      console.log(sedes[i].id);
-      sedeCohort.appendChild(optionElements);
-      sedeCohort.setAttribute('value', sedes[i].id);
-    }
-  })
-  .catch((err) => {
-    console.error(err);
-  });
+// -----MENU DESPLEGABLE-----
+let menuButton = document.getElementById('btn-menu'),
+    menuGeneral = document.getElementById('btn-gral'),
+    menuStudents = document.getElementById('btn-students'),
+    menuCourses = document.getElementById('btn-couses'),
+    menuSquads = document.getElementById('btn-squads');
 
-  // sedeCohort.addEventListener("change", (e) => {
-  //   if (e.target.value === 'lim-2018-03-pre-core-pw') {
-  //     fetch ('../data/cohorts/lim-2018-03-pre-core-pw/users.json')
-  //     .then(response => response.json())
-  //     .then(json => {
-  //       const usersStudents = json;
-  //       console.log(usersStudents.length);
-  //       for (let i = 0; i < usersStudents.length; i++){
-  //         const p = document.createElement('p');
-  //         p.innerText = usersStudents[i].name;
-  //         listStudent.appendChild(p);
-  //       }
-  //     })
-  //   }
-  // })
+const showMenu = () => {
+    let menu = document.getElementById('menu');
+    if(menu.classList.contains('hidden-menu')){
+        // console.log('aquí estoy');
+        menu.classList.remove('hidden-menu');
+        menu.classList.add('show-menu');
+    }
+    else{
+        // console.log('NO toy');
+        menu.classList.remove('show-menu');
+        menu.classList.add('hidden-menu');
+    }    
+}
+menuButton.addEventListener('click', showMenu); 
+
+// -----GENERAL-----
+
+const showGeneral = () => {
+    console.log('Muestra general');
+}
+
+menuGeneral.addEventListener('click', showGeneral);
+
+// -----ESTUDIANTES-----
+const showStudents = () => {
+    console.log('Aquí alumnas');
+}
+
+menuStudents.addEventListener('click', showStudents);
+
+// -----CURSOS-----
+
+const showCourses = () => {
+    console.log('Los cursos van aquí');
+}
+
+menuCourses.addEventListener('click', showCourses);
+
+// -----SQUADS-----
+
+const showSquads = () => {
+    console.log('Aquí irían los squads');
+}
+
+menuSquads.addEventListener('click', showSquads);

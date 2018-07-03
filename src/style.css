@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 body {
-    margin: 0;
     padding: 0;
+<<<<<<< HEAD
     background-color: white;
 }
 
@@ -18,3 +18,327 @@ aside{
 asideh
 
 
+=======
+    margin: 0;
+    
+}
+/*--MOBILE--*/
+/*--Menu--*/
+header {
+    width: 140%;
+    height: 80px;
+    display: flex;
+}
+
+#btn-menu{
+    display: none;
+    background: #FFE521;
+}
+
+header label {
+    width: 20%;
+    height: auto;
+    display: flex;
+    align-content: center;
+    vertical-align: center;
+    
+}
+
+.cuerpo-contenedor {
+    width: 85%;
+    text-align: center;
+    height: auto; 
+    background: #FFE521;
+    float: right;
+}
+
+header img {
+    width: 70%;
+    height: auto; 
+    margin: auto;
+}
+
+
+h2 {
+    font-size: 150%;
+    font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
+    display: flex;      
+    padding-top: 8px;
+    padding-left: 20px;
+    vertical-align: center;
+}
+
+
+nav {
+    position: absolute;
+    background-color: white;
+    width: 90%;
+    height: 130%;    
+    transition: all 0.5s;
+}
+
+#laboratoria {
+    display: none;
+}
+
+
+nav section { /*Ale*/
+    background: #FFE521;
+    height: 38%;
+    width: auto;
+    margin: 0;
+    display: fixed;
+
+}
+
+nav section img {
+    width: 60%;
+    height: auto;
+    padding: 7% 20% 5%; 
+    position: block;
+    border-radius: 100%;
+}
+
+hr {
+    margin: 0;
+}
+nav section h2 {
+    margin: auto;
+    text-align: center;
+    padding-top: 0%;
+    padding-left: 26%;
+    font-size: 19px;
+}
+
+ul {
+    
+    list-style:none;
+    padding-left: 0;
+    margin: 0;
+   
+}
+
+.logo-content {
+    height: 15%;
+    display: flex;    
+    background: white;
+    padding: 2px;
+    
+
+}
+
+
+.logo-content:hover {
+    cursor: pointer;
+    background: rgba(255, 229, 33, 1) 
+}
+
+.logo {
+    width: 120%;
+    float: left;
+}
+
+li {
+    font-size: 100%;
+    font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
+    padding-top: 25px;
+    padding-left: 5px;
+}
+
+.show-menu {
+    margin-left: 0%;    
+}
+
+.hidden-menu {
+    margin-left: -90%;
+}
+
+/*--CUERPO--*/
+
+main {
+    background: orange;
+    margin: 0%;
+    width: 140%;
+    height: 100%;    
+    
+}
+
+main p {
+    margin: 0%;
+
+}
+
+/* ----------------------------TABLET--------------------------- */
+@media screen and (min-width: 768px) and  (max-width: 799px) {
+    header {
+        height: 100px;
+    }
+
+
+
+    header label img{
+        width: 50%;
+        height: auto;
+    }
+
+    nav {
+        height: 130%;
+    }
+    nav section { /*Ale*/
+        height: 45%;
+        padding-left: 8%;
+    }
+
+
+
+    nav section img {
+        padding: 7% 18% 5%; 
+            
+    }
+
+    nav section h2 {
+        font-size: 220%;
+        text-align: center;
+    
+    }
+
+    .logo-content {
+        height: 180px;
+
+    }
+
+    .logo-content:hover {
+        cursor: pointer;
+        background: rgba(255, 229, 33, 1) 
+    }
+    
+    .logo-content figure {
+        height: 180px;
+        padding-left: 80px;
+
+    }
+
+    .logo {
+        width: 220%;
+        height: auto;
+        
+    }
+
+    li {
+        font-size: 40px;
+        padding-left: 20%;
+    }
+
+
+}
+
+/* ----------------------------PANTALLA PC---------------------------- */
+
+@media screen and (min-width: 800px) {
+
+    .hidden-menu {
+        margin-left: 0%;
+    }
+
+    header {
+        
+        width: 80%;
+        height: 80px;
+        float: right;
+    }
+    
+    header label {
+        display: none;
+        width: 15%;
+        
+    }
+
+    h2{
+        font-size: 150%;
+        padding-left: 25px;
+    }
+
+    nav {        
+        width: 20%;
+        height: 100%;
+        margin: 0;
+        
+    }
+
+    #laboratoria {
+        background: white;
+        height: 80px;
+        border-radius: 0;
+        display: block;
+
+       
+    }
+    
+    #laboratoria img{
+        width: 90%;
+        height: auto;
+        border-radius: 0%;
+        padding-left: 5%;
+        padding-top: 10%;
+    
+    }
+
+    nav section {
+        height: 38%;
+        
+    }
+
+    nav section img { /*Ale*/
+        width: 60%;
+        height: auto;
+        padding: 5% 19% 5%; 
+    }
+
+
+    nav section h2 {
+        
+        padding-top: 0;
+        padding-left: 24%;
+        font-size: 100%;
+    }
+
+
+    
+    .logo-content {
+        width: 99.5%;
+        height: 15.5%;
+        display: flex;
+        
+        padding-left: 0px;
+        padding-top: 20px;
+    }
+
+    .logo {
+       width: 40px;
+       height: auto;
+       float: right;
+       
+    }
+
+    li {
+        font-size: 70%;       
+        padding-left: 0;
+        padding-top: 30px;
+    }
+
+    .cuerpo-contenedor {
+        width: 100%;
+        float: inherit;
+    }
+   
+    main {
+        width:80%;         
+        height: 100px;
+        float: right;
+    }
+ 
+
+}
+
+
+>>>>>>> d0d28981b7c80f080d4bdff62c90c55015ed6a96
