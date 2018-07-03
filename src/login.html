@@ -4,40 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laboratoria Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/login.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
 </head>
+
 <body>
-    <div class="containerLogin">
+    <section class="containerLogin">
         <div class="imgLab">
-            <img src="img/imgLab.jpg">
+            <img src="assets/img/imgLab.jpg">
         </div>
-        <div class="loginLab">
+        <section class="loginLab">
             <div class="imgLogo">
-                <h3>
-                    <img src="img/logo.svg">
-                </h3>
+                    <img src="assets/img/logo.svg">
             </div>
-            <form>
-                <div class="inputLab">
-                    <input type="text" id="email" placeholder="Email">
+            <form class="form-log">
+                <section class="inputLab">
+                    <input id="email" type="text"  placeholder="Email">
                     <span>
                         <i class="fas fa-user-circle" aria-hidden="true"></i>
                     </span>
-                </div>
-                <div class="inputLab">
-                    <input id="password" name="password" type="password">
+                </section>
+                <section class="inputLab">
+                    <input id="password" type="password" placeholder="Password">
                     <span>
                         <i class="fas fa-lock" aria-hidden="true"></i>
                     </span>
-                </div>
+                </section>
                 <input id="btnIngresar" type="button" value="INICIAR SESIÓN" onclick="validar()">
                 <a href="#">Restaurar Contraseña</a>
             </form>
-        </div>
-    </div>
-    <script src="login.js"></script>
-    <script src="data.js"></script>
-    <script src="main.js"></script>
+        </section>
+    </section>
+    <script src="assets/js/login.js"></script>
 </body>
-</html>s
+
+</html>
