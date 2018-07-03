@@ -43,7 +43,7 @@ header img {
 
 
 h2 {
-    font-size: 15%;
+    font-size: 16px;
     font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
     display: flex;      
     padding-top: 8px;
@@ -72,17 +72,14 @@ nav section { /*Ale*/
     margin: 0;
     display: fixed;
 
-    padding-left: 60px;
 }
 
-.user-tm {
-    width: 150px;
+nav section img {
+    width: 60%;
     height: auto;
-    padding-top: 20px;
-    
-  
+    padding: 7% 20% 5%; 
     position: block;
-    border-radius: 50%;
+    border-radius: 100%;
 }
 
 hr {
@@ -239,7 +236,7 @@ main p {
     }
 
     h2{
-        font-size: 150%;
+        font-size: 16px;
         padding-left: 25px;
     }
 
@@ -274,7 +271,7 @@ main p {
     }
 
     nav section img { /*Ale*/
-        width: 50%;
+        width: 70px;
         height: auto;
         padding: 5% 25% 5%; 
     }
