@@ -41,9 +41,35 @@
       
     </section>
     <section id="pageOne">
-     <div class="selectCo">
+      <div>
+        <h4>Seleccione Campus:</h4>
+        <select id="selectCampuses">
+          <option value="">Seleccione</option>
+          
+        </select>
+      </div>
+      <div class="selectCo">
         <h4>Seleccione Cohort:</h4>
-        <select name="" id="cohorts" ></select>
+        <select id="cohorts" >
+          <option value="">Seleccione</option>
+        </select>
+        <input id="search" type="text" placeholder="Buscar estudiante..." >
+        <select id="orden">
+          <option value="">Seleccione ordenar por ..</option>
+          <option value="">Nombre</option>
+          <option value="">Porcentaje de completitud total</option>
+          <option value="">Porcentaje de ejercicios autocorregidos completados</option>
+          <option value="">Porcentaje de quizzes completados</option>   
+          <option value="">Puntuación promedio en quizzes completados</option>  
+          <option value="">Porcentaje de lecturas completadas</option>
+        </select>
+
+        <select id="direction">
+            <option value="ASC">Ascendente</option>
+            <option value="DESC">Descendente</option>
+        </select>
+        <button id="btnOrder">OK</button>
+        
         
 
         

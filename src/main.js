@@ -61,51 +61,124 @@ function register(){
 
 
 const getData = (process) => {
-  fetch ('https://api.laboratoria.la/cohorts')
-  .then (resCohorts=>
-    fetch ('https://api.laboratoria.la/cohorts/lim-2018-03-pre-core-pw/users')
-    .then (resUsers=> 
-      fetch ('https://api.laboratoria.la/cohorts/lim-2018-03-pre-core-pw/users')
-      .then (resProgress=>
-        Promise.all([ resCohorts.json(), resUsers.json(), resProgress.json()])
-        .then(data =>process(data))
+  fetch('https://api.laboratoria.la/campuses')
+  .then(resCampuses=>
+   fetch ('https://api.laboratoria.la/cohorts')
+   .then (resCohorts=>
+     fetch ('https://api.laboratoria.la/cohorts/lim-2018-03-pre-core-pw/users')
+     .then (resUsers=> 
+       fetch ('https://api.laboratoria.la/cohorts/lim-2018-03-pre-core-pw/users')
+       .then (resProgress=>
+         Promise.all([resCampuses.json(), resCohorts.json(), resUsers.json(), resProgress.json()])
+         .then(data =>process(data))
+        )
       )
     )
   )
 }
+let selectCampuses=document.getElementById('selectCampuses');
 let selection = document.getElementById('cohorts');
 let listauser = document.getElementById('lista');
-getData( (data) =>{
-  //arreglo de objetos del archivo cohorts 
- const dataCohorts=data[0];
- //arreglo de objetos del archivo lim-201-03-pre-core-pw(users)
- const dataUsers=data[1];
- //objeto del archivo lim-201-03-pre-core-pw(progress)
- const dataProgress=data[2];
+let searchInput=document.getElementById('searchInput');
+let order=document.getElementById('order');
+let direction=document.getElementById('direction');
+let btnOrder=document.getElementById('btnOrder');
 
-  //arreglo cohorts
-  const cohorts=dataCohorts.map(cohort=>cohort.id);
-  //mostrando la lista de cohorts 
-  cohorts.forEach(cohort=>{
-    selection.innerHTML+=`<option value=${cohort}>${cohort}</option>`
-  }); 
+
+
+getData( (data) =>{
+  //data campuses
+ const dataCampuses=data[0];
+  //arreglo de objetos del archivo cohorts 
+ const dataCohorts=data[1];
+ //arreglo de objetos del archivo lim-201-03-pre-core-pw(users)
+ const dataUsers=data[2];
+ //objeto del archivo lim-201-03-pre-core-pw(progress)
+ const dataProgress=data[3];
+ //campuses
+ dataCampuses.forEach((campuses)=>{
+   selectCampuses.innerHTML+=`<option value=${campuses.id}>${campuses.id}</option>`
+ });
+
+ //select campuses
+ selectCampuses.addEventListener('change', () => {
+   if (selectCampuses.value === 'lim') {
+     for (let i = 0; i < values[1].length; i++) {
+       if (values[1][i].id.substr(0, 3) === 'lim') {
+         const optionElements = document.createElement('option');
+         const contenidoOption = document.createTextNode(values[1][i].id);
+         optionElements.appendChild(contenidoOption);
+         listCohorts.appendChild(optionElements);
+      }
+    }
+  }
+ })
+
+
   
-  selection.addEventListener('change',selected);
+  //mostrando la lista de cohorts 
+  dataCohorts.forEach(cohort=>{
+    selection.innerHTML+=`<option value=${cohort.id}>${cohort.id}</option>`
+  }); 
+});  
+
+selection.addEventListener('change',selected);
   //mostrando lista de estudiantes
-  function selected(){
+function selected(){
+  getData((data)=>{
+     //arreglo de objetos del archivo cohorts 
+    const dataCohorts=data[1];
+   //arreglo de objetos del archivo lim-201-03-pre-core-pw(users)
+    const dataUsers=data[2];
+   //objeto del archivo lim-201-03-pre-core-pw(progress)
+    const dataProgress=data[3];
+    let cohortSelected=dataCohorts.filter(function( cohort ) {
+      return cohort.id == selection.value;
+    });
+    
+    let usersOfCohortSelected=dataUsers.filter(function( users ) {
+      return users.signupCohort == selection.value;
+    });
+
+    let studentSelected=usersOfCohortSelected.filter(function( user ) {
+      return user.role === 'student';
+
+    });
+    //console.log(usersGeneral);
+    //console.log(usersOfCohortSelected);
+    //console.log(studentOfcohortSelected);
+    const options={
+      cohort:cohortSelected,
+      cohortData:{
+        users:studentSelected,
+        progress:dataProgress
+      },
+      orderBy:function orderby(){return order.value},
+      orrderDirection:function orderdirect(){return direction.value},
+      search:function searched (){return searchInput.value}
+
+    }
+    console.log(options);
     if(selection.value==='lim-2018-03-pre-core-pw'){
       const users= dataUsers.map(user =>{ user.name
         listauser.innerHTML+=`<li id=${user.name}><a href=${user.name}>${user.name}</a></li>`;
       });
      
     }
-  } 
-  const users= dataUsers.map(user => user.name);
-  console.log(cohorts);
+   
+    const users= dataUsers.map(user => user.name);
+   console.log(cohorts);
   
- 
+
+
+
+
+
+
+    
+  });
   
-});
+};
 
 /*seleccionecohort.addEventListener('change',(event)=>{
 
@@ -172,11 +245,6 @@ getData( (data) =>{
 });
 */
 
-const sort=document.getElementById('sort');
-sort.addEventListener('click',()=>{
-
-
-})
 
 
 

@@ -1,18 +1,4 @@
-//Subiendo la data a arraysData
-const arraysData = [];
-arrayData.push(fetch('../data/cohorts.json'));
-arrayData.push(fetch('../data/cohorts/lim-2018-03-pre-core-pw/progress.json'));
-arraysData.push(fetch('../data/cohorts/lim-2018-03-pre-core-pw/users.json'));
-                                                           
-Promise.all(arraysData).then((responses)=>{
-    return responses.map(response => response.json());
-})
-.then((jsonResponses)=>{
-    
-})
-.catch((error)=>{
-    
-});
+
 
 /*const selectElement = document.getElementById('cohorts');
 fetch('../data/cohorts.json')
