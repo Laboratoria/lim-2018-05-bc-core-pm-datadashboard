@@ -2,23 +2,6 @@
 
 body {
     padding: 0;
-<<<<<<< HEAD
-    background-color: white;
-}
-
-aside{
-    position:fixed;
-	width:65px;
-	height:100%;
-	background-color:#2f3030;
-	overflow:hidden;
-	-webkit-transition:width 0.5s cubic-bezier(.61,.01,.37,1);
-}
-
-asideh
-
-
-=======
     margin: 0;
     
 }
@@ -341,4 +324,3 @@ main p {
 }
 
 
->>>>>>> d0d28981b7c80f080d4bdff62c90c55015ed6a96

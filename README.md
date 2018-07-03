@@ -66,8 +66,15 @@ Lo ideal es que cuado el usuario ingrese muestre, de manera predefinida, los dat
 Posee siguientes criterios de filtrado:
 
   ##### a.1. Sede y Cohort
+  * Lima 2018 pre core
+  * CDMX 2018 pre core
+  * GDL 2018 pre core
+  * Sao Paulo pre core
+  * SDC pre core 
 
   ##### a.2. Turno
+  * Mañana
+  * Tarde
 
   ##### a.3. Muestra
   * Cantidad de alumnas
@@ -124,29 +131,29 @@ otras.
 Posteriormente, se realizó el segundo prototipo en Figma. Este tiene fidelidad media y cuenta 
 cierto dinamismo, que simula la interación con el usuario.
 
-Pueden ver el avance [AQUÍ](https://marvelapp.com/177cdbf6/screen/44209192)
+Pueden ver el **PROTOTIPO DINÁMICO** en Marvel [**AQUÍ**](https://marvelapp.com/177cdbf6/screen/44209192)
 
 ### Prototipo ideal
 
-Este prototipo se desarrolló con las recomendaciones dadas por Alejandra. Pueden ver el desarrollo completo del mismo [AQUÍ](https://www.figma.com/proto/bV4vyCBlhShlAh9yqVelot/Data-dashboard-III?scaling=min-zoom&node-id=61%3A415)
+Este prototipo se desarrolló con las recomendaciones dadas por Alejandra. Pueden ver el **PROTOTIPO DINÁMICO** en Marvel [**AQUÍ**](https://marvelapp.com/3jd5hc3/screen/45119589)
 
 Datos generales (salón)
-![Gral](https://user-images.githubusercontent.com/39272944/42144750-783e9a10-7d82-11e8-8774-4ae119b6fdf7.png)
+![**Gral**](https://user-images.githubusercontent.com/39272944/42144750-783e9a10-7d82-11e8-8774-4ae119b6fdf7.png)
 
 Estudiantes
-![Estudiantes](https://user-images.githubusercontent.com/39272944/42144359-390e8d48-7d80-11e8-9bf3-9a1b1a84d97f.png)
+![**Estudiantes**](https://user-images.githubusercontent.com/39272944/42144359-390e8d48-7d80-11e8-9bf3-9a1b1a84d97f.png)
 
 Estudiantes ordenadas por completitud
 ![Estudiantes 2](https://user-images.githubusercontent.com/39272944/42144411-82c6e4f8-7d80-11e8-9b58-74e033095622.png)
 
 Vista a data individual
-![Estudiantes 3](https://user-images.githubusercontent.com/39272944/42144427-92a0ab98-7d80-11e8-93d1-0cfda2415263.png)
+![**Estudiantes 3**](https://user-images.githubusercontent.com/39272944/42144427-92a0ab98-7d80-11e8-93d1-0cfda2415263.png)
 
 Seleccionando squad
-![Squad](https://user-images.githubusercontent.com/39272944/42144442-a7a22972-7d80-11e8-9bda-a5f825303592.png)
+![**Squad**](https://user-images.githubusercontent.com/39272944/42144442-a7a22972-7d80-11e8-9bda-a5f825303592.png)
 
 Resultado: data por squad
-![Resultado squad](https://user-images.githubusercontent.com/39272944/42144450-b5fcb74e-7d80-11e8-9dbd-56dfdd44b33e.png)
+![**Resultado squad**](https://user-images.githubusercontent.com/39272944/42144450-b5fcb74e-7d80-11e8-9dbd-56dfdd44b33e.png)
 
 ## 5. Desarrollo del producto
 
