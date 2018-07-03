@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>DATADASHBOARD</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+</head>
+
+<body>
+  <section class="containerdata">
+    <section class="main">
+      <div class="logo">
+        <img src="img/logo.png">
+      </div>
+      <img class="image" src="img/user.png">
+      <h2>Bienvenido</h2>
+      <nav>
+        <a href="#">
+          <i class="fas fa-bars"></i> Menu</a>
+        <a href="#">
+          <i class="fas fa-home"></i> Inicio</a>
+        <a class="exit" href="#">
+          <i class="fas fa-sign-out-alt"></i> Salir</a>
+      </nav>
+    </section>
+    <section id="containersedes" class="containersedes">
+
+      <div id="containerdata">
+        <div class="title">
+          <p id="text">SEDES</p>
+        </div>
+        <div id="imgmap">
+          <img src="img/mapa.jpg">
+        </div>
+        <div id="btn-sedes" class="btn-sedes">
+          <h2>ESCOGE UNA SEDE</h2>
+          <button class="buttonLima" id="buttonLima" value="lim">Lima</button>
+          <br>
+          <br>
+          <button class="buttonAqp" id="buttonAqp" value="aqp">Arequipa</button>
+          <br>
+          <br>
+          <button class="buttonSdc" id="buttonSdc" value="scl">Santiago de Chile</button>
+          <br>
+          <br>
+          <button class="buttonCdm" id="buttonCdm" value="cdmx">Ciudad de México</button>
+          <br>
+          <br>
+          <button class="buttonSpl" id="buttonSpl" value="spl">Sao Paulo</button>
+          <br>
+          <br>
+        </div>
+      </div>
+      <div id="conteinerCohorts">
+        <div class="title">
+          <p id="text1">COHORTS</p>
+        </div>
+        <div id="cohortsSelected">
+
+
+        </div>
+      </div>
+      <div id="containerTable">
+
+        <div id="tableUserStats">
+          <div class="title">
+            <p id="text2">DATADASHBOARD</p>
+          </div>
+          <div id="filterInput"></div>
+          <br>
+          <input id="input" placeholder="Buscar por nombre">
+          <button id="filter">Buscar</button>
+          <br>
+        </div>
+        <div id="table">
+          <table>
+            <thead>
+              <tr>
+                <th class="columnName">Estudiante
+                  <button class="sortAsc"></button>
+                  <button class="sortDesc"></button>
+                </th>
+                <th class="columnExercises">%Ejercicios
+                  <button class="sortAsc"></button>
+                  <button class="sortDesc"></button>
+                </th>
+                <th class="columnReads">%Lecturas
+                  <button class="sortAsc"></button>
+                  <button class="sortDesc"></button>
+                </th>
+                <th class="columnQuizzes">%Cuestionarios
+                  <button class="sortAsc"></button>
+                  <button class="sortDesc"></button>
+                </th>
+                <th class="columnGeneral">%General
+                  <button class="sortAsc"></button>
+                  <button class="sortDesc"></button>
+                </th>
+
+              </tr>
+            </thead>
+
+            <tbody id="body"></tbody>
+
+
+          </table>
+        </div>
+
+      </div>
+    </section>
+    <footer>
+      <p class="textfooter">Derechos Reseservados &#169</p>
+    </footer>
+  </section>
+  <script src="main.js"></script>
+  <script src="data.js"></script>
+</body>
+
+</html>
