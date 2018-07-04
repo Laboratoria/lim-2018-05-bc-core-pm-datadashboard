@@ -66,7 +66,7 @@ function register(){
 //'https://api.laboratoria.la/cohorts/lim-2018-03-pre-core-pw/progress'
 
 
-const options={
+let options={
   //global por los distintos eventos
   cohort:null,
   cohortData:{
@@ -86,59 +86,55 @@ const getData = (str,url,callback) => {
     callback(str,res);
   })
 }
-let selectCampuses=document.getElementById('selectCampuses');
+
+let selectCampuses = document.getElementById('selectCampuses');
 let selectCohort = document.getElementById('cohorts');
 let sectionMain = document.getElementById('sectionMain');
 
-const showCohorts=(value,arrCohorts)=>{
-  const cohortOfCampus=arrCohorts.filter(element=>{
-    return element.id.indexOf(value) !== -1;
+const showCohorts=(valueCampus, dataCohorts)=>{
+  const cohortsOfCampus = dataCohorts.filter(cohort=>{
+    return cohort.id.indexOf(valueCampus) !== -1;//lim aqp
   });
   
-  let content = '';//string vacio (al usar template)contador string;
-  cohortOfCampus.forEach(cohort => {
-    content += `<option id='${cohort.id}' value='${cohort.id}'>${cohort.id}</option>` ;
+  let contentOfSelect = '';//string vacio (al usar template)contador string;
+  cohortsOfCampus.forEach(cohort => {
+    contentOfSelect += `<option id='${cohort.id}' value='${cohort.id}'>${cohort.id}</option>` ;
       
   });
-  selectCohort.innerHTML=content;
+  selectCohort.innerHTML = contentOfSelect;
 }
+
+selectCampuses.addEventListener('change',event=>{
+ const valueCampus= event.target.value//text.content
+ getData(valueCampus,'https://api.laboratoria.la/cohorts',showCohorts )
+
+})
 
 const showProgress=(valueCohort,objProgress)=>{
  options.cohortData.progress=objProgress
- const studentsWithStats=processCohortData(options);
- let template='';
- studentsWithStats.forEach((objStudentsWithStats)=>{
-   template+=
-   `<div>
-   <p>${objStudentsWithStats.stats.exercise.complete}</p>
-   </div>`
- })
- sectionMain.innerHTML=template;
+ let studentsWithStats = processCohortData(options);
+ 
+
 
 }
-
 const showUsers=(valueCohort,arrUsers)=>{
   options.cohortData.users=arrUsers;
-  getData(valueCohort,`https://api.laboratoria.la/cohorts/${valueCohort}/progress`,showProgress);
+  
+ getData(valueCohort,`https://api.laboratoria.la/cohorts/${valueCohort}/progress`,showProgress);
 }
 
 const cohortSelected=(valueCohort,dataCohorts)=>{
   dataCohorts.forEach(objCohort=>{
-    if(objCohort.id===idCohort){
+    if(objCohort.id===valueCohort){
       options.cohort=objCohort;
     }
   })
 }
 
-selectCampuses.addEventListener('change',event=>{
-  
-  const value= event.target.value//text.content
- getData(value,'https://api.laboratoria.la/cohorts',showCohorts )
 
-})
-
-listauser.addEventListener('change',e=>{
+selectCohort.addEventListener('change', e => {
   const valueCohort=e.target.value;
+  console.log(valueCohort);
   getData(valueCohort,`https://api.laboratoria.la/cohorts`,cohortSelected);
   getData(valueCohort,`https://api.laboratoria.la/cohorts/${valueCohort}/users`,showUsers);
 })
