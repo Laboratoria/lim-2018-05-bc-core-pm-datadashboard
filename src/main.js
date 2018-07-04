@@ -59,26 +59,93 @@ function register(){
 
 
 
+////////////////////////////////////////////////////////////////////////////
+//'https://api.laboratoria.la/campuses'
+//'https://api.laboratoria.la/cohorts'
+//'https://api.laboratoria.la/cohorts/lim-2018-03-pre-core-pw/users'
+//'https://api.laboratoria.la/cohorts/lim-2018-03-pre-core-pw/progress'
 
-const getData = (process) => {
-  fetch('https://api.laboratoria.la/campuses')
-  .then(resCampuses=>
-   fetch ('https://api.laboratoria.la/cohorts')
-   .then (resCohorts=>
-     fetch ('https://api.laboratoria.la/cohorts/lim-2018-03-pre-core-pw/users')
-     .then (resUsers=> 
-       fetch ('https://api.laboratoria.la/cohorts/lim-2018-03-pre-core-pw/users')
-       .then (resProgress=>
-         Promise.all([resCampuses.json(), resCohorts.json(), resUsers.json(), resProgress.json()])
-         .then(data =>process(data))
-        )
-      )
-    )
-  )
+
+const options={
+  //global por los distintos eventos
+  cohort:null,
+  cohortData:{
+     users:null,
+     progress:null,
+  },
+  orderBy:'name',
+  orderDirection:'ASC',
+  search:''
+};
+
+
+const getData = (str,url,callback) => {
+  fetch(url)
+  .then (res=>res.json())
+  .then(res =>{
+    callback(str,res);
+  })
 }
 let selectCampuses=document.getElementById('selectCampuses');
-let selection = document.getElementById('cohorts');
-let listauser = document.getElementById('lista');
+let selectCohort = document.getElementById('cohorts');
+let sectionMain = document.getElementById('sectionMain');
+
+const showCohorts=(value,arrCohorts)=>{
+  const cohortOfCampus=arrCohorts.filter(element=>{
+    return element.id.indexOf(value) !== -1;
+  });
+  
+  let content = '';//string vacio (al usar template)contador string;
+  cohortOfCampus.forEach(cohort => {
+    content += `<option id='${cohort.id}' value='${cohort.id}'>${cohort.id}</option>` ;
+      
+  });
+  selectCohort.innerHTML=content;
+}
+
+const showProgress=(valueCohort,objProgress)=>{
+ options.cohortData.progress=objProgress
+ const studentsWithStats=processCohortData(options);
+ let template='';
+ studentsWithStats.forEach((objStudentsWithStats)=>{
+   template+=
+   `<div>
+   <p>${objStudentsWithStats.stats.exercise.complete}</p>
+   </div>`
+ })
+ sectionMain.innerHTML=template;
+
+}
+
+const showUsers=(valueCohort,arrUsers)=>{
+  options.cohortData.users=arrUsers;
+  getData(valueCohort,`https://api.laboratoria.la/cohorts/${valueCohort}/progress`,showProgress);
+}
+
+const cohortSelected=(valueCohort,dataCohorts)=>{
+  dataCohorts.forEach(objCohort=>{
+    if(objCohort.id===idCohort){
+      options.cohort=objCohort;
+    }
+  })
+}
+
+selectCampuses.addEventListener('change',event=>{
+  
+  const value= event.target.value//text.content
+ getData(value,'https://api.laboratoria.la/cohorts',showCohorts )
+
+})
+
+listauser.addEventListener('change',e=>{
+  const valueCohort=e.target.value;
+  getData(valueCohort,`https://api.laboratoria.la/cohorts`,cohortSelected);
+  getData(valueCohort,`https://api.laboratoria.la/cohorts/${valueCohort}/users`,showUsers);
+})
+
+
+
+
 let searchInput=document.getElementById('searchInput');
 let order=document.getElementById('order');
 let direction=document.getElementById('direction');
@@ -86,99 +153,7 @@ let btnOrder=document.getElementById('btnOrder');
 
 
 
-getData( (data) =>{
-  //data campuses
- const dataCampuses=data[0];
-  //arreglo de objetos del archivo cohorts 
- const dataCohorts=data[1];
- //arreglo de objetos del archivo lim-201-03-pre-core-pw(users)
- const dataUsers=data[2];
- //objeto del archivo lim-201-03-pre-core-pw(progress)
- const dataProgress=data[3];
- //campuses
- dataCampuses.forEach((campuses)=>{
-   selectCampuses.innerHTML+=`<option value=${campuses.id}>${campuses.id}</option>`
- });
-
- //select campuses
- selectCampuses.addEventListener('change', () => {
-   if (selectCampuses.value === 'lim') {
-     for (let i = 0; i < values[1].length; i++) {
-       if (values[1][i].id.substr(0, 3) === 'lim') {
-         const optionElements = document.createElement('option');
-         const contenidoOption = document.createTextNode(values[1][i].id);
-         optionElements.appendChild(contenidoOption);
-         listCohorts.appendChild(optionElements);
-      }
-    }
-  }
- })
-
-
-  
-  //mostrando la lista de cohorts 
-  dataCohorts.forEach(cohort=>{
-    selection.innerHTML+=`<option value=${cohort.id}>${cohort.id}</option>`
-  }); 
-});  
-
-selection.addEventListener('change',selected);
-  //mostrando lista de estudiantes
-function selected(){
-  getData((data)=>{
-     //arreglo de objetos del archivo cohorts 
-    const dataCohorts=data[1];
-   //arreglo de objetos del archivo lim-201-03-pre-core-pw(users)
-    const dataUsers=data[2];
-   //objeto del archivo lim-201-03-pre-core-pw(progress)
-    const dataProgress=data[3];
-    let cohortSelected=dataCohorts.filter(function( cohort ) {
-      return cohort.id == selection.value;
-    });
-    
-    let usersOfCohortSelected=dataUsers.filter(function( users ) {
-      return users.signupCohort == selection.value;
-    });
-
-    let studentSelected=usersOfCohortSelected.filter(function( user ) {
-      return user.role === 'student';
-
-    });
-    //console.log(usersGeneral);
-    //console.log(usersOfCohortSelected);
-    //console.log(studentOfcohortSelected);
-    const options={
-      cohort:cohortSelected,
-      cohortData:{
-        users:studentSelected,
-        progress:dataProgress
-      },
-      orderBy:function orderby(){return order.value},
-      orrderDirection:function orderdirect(){return direction.value},
-      search:function searched (){return searchInput.value}
-
-    }
-    console.log(options);
-    if(selection.value==='lim-2018-03-pre-core-pw'){
-      const users= dataUsers.map(user =>{ user.name
-        listauser.innerHTML+=`<li id=${user.name}><a href=${user.name}>${user.name}</a></li>`;
-      });
-     
-    }
-   
-    const users= dataUsers.map(user => user.name);
-   console.log(cohorts);
-  
-
-
-
-
-
-
-    
-  });
-  
-};
+ 
 
 /*seleccionecohort.addEventListener('change',(event)=>{
 
