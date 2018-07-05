@@ -113,8 +113,21 @@ selectCampuses.addEventListener('change',event=>{
 const showProgress=(valueCohort,objProgress)=>{
  options.cohortData.progress=objProgress
  let studentsWithStats = processCohortData(options);
- 
+ let template='';
+ studentsWithStats.forEach((objStudentWithStats)=>{
+   template+=
+   `<div>
+     <p>${Math.floor(objStudentWithStats.stats.percent)}</p>
 
+     <div>
+       <p>${Math.floor(objStudentWithStats.stats.exercises.completed)}</p>
+       <p>${Math.floor(objStudentWithStats.stats.exercises.total)}</p>
+      </div>
+      <div>
+       
+    </div>`
+  })
+  sectionMain.innerHTML=template;
 
 }
 const showUsers=(valueCohort,arrUsers)=>{
@@ -134,7 +147,7 @@ const cohortSelected=(valueCohort,dataCohorts)=>{
 
 selectCohort.addEventListener('change', e => {
   const valueCohort=e.target.value;
-  console.log(valueCohort);
+  //console.log(valueCohort);
   getData(valueCohort,`https://api.laboratoria.la/cohorts`,cohortSelected);
   getData(valueCohort,`https://api.laboratoria.la/cohorts/${valueCohort}/users`,showUsers);
 })
