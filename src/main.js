@@ -90,6 +90,9 @@ const getData = (str,url,callback) => {
 let selectCampuses = document.getElementById('selectCampuses');
 let selectCohort = document.getElementById('cohorts');
 let sectionMain = document.getElementById('sectionMain');
+let searchInput=document.getElementById('searchInput');
+
+
 
 const showCohorts=(valueCampus, dataCohorts)=>{
   const cohortsOfCampus = dataCohorts.filter(cohort=>{
@@ -104,37 +107,30 @@ const showCohorts=(valueCampus, dataCohorts)=>{
   selectCohort.innerHTML = contentOfSelect;
 }
 
-selectCampuses.addEventListener('change',event=>{
- const valueCampus= event.target.value//text.content
- getData(valueCampus,'https://api.laboratoria.la/cohorts',showCohorts )
-
-})
-
-const showProgress=(valueCohort,objProgress)=>{
- options.cohortData.progress=objProgress
- let studentsWithStats = processCohortData(options);
- let template='';
- studentsWithStats.forEach((objStudentWithStats)=>{
-   template+=
-   `<div>
-     <p>${Math.floor(objStudentWithStats.stats.percent)}</p>
-
-     <div>
-       <p>${Math.floor(objStudentWithStats.stats.exercises.completed)}</p>
-       <p>${Math.floor(objStudentWithStats.stats.exercises.total)}</p>
-      </div>
-      <div>
-       
+const showAll=(studentsWithStats)=>{
+  let template='';
+  studentsWithStats.forEach((objStudentWithStats)=>{
+    template+=
+    `<div>
+      <p><span>${objStudentWithStats.name}</span>
+ 
+        </br>
+        <span> %completitud total : ${Math.floor(objStudentWithStats.stats.percent)}</span>
+        <span> % de ejercicios autocorregidos completados : </span>
+        <span> % de quizzes completados : </span>
+        <span> puntuación promedio en quizzes completados : </span>
+        <span> % de lecturas completadas : </span>
+        
+       </p>
+        
     </div>`
-  })
+  });
   sectionMain.innerHTML=template;
+ 
+ 
+}
 
-}
-const showUsers=(valueCohort,arrUsers)=>{
-  options.cohortData.users=arrUsers;
-  
- getData(valueCohort,`https://api.laboratoria.la/cohorts/${valueCohort}/progress`,showProgress);
-}
+
 
 const cohortSelected=(valueCohort,dataCohorts)=>{
   dataCohorts.forEach(objCohort=>{
@@ -144,18 +140,45 @@ const cohortSelected=(valueCohort,dataCohorts)=>{
   })
 }
 
+const progressOfCohortSelected=(valueCohort,objProgress)=>{
+  options.cohortData.progress=objProgress;
+  let studentsWithStats = processCohortData(options);
+  showAll(studentsWithStats)
+ }
+
+const usersOfCohortSelected=(valueCohort,arrUsers)=>{
+  options.cohortData.users=arrUsers;
+  
+ getData(valueCohort,`https://api.laboratoria.la/cohorts/${valueCohort}/progress`,progressOfCohortSelected);
+}
+
+
+
+
+selectCampuses.addEventListener('change',event=>{
+  const valueCampus= event.target.value//text.content
+  getData(valueCampus,'https://api.laboratoria.la/cohorts',showCohorts )
+ 
+})
 
 selectCohort.addEventListener('change', e => {
   const valueCohort=e.target.value;
   //console.log(valueCohort);
   getData(valueCohort,`https://api.laboratoria.la/cohorts`,cohortSelected);
-  getData(valueCohort,`https://api.laboratoria.la/cohorts/${valueCohort}/users`,showUsers);
+  getData(valueCohort,`https://api.laboratoria.la/cohorts/${valueCohort}/users`,usersOfCohortSelected);
+})
+
+searchInput.addEventListener('keyup',e=>{
+  const valueInput=e.target.value;
+  options.search = valueInput;
+  
+  const userfilter = processCohortData(options);
+  showAll(userfilter);
+
 })
 
 
 
-
-let searchInput=document.getElementById('searchInput');
 let order=document.getElementById('order');
 let direction=document.getElementById('direction');
 let btnOrder=document.getElementById('btnOrder');

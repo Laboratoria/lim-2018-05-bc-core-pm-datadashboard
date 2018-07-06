@@ -18,7 +18,6 @@ window.computeUsersStats=(users,progress,courses)=>{
     const calculate=(students,type)=>{
         let total=0;
         let completed=0;
-        let percentLesson=0;
         let scoreSum=0;
         let scoreAvg=0;
         courses.forEach((course)=>{
@@ -31,36 +30,36 @@ window.computeUsersStats=(users,progress,courses)=>{
                     const partsOfUnits=Object.values(unit.parts);
                     //console.log(partsOfUnits);
                     switch (type) {
-                        case 'practice':
+                        case "practice":
                            const lessonsExercise=partsOfUnits.filter(objLesson=>objLesson.type==="practice" && objLesson.hasOwnProperty("exercises"));
                            //console.log(lessonsExercise);
                            lessonsExercise.forEach((objExercise)=>{
-                              console.log(objExercise.completed);
+                              //console.log(objExercise.completed);
                               completed+=objExercise.completed
                               total+=lessonsExercise.length;
                             });
                            break;//rompe el ciclo que esta ocurriendo
-                        case 'read':
+                        case "read":
                            const lessonsRead=partsOfUnits.filter(objLesson=>objLesson.type==="read");
                            //console.log(lessonsRead);
                            lessonsRead.forEach((objRead)=>{
-                              console.log(objRead.completed);
+                              //console.log(objRead.completed);
                               completed+=objRead.completed
                               total+=lessonsRead.length;
                            });
                            break;
-                        case 'quiz':
+                        case "quiz":
                             const lessonsQuizzes=partsOfUnits.filter(objLesson=>objLesson.type==="quiz"&& objLesson.hasOwnProperty("score"));
                             //console.log(lessonsQuizzes);
                             lessonsQuizzes.forEach((objQuiz)=>{
-                            //console.log(objQuiz.completed);
-                            //console.log(objQuiz.score);
-                              console.log(scoreSum/lessonsQuizzes.length);
+                             //console.log(objQuiz.completed);
+                             //console.log(objQuiz.score);
+                              //console.log(scoreSum/lessonsQuizzes.length);
                               completed+=objQuiz.completed
                               total+=lessonsQuizzes.length;
                               scoreSum+=objQuiz.score;
                               scoreAvg+=scoreSum/lessonsQuizzes.length;
-                              });
+                            });
                            break;
                         default:
                           break;
@@ -77,9 +76,9 @@ window.computeUsersStats=(users,progress,courses)=>{
             completed:completed,
             percent:completed*100/total
         };
-        if(type==='quiz'){
+        if(type==="quiz"){
           answer.scoreSum=scoreSum;
-          answer.scoreAvg=scoreAvg;
+          answer.scoreAvg=scoreAvg/total;
         }
        return answer;
 
@@ -88,25 +87,37 @@ window.computeUsersStats=(users,progress,courses)=>{
 
     let studentsWithStats=students.map(objStudent=>{
        let usersWithStats={
+            name:objStudent.name,
             stats:{
                 percent:calculatePercent(objStudent),
-                exercises:calculate(objStudent,'practice'),
-                reads:calculate(objStudent,'read'),
-                quizzes:calculate(objStudent,'quiz')
+                exercises:calculate(objStudent,"practice"),
+                reads:calculate(objStudent,"read"),
+                quizzes:calculate(objStudent,"quiz")
             }
         
         }
         return usersWithStats
     });
     return studentsWithStats;
-}
-
+};
+//window.sortUsers=()=>{};
+window.filterUsers=(users,search)=>{
+    let searchingName = users.filter(
+        user => user.name.toUpperCase().indexOf(search.toUpperCase()) > -1
+     );
+    return searchingName;
+};
 window.processCohortData=(options)=>{
     let courses=Object.keys(options.cohort.coursesIndex);
-    //console.log(courses);
+    
     let usersCohort=options.cohortData.users;
     let progressCohort=options.cohortData.progress;
-    let students=computeUsersStats(usersCohort,progressCohort,courses);
+    //let order=options.orderBy;
+    //let orderDirection=options.orderDirection;
+    let search=options.search;
+    
+    let studentWithStats=computeUsersStats(usersCohort,progressCohort,courses);
+    let filterStudents=filterUsers(studentWithStats,search);
 
-    return students;
+    return filterStudents;
 }
