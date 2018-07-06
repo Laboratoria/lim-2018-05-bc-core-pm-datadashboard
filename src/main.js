@@ -112,7 +112,7 @@ const showAll=(studentsWithStats)=>{
   studentsWithStats.forEach((objStudentWithStats)=>{
     template+=
     `<div>
-      <p><span>${objStudentWithStats.name}</span>
+      <p><span style= "font-weight:bold;">${objStudentWithStats.name}</span>
  
         </br>
         <span> %completitud total : ${Math.floor(objStudentWithStats.stats.percent)}</span>
