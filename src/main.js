@@ -92,8 +92,6 @@ let selectCohort = document.getElementById('cohorts');
 let sectionMain = document.getElementById('sectionMain');
 let searchInput=document.getElementById('searchInput');
 
-
-
 const showCohorts=(valueCampus, dataCohorts)=>{
   const cohortsOfCampus = dataCohorts.filter(cohort=>{
     return cohort.id.indexOf(valueCampus) !== -1;//lim aqp
@@ -107,6 +105,7 @@ const showCohorts=(valueCampus, dataCohorts)=>{
   selectCohort.innerHTML = contentOfSelect;
 }
 
+
 const showAll=(studentsWithStats)=>{
   let template='';
   studentsWithStats.forEach((objStudentWithStats)=>{
@@ -116,10 +115,10 @@ const showAll=(studentsWithStats)=>{
  
         </br>
         <span> %completitud total : ${Math.floor(objStudentWithStats.stats.percent)}</span>
-        <span> % de ejercicios autocorregidos completados : </span>
-        <span> % de quizzes completados : </span>
-        <span> puntuación promedio en quizzes completados : </span>
-        <span> % de lecturas completadas : </span>
+        <span> % de ejercicios autocorregidos completados : ${Math.floor(objStudentWithStats.stats.exercises.percent)}</span>
+        <span> % de quizzes completados : ${Math.floor(objStudentWithStats.stats.quizzes.percent)}</span>
+        <span> puntuación promedio en quizzes completados : ${Math.floor(objStudentWithStats.stats.quizzes.scoreAvg)}</span>
+        <span> % de lecturas completadas : ${Math.floor(objStudentWithStats.stats.reads.percent)}</span>
         
        </p>
         
@@ -132,6 +131,7 @@ const showAll=(studentsWithStats)=>{
 
 
 
+
 const cohortSelected=(valueCohort,dataCohorts)=>{
   dataCohorts.forEach(objCohort=>{
     if(objCohort.id===valueCohort){
@@ -140,17 +140,30 @@ const cohortSelected=(valueCohort,dataCohorts)=>{
   })
 }
 
+
+
+
+
 const progressOfCohortSelected=(valueCohort,objProgress)=>{
   options.cohortData.progress=objProgress;
   let studentsWithStats = processCohortData(options);
-  showAll(studentsWithStats)
- }
+ showAll(studentsWithStats);
 
+}
+ 
 const usersOfCohortSelected=(valueCohort,arrUsers)=>{
   options.cohortData.users=arrUsers;
   
+  
  getData(valueCohort,`https://api.laboratoria.la/cohorts/${valueCohort}/progress`,progressOfCohortSelected);
+ 
 }
+
+
+
+
+
+
 
 
 
@@ -168,6 +181,9 @@ selectCohort.addEventListener('change', e => {
   getData(valueCohort,`https://api.laboratoria.la/cohorts/${valueCohort}/users`,usersOfCohortSelected);
 })
 
+
+
+
 searchInput.addEventListener('keyup',e=>{
   const valueInput=e.target.value;
   options.search = valueInput;
@@ -177,11 +193,25 @@ searchInput.addEventListener('keyup',e=>{
 
 })
 
-
-
 let order=document.getElementById('order');
+order.addEventListener('change',ev=>{
+  const valueOrder=ev.target.value;
+  options.orderBy=valueOrder;
+ 
+});
+
 let direction=document.getElementById('direction');
+direction.addEventListener('change', evt=>{
+  const valueDirect=evt.target.value;
+  options.orderDirection=valueDirect;
+ 
+});
 let btnOrder=document.getElementById('btnOrder');
+btnOrder.addEventListener('click',()=>{
+  const sortSt=processCohortData(options);
+  showAll(sortSt);
+})
+
 
 
 
