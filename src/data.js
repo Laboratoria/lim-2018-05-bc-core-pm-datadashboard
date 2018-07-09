@@ -57,13 +57,14 @@ window.computeUsersStats=(users,progress,courses)=>{
                               //console.log(scoreSum/lessonsQuizzes.length);
                               completed+=objQuiz.completed;
                               total+=lessonsQuizzes.length;
-                              if(objQuiz.hasOwnProperty("score")){
+                              if(objQuiz.hasOwnProperty('score')){
                                   scoreSum+=objQuiz.score;
-                                  scoreAvg+=scoreSum/lessonsQuizzes.length;
+                                  scoreAvg+=objQuiz.score/lessonsQuizzes.length;
                                 }else{
                                     scoreSum+=0;
-                                    scoreAvg+=0;  
+                                    scoreAvg+=0;
                                 }
+                                
                                
                             });
                            break;
@@ -83,12 +84,10 @@ window.computeUsersStats=(users,progress,courses)=>{
             percent:completed*100/total
         };
         if(type==="quiz"){
-            if(completed!=0){
-             answer.scoreSum=scoreSum;
-             answer.scoreAvg=scoreSum/total;
-            }else{
-                answer.scoreAvg=0;
-            }
+            
+            answer.scoreSum=scoreSum;
+            answer.scoreAvg=scoreSum/total;
+            
          
         }
        return answer;
