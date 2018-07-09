@@ -214,6 +214,7 @@ window.sortUsers = (users, orderBy, orderDirection) => {
         })
       }
     } 
+    return users;
 };
 window.filterUsers=(users,search)=>{
     let searchingName = users.filter(user => user.name.toUpperCase().indexOf(search.toUpperCase()) > -1);
