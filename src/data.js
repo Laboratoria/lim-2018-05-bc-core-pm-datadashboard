@@ -67,6 +67,7 @@ window.computeUsersStats=(users,progress,courses)=>{
                                 
                                
                             });
+                            total+=lessonsQuizzes.length;
                            break;
                         default:
                           break;
