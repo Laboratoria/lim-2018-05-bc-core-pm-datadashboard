@@ -94,7 +94,13 @@ describe('data', () => {
   describe('filterUsers(users, filterBy)', () => {
 
     it('debería retornar nuevo arreglo solo con usuarios con nombres que contengan string (case insensitive)');
+    const users = fixtures.users;
+      let foundUsers = users.filter(
+        user => user.name.toLowerCase().indexOf('Mary Katty Vicuña Ore') > -1
+      );
+      const processed = filterUsers(users, 'Mary Katty Vicuña Ore');
 
+      assert.deepEqual(foundUsers, processed);
   });
 
   describe('processCohortData({ cohortData, orderBy, orderDirection, filterBy })', () => {

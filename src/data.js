@@ -17,9 +17,9 @@ window.computeUsersStats=(users,progress,courses)=>{
     };
     const calculate=(students,type)=>{
         let total=0;
-        let completed=0;
-        let scoreSum=0;
-        let scoreAvg=0;
+        let completed = 0;
+        let scoreSum = 0;
+        let scoreAvg = 0;
         courses.forEach((course)=>{
             const progressOfUsers=progress[students.id];
             //console.log(progressOfUsers);
@@ -36,8 +36,9 @@ window.computeUsersStats=(users,progress,courses)=>{
                            lessonsExercise.forEach((objExercise)=>{
                               //console.log(objExercise.completed);
                               completed+=objExercise.completed;
-                              total+=lessonsExercise.length;
+                              
                             });
+                            total+=lessonsExercise.length;
                            break;//rompe el ciclo que esta ocurriendo
                         case "read":
                            const lessonsRead=partsOfUnits.filter(objLesson=>objLesson.type==="read");
@@ -45,8 +46,9 @@ window.computeUsersStats=(users,progress,courses)=>{
                            lessonsRead.forEach((objRead)=>{
                               //console.log(objRead.completed);
                               completed+=objRead.completed;
-                              total+=lessonsRead.length;
+                              
                            });
+                           total+=lessonsRead.length;
                            break;
                         case "quiz":
                             const lessonsQuizzes=partsOfUnits.filter(objLesson=>objLesson.type==="quiz");
@@ -56,13 +58,13 @@ window.computeUsersStats=(users,progress,courses)=>{
                              //console.log(objQuiz.score);
                               //console.log(scoreSum/lessonsQuizzes.length);
                               completed+=objQuiz.completed;
-                              total+=lessonsQuizzes.length;
+                             
                               if(objQuiz.hasOwnProperty('score')){
                                   scoreSum+=objQuiz.score;
-                                  scoreAvg+=objQuiz.score/lessonsQuizzes.length;
+                                  
                                 }else{
                                     scoreSum+=0;
-                                    scoreAvg+=0;
+                                   
                                 }
                                 
                                
