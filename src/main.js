@@ -120,6 +120,7 @@ const showAll=(studentsWithStats)=>{
   studentsWithStats.forEach((objStudentWithStats)=>{
     template+=
     `<div>
+      <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="image" >
       <p><span style= "font-weight:bold;">${objStudentWithStats.name}</span>
  
         </br>
