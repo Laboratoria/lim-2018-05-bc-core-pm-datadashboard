@@ -84,3 +84,52 @@ img{
 .list li a:hover:not(.header) {
     background-color: #eee;
 }
+.container {
+    position: relative;
+    width: 350px;
+    float:left;
+}
+  
+.image {
+    display: block;
+    height: auto;
+    width: 40%;
+    
+}
+  
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 350px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color:  #ffe521;
+}
+  
+.container:hover .overlay {
+    opacity: 1;
+}
+  
+.text {
+    color: black;
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text-block {
+    position: absolute;
+    bottom: 25px;
+    left: 20px;
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
