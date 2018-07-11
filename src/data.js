@@ -17,9 +17,9 @@ window.computeUsersStats=(users,progress,courses)=>{
     };
     const calculate=(students,type)=>{
         let total=0;
-        let completed=0;
-        let scoreSum=0;
-        let scoreAvg=0;
+        let completed = 0;
+        let scoreSum = 0;
+        let scoreAvg = 0;
         courses.forEach((course)=>{
             const progressOfUsers=progress[students.id];
             //console.log(progressOfUsers);

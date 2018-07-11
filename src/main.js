@@ -144,7 +144,7 @@ const showAll=(studentsWithStats)=>{
 
 
 
-const progressOfCohortSelected = (valueCohort,objProgress) => {
+const progressOfCohortSelected=(valueCohort,objProgress)=>{
   options.cohortData.progress=objProgress;
   let studentsWithStats = processCohortData(options);
   showAll(studentsWithStats);
