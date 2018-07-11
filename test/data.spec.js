@@ -76,9 +76,59 @@ describe('data', () => {
 
   describe('sortUsers(users, orderBy, orderDirection)', () => {
 
-    it('debería retornar arreglo de usuarios ordenado por nombre ASC');
-    it('debería retornar arreglo de usuarios ordenado por nombre DESC');
-    it('debería retornar arreglo de usuarios ordenado por porcentaje general ASC');
+    it('debería retornar arreglo de usuarios ordenado por nombre ASC',() => {
+      const users = fixtures.users;
+      
+      const order = users.sort((a, b) => {
+        if (a.name > b.name) {
+          return 1;
+        }
+        if (a.name < b.name) {
+            return -1;
+        }
+        return 0;
+      });
+
+      const processed = sortUsers(users, 'name', 'ASC');
+      
+      assert.deepEqual(order, processed);
+    });
+    it('debería retornar arreglo de usuarios ordenado por nombre DESC',()=>{
+      const users = fixtures.users;
+      
+      const order = users.sort((a, b) => {
+        if (b.name > a.name) {
+          return 1;
+        }
+        if (b.name < a.name) {
+            return -1;
+        }
+        return 0;
+      });
+
+      const processed = sortUsers(users, 'name', 'DESC');
+      
+      assert.deepEqual(order, processed);
+
+    });
+    it('debería retornar arreglo de usuarios ordenado por porcentaje general ASC',() => {
+      const users = fixtures.users;
+
+
+      const order = users.sort((a, b) => {
+        if (a.stats.percent > b.stats.percent) {
+          return 1;
+        }
+        if (a.stats.percent < b.stats.percent) {
+          return -1;
+        }
+        return 0;
+      });
+
+      const processed = sortUsers(users, 'percent', 'ASC');
+
+      assert.deepEqual(order, processed);
+    });
     it('debería retornar arreglo de usuarios ordenado por porcentaje general DESC');
     it('debería retornar arreglo de usuarios ordenado por ejercicios completados ASC');
     it('debería retornar arreglo de usuarios ordenado por ejercicios completados DESC');
@@ -93,15 +143,18 @@ describe('data', () => {
 
   describe('filterUsers(users, filterBy)', () => {
 
-    it('debería retornar nuevo arreglo solo con usuarios con nombres que contengan string (case insensitive)');
-    const users = fixtures.users;
+    it('debería retornar nuevo arreglo solo con usuarios con nombres que contengan string (case insensitive)',() => {
+      const users = fixtures.users;
       let foundUsers = users.filter(
-        user => user.name.toLowerCase().indexOf('Mary Katty Vicuña Ore') > -1
+        user => user.name.toLowerCase().indexOf("mary") > -1
       );
-      const processed = filterUsers(users, 'Mary Katty Vicuña Ore');
+      const processed = filterUsers(users, "mary");
 
       assert.deepEqual(foundUsers, processed);
-  });
+    });
+
+    });
+   
 
   describe('processCohortData({ cohortData, orderBy, orderDirection, filterBy })', () => {
 
@@ -110,3 +163,4 @@ describe('data', () => {
   });
 
 });
+    
