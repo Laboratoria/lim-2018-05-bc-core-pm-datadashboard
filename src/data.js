@@ -102,6 +102,7 @@ window.computeUsersStats=(users,progress,courses)=>{
              answer.scoreAvg=0;
             }
         }
+        console.log(answer);
         return answer;
 
 
