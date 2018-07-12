@@ -17,9 +17,9 @@ window.computeUsersStats=(users,progress,courses)=>{
     };
     const calculate=(students,type)=>{
         let total=0;
-        let completed=0;
-        let scoreSum=0;
-        let scoreAvg=0;
+        let completed = 0;
+        let scoreSum = 0;
+        let scoreAvg = 0;
         courses.forEach((course)=>{
             const progressOfUsers=progress[students.id];
             //console.log(progressOfUsers);
@@ -46,32 +46,23 @@ window.computeUsersStats=(users,progress,courses)=>{
                            lessonsRead.forEach((objRead)=>{
                               //console.log(objRead.completed);
                               completed+=objRead.completed;
-                              
-                           });
+                            });
                            total+=lessonsRead.length;
                            break;
                         case "quiz":
                             const lessonsQuizzes=partsOfUnits.filter(objLesson=>objLesson.type==="quiz");
                             //console.log(lessonsQuizzes);
                             lessonsQuizzes.forEach((objQuiz)=>{
-                             //console.log(objQuiz.completed);
-                             //console.log(objQuiz.score);
-                              //console.log(scoreSum/lessonsQuizzes.length);
                               completed+=objQuiz.completed;
-                             
                               if(objQuiz.hasOwnProperty('score')){
-                                  scoreSum+=objQuiz.score;
-                                  
-                                }else{
-                                    scoreSum+=0;
-                                   
-                                }
-                                
-                               
-                            });
+                                scoreSum+=objQuiz.score;
+                              }
+                            })
                             total+=lessonsQuizzes.length;
+                            
                            break;
                         default:
+                            
                           break;
                     }
                         
@@ -81,19 +72,27 @@ window.computeUsersStats=(users,progress,courses)=>{
                 
             }
         });
-        let answer= {
-            total:total,
-            completed:completed,
-            percent:completed*100/total
-        };
-        if(type==="quiz"){
+        
+        let answer= {};
+        if(completed!=0){
+            answer.total=total;
+            answer.completed=completed;
+            answer.percent=Math.round(completed*100/total);
+        }else{
             
-            answer.scoreSum=scoreSum;
-            answer.scoreAvg=scoreSum/total;
-            
-         
+            answer.completed=0;
+            answer.percent=0;
         }
-       return answer;
+            
+        if(type==="quiz"){
+            if(completed!=0){
+             answer.scoreSum=scoreSum;
+             answer.scoreAvg=Math.round(scoreSum/completed);
+            }else{
+             answer.scoreAvg=0;
+            }
+        }
+        return answer;
 
 
     };

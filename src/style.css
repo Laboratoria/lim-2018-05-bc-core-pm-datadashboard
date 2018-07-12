@@ -6,6 +6,9 @@ header {
   
     background-color: #ffe521;
     padding: 10px 10px;
+   /* height: 100%;*/
+   
+    
     
     
 }
@@ -45,6 +48,7 @@ header {
 }
 img{
     width: 20%;
+    
 }
 
 .intro{
@@ -53,9 +57,7 @@ img{
     padding: 20px;
     
 }
-#pageOne{
-    padding: 10% 20%;
-}
+
 .selectCo{
     
     text-align: left;
@@ -85,4 +87,81 @@ img{
   
 .list li a:hover:not(.header) {
     background-color: #eee;
+}
+.container {
+    position: relative;
+    width: 300px;
+    float:left;
+}
+  
+.image {
+    display: block;
+    height: auto;
+    width: 40%;
+    
+}
+  
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 200px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color:  #ffe521;
+}
+  
+.container:hover .overlay {
+    opacity: 1;
+}
+  
+.text {
+    color: black;
+    font-size: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    width: 250px;
+}
+.text-block {
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 130px;
+}
+
+.side {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 40;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+    border-right-width: 2px;
+    border-right-style: solid;
+    border-color: rgb(209, 206, 206);
+    background-color: #fafafa;
+    width: 350px;
+    
+}
+.sectionMain {
+    margin-left: 350px; /* Same as the width of the sidenav */
+    /*font-size: 28px;*/ /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+.input {
+    margin-left: 350px; 
+    padding: 0px 10px;
 }
