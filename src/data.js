@@ -77,7 +77,7 @@ window.computeUsersStats=(users,progress,courses)=>{
         if(completed!=0){
             answer.total=total;
             answer.completed=completed;
-            answer.percent=completed*100/total;
+            answer.percent=Math.round(completed*100/total);
         }else{
             
             answer.completed=0;
@@ -87,9 +87,7 @@ window.computeUsersStats=(users,progress,courses)=>{
         if(type==="quiz"){
             if(completed!=0){
              answer.scoreSum=scoreSum;
-             answer.scoreAvg=scoreSum/total
-             
-             ;
+             answer.scoreAvg=Math.round(scoreSum/completed);
             }else{
              answer.scoreAvg=0;
             }
