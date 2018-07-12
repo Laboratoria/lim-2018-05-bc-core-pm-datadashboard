@@ -72,6 +72,7 @@ window.computeUsersStats=(users,progress,courses)=>{
                             total+=lessonsQuizzes.length;
                            break;
                         default:
+                            
                           break;
                     }
                         
@@ -81,19 +82,27 @@ window.computeUsersStats=(users,progress,courses)=>{
                 
             }
         });
-        let answer= {
-            total:total,
-            completed:completed,
-            percent:completed*100/total
-        };
-        if(type==="quiz"){
+        
+        let answer= {};
+        if(completed!=0){
+            answer.total=total;
+            answer.completed=completed;
+            answer.percent=completed*100/total;
+        }else{
             
-            answer.scoreSum=scoreSum;
-            answer.scoreAvg=scoreSum/total;
-            
-         
+            answer.completed=0;
+            answer.percent=0;
         }
-       return answer;
+            
+        if(type==="quiz"){
+            if(completed!=0){
+             answer.scoreSum=scoreSum;
+             answer.scoreAvg=scoreSum/total;
+            }else{
+             answer.scoreAvg=0;
+            }
+        }
+        return answer;
 
 
     };
