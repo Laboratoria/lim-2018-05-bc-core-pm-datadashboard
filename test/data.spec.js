@@ -90,7 +90,7 @@ describe('data', () => {
     });
     it('debería retornar arreglo de usuarios ordenado por porcentaje general ASC',()=>{
       const users = fixtures.users;
-      const processed = sortUsers(users, 'percent', 'asc');
+      const processed = sortUsers(users, 'total', 'asc');
       assert.deepEqual('0', processed[0].stats.percent);
     });
     it('debería retornar arreglo de usuarios ordenado por porcentaje general DESC',() => {
@@ -100,15 +100,35 @@ describe('data', () => {
     });
     it('debería retornar arreglo de usuarios ordenado por ejercicios completados ASC',() => {
       const users = fixtures.users;
-      const processed = sortUsers(users, 'completed', 'asc');
+      const processed = sortUsers(users, 'total', 'asc');
       assert.deepEqual('0', processed[0].stats.exercises.completed);
     });
-    it('debería retornar arreglo de usuarios ordenado por ejercicios completados DESC');
-    it('debería retornar arreglo de usuarios ordenado por quizzes completados ASC');
-    it('debería retornar arreglo de usuarios ordenado por quizzes completados DESC');
-    it('debería retornar arreglo de usuarios ordenado por score promedio en quizzes completados ASC');
-    it('debería retornar arreglo de usuarios ordenado por score promedio en quizzes completados DESC');
-    it('debería retornar arreglo de usuarios ordenado por lecturas (reads) completadas ASC');
+    it('debería retornar arreglo de usuarios ordenado por ejercicios completados DESC',() => {
+      const users = fixtures.users;
+      const processed = sortUsers(users, 'total', 'asc');
+      assert.deepEqual('2', processed[0].stats.exercises.completed);
+    });
+    it('debería retornar arreglo de usuarios ordenado por quizzes completados ASC',() => {
+      const users = fixtures.users;
+      const processed = sortUsers(users, 'exercise', 'asc');
+      assert.deepEqual('0', processed[0].stats.quizzes.completed);
+    });
+    it('debería retornar arreglo de usuarios ordenado por quizzes completados DESC',() => {
+      const users = fixtures.users;
+      const processed = sortUsers(users, 'exercise', 'desc');
+      assert.deepEqual('3', processed[0].stats.quizzes.completed);
+    });
+    it('debería retornar arreglo de usuarios ordenado por score promedio en quizzes completados ASC',() => {
+      const users = fixtures.users;
+      const processed = sortUsers(users, 'quizzes', 'asc');
+      assert.deepEqual('0', processed[0].stats.quizzes.completed);
+    });
+    it('debería retornar arreglo de usuarios ordenado por score promedio en quizzes completados DESC',() => {
+      const users = fixtures.users;
+      const processed = sortUsers(users, 'quizzes', 'asc');
+      assert.deepEqual('0', processed[0].stats.quizzes.completed);
+    });
+    it('debería retornar arreglo de usuarios ordenado por lecturas (reads) completadas ASC',);
     it('debería retornar arreglo de usuarios ordenado por lecturas (reads) completadas DESC');
 
   });
