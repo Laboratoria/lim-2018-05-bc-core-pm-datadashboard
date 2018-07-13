@@ -2,6 +2,7 @@
 let signIn = document.getElementById('signIn');
 let signUp = document.getElementById('signUp');
 let pageOne =document.getElementById('pageOne');
+const header=document.querySelector('header');
 //mostrando y ocultando secciones
 signIn.style.display='block';
 signUp.style.display='none';
@@ -35,8 +36,12 @@ function login() {
 
  if(username==='Bea'&& password==='lab'){
     pageOne.style.display='block';
+    header.style.display='none';
+    
   }else if(username==='Ale'&& password==='lab'){
     pageOne.style.display='block';
+    header.style.display='none';
+    
   }else{
    pageOne.style.display='none';
    signIn.style.display='block';

@@ -2,7 +2,7 @@
     padding: 0px;
     margin: 0px;
 }
-header {
+.header {
   
     background-color: #ffe521;
     padding: 10px 10px;
@@ -46,7 +46,7 @@ header {
   font-family: Arial;
     
 }
-img{
+.img{
     width: 20%;
     
 }
@@ -88,6 +88,8 @@ img{
 .list li a:hover:not(.header) {
     background-color: #eee;
 }
+
+
 .container {
     position: relative;
     width: 300px;
@@ -140,13 +142,25 @@ img{
     width: 130px;
 }
 
+.headerSection{
+    /*background-color: #ffe521;*/
+    background-color: #fafafa;
+    
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-color: rgb(209, 206, 206);
+}
+.imgOne{
+    width: 50%;
+}
+
 .side {
     height: 100%;
     position: fixed;
     z-index: 1;
-    top: 40;
+    top: 100;
     left: 0;
-    background-color: #111;
+    
     overflow-x: hidden;
     padding-top: 20px;
     border-right-width: 2px;
