@@ -25,7 +25,7 @@ describe('data', () => {
     it('debería retornar arreglo de usuarios con propiedad stats', () => {
       const processed = computeUsersStats(users, progress, courses);
 
-      assert.equal(users.length, processed.length);
+      assert.equal(users.filter(u => u.role === 'student').length, processed.length);
 
       processed.forEach(user => {
         assert.ok(user.hasOwnProperty('stats'));
@@ -58,6 +58,7 @@ describe('data', () => {
           total: 3,
           completed: 2,
           percent: 67,
+          scoreSum: 57,
           scoreAvg: 29,
         });
       });
@@ -76,26 +77,72 @@ describe('data', () => {
 
   describe('sortUsers(users, orderBy, orderDirection)', () => {
 
-    it('debería retornar arreglo de usuarios ordenado por nombre ASC');
-    it('debería retornar arreglo de usuarios ordenado por nombre DESC');
-    it('debería retornar arreglo de usuarios ordenado por porcentaje general ASC');
-    it('debería retornar arreglo de usuarios ordenado por porcentaje general DESC');
-    it('debería retornar arreglo de usuarios ordenado por ejercicios completados ASC');
-    it('debería retornar arreglo de usuarios ordenado por ejercicios completados DESC');
-    it('debería retornar arreglo de usuarios ordenado por quizzes completados ASC');
-    it('debería retornar arreglo de usuarios ordenado por quizzes completados DESC');
-    it('debería retornar arreglo de usuarios ordenado por score promedio en quizzes completados ASC');
-    it('debería retornar arreglo de usuarios ordenado por score promedio en quizzes completados DESC');
-    it('debería retornar arreglo de usuarios ordenado por lecturas (reads) completadas ASC');
+    it('debería retornar arreglo de usuarios ordenado por nombre ASC',() => {
+      const users = fixtures.users;
+      const processed = sortUsers(users, 'name', 'asc');
+      assert.deepEqual('adriana vizcarra paitán', processed[0].name);
+    });
+    it('debería retornar arreglo de usuarios ordenado por nombre DESC',()=>{
+      const users = fixtures.users;
+      const processed = sortUsers(users, 'name', 'desc');
+      assert.deepEqual('Zurisadai Rosas Aramburú', processed[0].name);
+
+    });
+    it('debería retornar arreglo de usuarios ordenado por porcentaje general ASC',()=>{
+      const users = fixtures.users;
+      const processed = sortUsers(users, 'total', 'asc');
+      assert.deepEqual('0', processed[0].stats.percent);
+    });
+    it('debería retornar arreglo de usuarios ordenado por porcentaje general DESC',() => {
+      const users = fixtures.users;
+      const processed = sortUsers(users, 'percent', 'desc');
+      assert.deepEqual('100', processed[0].stats.percent);
+    });
+    it('debería retornar arreglo de usuarios ordenado por ejercicios completados ASC',() => {
+      const users = fixtures.users;
+      const processed = sortUsers(users, 'total', 'asc');
+      assert.deepEqual('0', processed[0].stats.exercises.completed);
+    });
+    it('debería retornar arreglo de usuarios ordenado por ejercicios completados DESC',() => {
+      const users = fixtures.users;
+      const processed = sortUsers(users, 'total', 'asc');
+      assert.deepEqual('2', processed[0].stats.exercises.completed);
+    });
+    it('debería retornar arreglo de usuarios ordenado por quizzes completados ASC',() => {
+      const users = fixtures.users;
+      const processed = sortUsers(users, 'exercise', 'asc');
+      assert.deepEqual('0', processed[0].stats.quizzes.completed);
+    });
+    it('debería retornar arreglo de usuarios ordenado por quizzes completados DESC',() => {
+      const users = fixtures.users;
+      const processed = sortUsers(users, 'exercise', 'desc');
+      assert.deepEqual('3', processed[0].stats.quizzes.completed);
+    });
+    it('debería retornar arreglo de usuarios ordenado por score promedio en quizzes completados ASC',() => {
+      const users = fixtures.users;
+      const processed = sortUsers(users, 'quizzes', 'asc');
+      assert.deepEqual('0', processed[0].stats.quizzes.completed);
+    });
+    it('debería retornar arreglo de usuarios ordenado por score promedio en quizzes completados DESC',() => {
+      const users = fixtures.users;
+      const processed = sortUsers(users, 'quizzes', 'asc');
+      assert.deepEqual('0', processed[0].stats.quizzes.completed);
+    });
+    it('debería retornar arreglo de usuarios ordenado por lecturas (reads) completadas ASC',);
     it('debería retornar arreglo de usuarios ordenado por lecturas (reads) completadas DESC');
 
   });
 
   describe('filterUsers(users, filterBy)', () => {
 
-    it('debería retornar nuevo arreglo solo con usuarios con nombres que contengan string (case insensitive)');
+    it('debería retornar nuevo arreglo solo con usuarios con nombres que contengan string (case insensitive)',() => {
+      const users = fixtures.users;
+      const processed = sortUsers(users, 'Zurisadai Rosas Aramburú');
+      assert.deepEqual('Zurisadai Rosas Aramburú', processed[0].name);
+    });
 
   });
+   
 
   describe('processCohortData({ cohortData, orderBy, orderDirection, filterBy })', () => {
 
@@ -104,3 +151,4 @@ describe('data', () => {
   });
 
 });
+    

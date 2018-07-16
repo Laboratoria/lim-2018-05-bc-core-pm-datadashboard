@@ -119,18 +119,20 @@ const showAll=(studentsWithStats)=>{
   let template='';
   studentsWithStats.forEach((objStudentWithStats)=>{
     template+=
-    `<div>
-      <p><span style= "font-weight:bold;">${objStudentWithStats.name}</span>
- 
-        </br>
-        <span> %completitud total : ${Math.floor(objStudentWithStats.stats.percent)}</span>
-        <span> % de ejercicios autocorregidos completados : ${Math.floor(objStudentWithStats.stats.exercises.percent)}</span>
-        <span> % de quizzes completados : ${Math.floor(objStudentWithStats.stats.quizzes.percent)}</span>
-        <span> puntuación promedio en quizzes completados : ${Math.floor(objStudentWithStats.stats.quizzes.scoreAvg)}</span>
-        <span> % de lecturas completadas : ${Math.floor(objStudentWithStats.stats.reads.percent)}</span>
-        
-       </p>
-        
+    `<div class="container">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvXsKRwlFWrVpXuA2E4RyQozkk76lvCwh5QP5IQEt2D7q-iy7vsQ" alt="Avatar" class="image" >
+      <div class="text-block">
+       <p style= "font-weight:bold;">${objStudentWithStats.name}</p></br>
+       </div>
+      <div class="overlay">
+       <p class="text">
+         <span> %completitud total : ${Math.floor(objStudentWithStats.stats.percent)}</span></br>
+         <span> % de ejercicios autocorregidos completados : ${Math.floor(objStudentWithStats.stats.exercises.percent)}</span></br>
+         <span> % de quizzes completados : ${Math.floor(objStudentWithStats.stats.quizzes.percent)}</span></br>
+         <span> puntuación promedio en quizzes completados : ${Math.floor(objStudentWithStats.stats.quizzes.scoreAvg)}</span></br>
+         <span> % de lecturas completadas : ${Math.floor(objStudentWithStats.stats.reads.percent)}</span>
+        </p>
+      </div>  
     </div>`
   });
   sectionMain.innerHTML=template;
