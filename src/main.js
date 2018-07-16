@@ -115,18 +115,18 @@ const showAll=(studentsWithStats)=>{
   studentsWithStats.forEach((objStudentWithStats)=>{
     template+=
     `<div class="container">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvXsKRwlFWrVpXuA2E4RyQozkk76lvCwh5QP5IQEt2D7q-iy7vsQ" alt="Avatar" class="image" >
+      <img class="student" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvXsKRwlFWrVpXuA2E4RyQozkk76lvCwh5QP5IQEt2D7q-iy7vsQ" alt="Avatar" class="image" >
       <div class="text-block">
-       <p style= "font-weight:bold;">${objStudentWithStats.name}</p></br>
-       </div>
-      <div class="overlay">
-       <p class="text">
-         <span> %completitud total : ${(objStudentWithStats.stats.percent)}</span></br>
-         <span> % de ejercicios autocorregidos completados : ${(objStudentWithStats.stats.exercises.percent)}</span></br>
-         <span> % de quizzes completados : ${(objStudentWithStats.stats.quizzes.percent)}</span></br>
-         <span> puntuación promedio en quizzes completados : ${(objStudentWithStats.stats.quizzes.scoreAvg)}</span></br>
-         <span> % de lecturas completadas : ${(objStudentWithStats.stats.reads.percent)}</span>
-        </p>
+        <p style= "font-weight:bold;">${objStudentWithStats.name}</p></br>
+      </div>
+      <div class="text">
+        <ul >
+         <li> COMPLETITUD TOTAL : ${(objStudentWithStats.stats.percent)}%</li>
+         <li> EJERCICIOS AUTOCORREGIDOS COMPLETADOS : ${(objStudentWithStats.stats.exercises.percent)}%</li>
+         <li> QUIZZES COMPLETADOS : ${(objStudentWithStats.stats.quizzes.percent)}%</li>
+         <li> PUNTUACIÓN PROMEDIO EN QUIZZES COMPLETADOS : ${(objStudentWithStats.stats.quizzes.scoreAvg)}</li>
+         <li> LECTURAS COMPLETADAS : ${(objStudentWithStats.stats.reads.percent)}%</li>
+        </ul>
       </div>  
     </div>`
   });
@@ -162,8 +162,8 @@ searchInput.addEventListener('keyup',e=>{
   const valueInput=e.target.value;
   options.search = valueInput;
   
-  const userfilter = processCohortData(options);
-  showAll(userfilter);
+  const studentsStatsFilter = processCohortData(options);
+  showAll(studentsStatsFilter);
 
 })
 
@@ -181,8 +181,8 @@ direction.addEventListener('change', evt=>{
 
 let btnOrder=document.getElementById('btnOrder');
 btnOrder.addEventListener('click',()=>{
-  const sortSt=processCohortData(options);
-  showAll(sortSt);
+  const studentsStatsSort=processCohortData(options);
+  showAll(studentsStatsSort);
 })
 
 
