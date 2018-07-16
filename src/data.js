@@ -62,14 +62,10 @@ window.computeUsersStats=(users,progress,courses)=>{
                             
                            break;
                         default:
-                            
-                          break;
+                        break;
                     }
                         
-                })
-
-
-                
+                })     
             }
         });
         
@@ -77,7 +73,7 @@ window.computeUsersStats=(users,progress,courses)=>{
         if(completed!=0){
             answer.total=total;
             answer.completed=completed;
-            answer.percent=completed*100/total;
+            answer.percent=Math.round(completed*100/total);
         }else{
             
             answer.completed=0;
@@ -87,9 +83,7 @@ window.computeUsersStats=(users,progress,courses)=>{
         if(type==="quiz"){
             if(completed!=0){
              answer.scoreSum=scoreSum;
-             answer.scoreAvg=scoreSum/total
-             
-             ;
+             answer.scoreAvg=Math.round(scoreSum/completed);
             }else{
              answer.scoreAvg=0;
             }
@@ -116,107 +110,89 @@ window.computeUsersStats=(users,progress,courses)=>{
     return studentsWithStats;
 };
 window.sortUsers = (users, orderBy, orderDirection) => {
-    //Orderby y orderDirection por nombre:
-    if(orderBy === "name")
-    {
-     if(orderDirection === "asc")
-     {
-        users.sort((a, b) => {
-        if (a.name.toLowerCase() < b.name.toLowerCase()) 
-            return -1 
-        if (a.name.toLowerCase() > b.name.toLowerCase())
-            return 1
-        return 0 
-        })
-     }
-     if(orderDirection === "desc")
-     {
-        users.sort((a, b) => {
-        if (a.name.toLowerCase() < b.name.toLowerCase()) 
-            return 1
-        if (a.name.toLowerCase() > b.name.toLowerCase())
-            return -1
-        return 0 
-        })
-     }  
+    //Order por nombre:
+    if(orderBy === "name"){
+        if(orderDirection === "asc"){
+          users.sort((a, b) => {
+              if (a.name.toLowerCase() < b.name.toLowerCase()) 
+                 return -1 
+              if (a.name.toLowerCase() > b.name.toLowerCase())
+                 return 1
+             return 0 
+           })
+        }
+       if(orderDirection === "desc"){
+          users.sort((a, b) => {
+              if (a.name.toLowerCase() < b.name.toLowerCase()) 
+                 return 1
+              if (a.name.toLowerCase() > b.name.toLowerCase())
+                 return -1
+              return 0 
+           })
+        }  
     } 
-    //Orderby y orderDirection por total:
-    if(orderBy === "total")
-    {
-      if(orderDirection === "asc")
-      {
-        users.sort((a, b) => {
-        return a.stats.percent - b.stats.percent 
-        })
-      }
-      if(orderDirection === "desc")
-      {
-        users.sort((a, b) => {
-        return b.stats.percent - a.stats.percent 
-        })
-      }
+    //Order por total:
+    if(orderBy === "total"){
+      if(orderDirection === "asc"){
+          users.sort((a, b) => {
+              return a.stats.percent - b.stats.percent 
+           })
+        }
+      if(orderDirection === "desc"){
+          users.sort((a, b) => {
+              return b.stats.percent - a.stats.percent 
+           })
+        }
     }   
-    //Orderby y orderDirection por Ejercicios:
-    if(orderBy === "exercise")
-    {
-      if(orderDirection === "asc")
-      {
-        users.sort((a, b) => {
-        return a.stats.exercises.completed - b.stats.exercises.completed; 
-        })
-      }
-      if(orderDirection === "desc")
-      {
-        users.sort((a, b) => {
-        return b.stats.exercises.completed - a.stats.exercises.completed
-        })
-      }
+    //Order por Ejercicios:
+    if(orderBy === "exercise"){
+      if(orderDirection === "asc"){
+          users.sort((a, b) => {
+              return a.stats.exercises.completed - b.stats.exercises.completed; 
+           })
+        }
+      if(orderDirection === "desc"){
+           users.sort((a, b) => {
+              return b.stats.exercises.completed - a.stats.exercises.completed
+           })
+        }
     }   
-    if(orderBy === "quizzes")
-    {
-      if(orderDirection === "asc")
-      {
-        users.sort((a, b) => {
-        return a.stats.quizzes.completed - b.stats.quizzes.completed; 
-        })
-      }
-      if(orderDirection === "desc")
-      {
-        users.sort((a, b) => {    
-        return b.stats.quizzes.completed - a.stats.quizzes.completed 
-        })
-      }
+    if(orderBy === "quizzes"){
+      if(orderDirection === "asc"){
+            users.sort((a, b) => {
+              return a.stats.quizzes.completed - b.stats.quizzes.completed; 
+           })
+        }
+      if(orderDirection === "desc"){
+            users.sort((a, b) => {    
+              return b.stats.quizzes.completed - a.stats.quizzes.completed 
+           })
+        }
     } 
-    if(orderBy === "quizpoints")
-    {
-      if(orderDirection === "asc")
-      {
-        users.sort((a, b) => {
-        return a.stats.quizzes.scoreAvg - b.stats.quizzes.scoreAvg; 
-        })
-      }
-      if(orderDirection === "desc")
-      {
-        users.sort((a, b) => {    
-        return b.stats.quizzes.scoreAvg - a.stats.quizzes.scoreAvg 
-        })
-      }
+    if(orderBy === "quizpoints"){
+      if(orderDirection === "asc"){
+            users.sort((a, b) => {
+              return a.stats.quizzes.scoreAvg - b.stats.quizzes.scoreAvg; 
+           })
+        }
+      if(orderDirection === "desc"){
+           users.sort((a, b) => {    
+              return b.stats.quizzes.scoreAvg - a.stats.quizzes.scoreAvg 
+           })
+        }
     }   
     //Orderby y orderDirection por Lecturas:
-    if(orderBy === "reads")
-    {
-      if(orderDirection === "asc")
-      {
-        users.sort((a, b) => {
-        return a.stats.reads.completed - b.stats.reads.completed; 
-        })
-      }
-      if(orderDirection === "desc")
-      {
-        users.sort((a, b) => {    
-        return b.stats.reads.completed - a.stats.reads.completed 
-        })
-      }
+    if(orderBy === "reads"){
+      if(orderDirection === "asc"){
+           users.sort((a, b) => {
+             return a.stats.reads.completed - b.stats.reads.completed; 
+           })
+        }
+      if(orderDirection === "desc"){
+           users.sort((a, b) => {    
+             return b.stats.reads.completed - a.stats.reads.completed 
+            })
+        }
     } 
     return users;
 };
@@ -228,11 +204,11 @@ window.processCohortData=(options)=>{
     let courses=Object.keys(options.cohort.coursesIndex);
     
  
-    let studentWithStats=computeUsersStats(options.cohortData.users,options.cohortData.progress,courses);
-    let sortStu=sortUsers(studentWithStats,options.orderBy,options.orderDirection);
-    let filterStu=filterUsers(sortStu,options.search);
+    let studentWithStats = computeUsersStats(options.cohortData.users,options.cohortData.progress,courses);
+    studentWithStats = sortUsers(studentWithStats,options.orderBy,options.orderDirection);
+    studentWithStats = filterUsers(studentWithStats,options.search);
     
     
 
-    return filterStu;
+    return studentWithStats;
 }
