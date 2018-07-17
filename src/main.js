@@ -1,8 +1,8 @@
 //llamamos a los elementos
-
 let signIn = document.getElementById('signIn');
 let signUp = document.getElementById('signUp');
 let pageOne =document.getElementById('pageOne');
+const header=document.querySelector('header');
 //mostrando y ocultando secciones
 signIn.style.display='block';
 signUp.style.display='none';
@@ -23,8 +23,6 @@ function show(e){
   }else if ( tabSeleccionado === 'tabRegister'){
     signIn.style.display='none';
     signUp.style.display='block';
-    
-  
   }
 }
 //click de botones
@@ -38,8 +36,12 @@ function login() {
 
  if(username==='Bea'&& password==='lab'){
     pageOne.style.display='block';
+    header.style.display='none';
+    
   }else if(username==='Ale'&& password==='lab'){
     pageOne.style.display='block';
+    header.style.display='none';
+    
   }else{
    pageOne.style.display='none';
    signIn.style.display='block';
@@ -53,13 +55,6 @@ function register(){
 
 }
 
-
-
-
-
-
-
-////////////////////////////////////////////////////////////////////////////
 //'https://api.laboratoria.la/campuses'
 //'https://api.laboratoria.la/cohorts'
 //'https://api.laboratoria.la/cohorts/lim-2018-03-pre-core-pw/users'
@@ -119,19 +114,20 @@ const showAll=(studentsWithStats)=>{
   let template='';
   studentsWithStats.forEach((objStudentWithStats)=>{
     template+=
-    `<div>
-      <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="image" >
-      <p><span style= "font-weight:bold;">${objStudentWithStats.name}</span>
- 
-        </br>
-        <span> %completitud total : ${Math.floor(objStudentWithStats.stats.percent)}</span>
-        <span> % de ejercicios autocorregidos completados : ${Math.floor(objStudentWithStats.stats.exercises.percent)}</span>
-        <span> % de quizzes completados : ${Math.floor(objStudentWithStats.stats.quizzes.percent)}</span>
-        <span> puntuación promedio en quizzes completados : ${Math.floor(objStudentWithStats.stats.quizzes.scoreAvg)}</span>
-        <span> % de lecturas completadas : ${Math.floor(objStudentWithStats.stats.reads.percent)}</span>
-        
-       </p>
-        
+    `<div class="container">
+      <img class="student" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvXsKRwlFWrVpXuA2E4RyQozkk76lvCwh5QP5IQEt2D7q-iy7vsQ" alt="Avatar" class="image" >
+      <div class="text-block">
+        <p style= "font-weight:bold;">${objStudentWithStats.name}</p></br>
+      </div>
+      <div class="text">
+        <ul >
+         <li> COMPLETITUD TOTAL : ${(objStudentWithStats.stats.percent)}%</li>
+         <li> EJERCICIOS AUTOCORREGIDOS COMPLETADOS : ${(objStudentWithStats.stats.exercises.percent)}%</li>
+         <li> QUIZZES COMPLETADOS : ${(objStudentWithStats.stats.quizzes.percent)}%</li>
+         <li> PUNTUACIÓN PROMEDIO EN QUIZZES COMPLETADOS : ${(objStudentWithStats.stats.quizzes.scoreAvg)}</li>
+         <li> LECTURAS COMPLETADAS : ${(objStudentWithStats.stats.reads.percent)}%</li>
+        </ul>
+      </div>  
     </div>`
   });
   sectionMain.innerHTML=template;
@@ -139,59 +135,35 @@ const showAll=(studentsWithStats)=>{
  
 }
 
-
-
-
-
-
-
 const progressOfCohortSelected=(valueCohort,objProgress)=>{
   options.cohortData.progress=objProgress;
   let studentsWithStats = processCohortData(options);
   showAll(studentsWithStats);
-
 }
  
 const usersOfCohortSelected=(valueCohort,arrUsers)=>{
   options.cohortData.users=arrUsers;
-  
-  
- getData(valueCohort,`https://api.laboratoria.la/cohorts/${valueCohort}/progress`,progressOfCohortSelected);
- 
+  getData(valueCohort,`https://api.laboratoria.la/cohorts/${valueCohort}/progress`,progressOfCohortSelected);
 }
-
-
-
-
-
-
-
-
-
 
 selectCampuses.addEventListener('change',event=>{
   const valueCampus= event.target.value//text.content
   getData(valueCampus,'https://api.laboratoria.la/cohorts',showCohorts )
- 
 })
 
 selectCohort.addEventListener('change', e => {
   const valueCohort=e.target.value;
   //console.log(valueCohort);
   getData(valueCohort,`https://api.laboratoria.la/cohorts`,cohortSelected);
-  getData(valueCohort,`https://api.laboratoria.la/cohorts/${valueCohort}/users`,usersOfCohortSelected);
-  
+  getData(valueCohort,`https://api.laboratoria.la/cohorts/${valueCohort}/users`,usersOfCohortSelected); 
 })
-
-
-
 
 searchInput.addEventListener('keyup',e=>{
   const valueInput=e.target.value;
   options.search = valueInput;
   
-  const userfilter = processCohortData(options);
-  showAll(userfilter);
+  const studentsStatsFilter = processCohortData(options);
+  showAll(studentsStatsFilter);
 
 })
 
@@ -199,209 +171,24 @@ let order=document.getElementById('order');
 order.addEventListener('change',ev=>{
   const valueOrder=ev.target.value;
   options.orderBy=valueOrder;
- 
 });
 
 let direction=document.getElementById('direction');
 direction.addEventListener('change', evt=>{
   const valueDirect=evt.target.value;
   options.orderDirection=valueDirect;
- 
 });
+
 let btnOrder=document.getElementById('btnOrder');
 btnOrder.addEventListener('click',()=>{
-  const sortSt=processCohortData(options);
-  showAll(sortSt);
+  const studentsStatsSort=processCohortData(options);
+  showAll(studentsStatsSort); 
 })
 
 
 
 
- 
 
-/*seleccionecohort.addEventListener('change',(event)=>{
 
-  getData((data)=>{
-    const cohortsGeneral=data[0];
-    const usersGeneral=data[1];
-    const progressGeneral=data[2];
 
-    let cohortSelected=cohortsGeneral.filter(function( cohort ) {
-      return cohort.id == event.target.value;
-    });
-  
-    let usersOfCohortSelected=usersGeneral.filter(function( users ) {
-      return users.signupCohort == event.target.value;
-    });
-
-    let studentSelected=usersOfCohortSelected.filter(function( user ) {
-      return user.role === 'student';
-
-    });
-    let studentSelectedId=studentSelected.filter(function( user ) {
-      return user.id ;
-
-    });
-    console.log(studentSelectedId);
-    let progressSelected=Object.keys(progressGeneral[user.id]).forEach((ele)=>{
-      if(progress[user.id].intro.hasOwnProperty('percent')){
-        let answer=progress[user.id].intro;
-        
-        
-      }
-         
-       
-       
      
-   
-    //console.log(usersGeneral);
-    //console.log(usersOfCohortSelected);
-    //console.log(studentOfcohortSelected);
-    const options={
-      cohort:cohortSelected,
-      cohortData:{
-        users:studentSelected,
-        progress:progressSelected
-      },
-      orderBy:'',
-      orrderDirection:'',
-      search:''
-
-    }
-
-    
-    let studentOfCohortSelected=Object.keys(progressGeneral);function( progress ) {
-      return progress.role == 'student';
-    });
-    console.log(studentOfCohortSelected);
-    
-
-    
-    
-    
-  })
-  
-});
-*/
-
-
-
-
-/*
-const functionfilter=(texto)=>{
-  return Array.filter((element)=>element.name.indexOf(texto)!== -1)
-};
-
-//
-const functionfilter=(texto)=>{
-  return Array.filter((element)=>element.name===texto)
-};*/
-
-/*selection.addEventListener('click',change);
-function change(e){
-  if(e.target.value===)
-
-}*/
-
-///////////////////////////////////////////////////////
-/*let selection = document.getElementById('cohorts');
-let listauser = document.getElementById('lista');
-
-fetch('https://api.laboratoria.la/cohorts')
-.then(response => response.json())
-.then(json => {
-  const cohorts = json;
-  for (let i = 0; i < cohorts.length; i++) {
-    const optionElements = document.createElement('option');
-    const contenidoOption = document.createTextNode(cohorts[i].id);
-    optionElements.appendChild(contenidoOption);
-    optionElements.setAttribute('value',cohorts[i].id);
-    selection.appendChild(optionElements);
-  }
-
-})
-.catch((err) => {
-  console.error(err);
-});
-
-
-
-
-fetch('https://api.laboratoria.la/cohorts/lim-2018-03-pre-core-pw/users')
-.then(response => response.json())
-.then(json => {
-  const users = json;
-  
-  for(let i=0; i< users.length; i++){
-    listausuarios=(users[i].signupCohort);
-    
-    selection.addEventListener('change', carga);
-    function carga(){
-     if(selection.value === listausuarios){
-      
-       const optionlist=document.createElement('li');
-       const contenidolista=document.createTextNode(users[i].name);
-       optionlist.appendChild(contenidolista)
-       listauser.appendChild(optionlist);
-      }
-    }
- }
- 
-     
-     
-})
-.catch((err) => {
- console.error(err);
-});
- */
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*var lista = document.getElementById('lista');
-var Uno = "";
-
-fetch('http://127.0.0.1:5500/data/cohorts.json').then((response) => {
-  if(response.status == 200){
-    return response.json();
-  }else{
-    throw new Error("la llamada a la API falló");
-  }
-}).then ((data) => {
-
-  for(let i=0;i<data.length; i++){
-  var uno = data[i].id;
-  console.log(data[i].id);
-  lista.innerHTML += data[i].id+"<p>";
-  
-    
-  }
- 
-});*/
-
-
-/*-------------------------------------------------------------------------
-const llamadas = [];
-llamadas.push(fetch('http://127.0.0.1:5500/data/cohorts.json'));
-//llamadas.push(fetch(url2));
-//llamadas.push(fetch(url3));
-
-Promise.all(llamadas).then((responses)=>{
-    return responses.map(response => response.json()); 
-    //En caso de que sean llamadas a api
-}).then((jsonResponses)=>{
-    //Código que maneja las múltiples llamdas y sus respuestas en JSON
-}).catch((error)=>{
-    //Código que maneja errores
-});*/

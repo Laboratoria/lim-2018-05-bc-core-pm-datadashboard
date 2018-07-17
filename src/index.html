@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
   <head>
     <meta charset="utf-8">
@@ -6,16 +7,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <img src="laboratoria.png" alt="img">
+    <header class="header" id="header">
+      <img class="img" src="laboratoria.png" alt="img">
       
-    </header>
+    </header> 
 
     <section class="initial" id="content">
       
       <ul class="contenedorTabs">
-        <li><button type="button" name="button" data-tab-seleccionado="tabLogin" class="tab">Iniciar Sesión</button></li>
-        <li><button type="button" name="button" data-tab-seleccionado="tabRegister" class="tab">Crear Cuenta</button></li>     
+        <li><button type="button" name="button" data-tab-seleccionado="tabLogin" class="tab">INICIAR SESIÓN</button></li>
+        <li><button type="button" name="button" data-tab-seleccionado="tabRegister" class="tab">CREAR CUENTA</button></li>     
       </ul>
      
       <div class="intro" id="signIn">
@@ -31,19 +32,26 @@
       <div class="intro" id="signUp">
         <form action="">
           <h4>Registrese</h4>
-          <input type="text" placeholder="Usuario" required><br>
-          <input type="text" placeholder="Email" required><br>
-          <input type="password" placeholder="Contraseña" required><br>
-          <button  type="button" id="btn" >ACEPTAR</button>
+          <input type = "text" placeholder = "Usuario" required><br>
+          <input type = "text" placeholder = "Email" required><br>
+          <input type = "password" placeholder = "Contraseña" required><br>
+          <button  type = "button" id = "btn" >ACEPTAR</button>
             
          </form>
-      </div>
+      </div> 
       
     </section>
     <section id="pageOne">
-      <section id="menu">
-       <div>
-         <h4>Seleccione Sede:</h4>
+      
+      <section class="side">
+        <div>
+            <div class="headerSection">
+              <img class = "imgOne" src = "labo.png" alt = "img">
+            </div>
+        </div>
+        
+        <div class="selectC">
+         <p>SELECCIONE SEDE:</p>
          <select id="selectCampuses">
            <option value="">Seleccione</option>
            <option value="lim" >Lima</option>
@@ -55,33 +63,40 @@
          </select>
        </div>
        <div class="selectCo">
-         <h4>Seleccione Cohort:</h4>
+         <p>SELECCIONE COHORT:</p>
          <select id="cohorts" >
            <option value="">Seleccione</option>
          </select>
-
+       </div>
+       <div class="selectCo">
+         <p>ORDENAR POR:</p>
          <select id="order">
-           <option value="">Seleccione ordenar por ..</option>
            <option value="name">Nombre</option>
-           <option value="total">Porcentaje de completitud total</option>
-           <option value="exercise">Porcentaje de ejercicios autocorregidos completados</option>
-           <option value="quizzes">Porcentaje de quizzes completados</option>   
+           <option value="total">% de completitud total</option>
+           <option value="exercise">% de ejercicios autocorregidos completados</option>
+           <option value="quizzes">% de quizzes completados</option>   
            <option value="quizpoints">Puntuación promedio en quizzes completados</option>  
-           <option value="reads">Porcentaje de lecturas completadas</option>
+           <option value="reads">% de lecturas completadas</option>
          </select>
 
          <select id="direction">
             <option value="asc">Ascendente</option>
             <option value="desc">Descendente</option>
-         </select>
+         </select><br>
          <button id="btnOrder">OK</button>
         </div>
       </section>
-      <input id="searchInput" type="text" placeholder="Buscar estudiante..." >
-      <section id="sectionMain">
+      <div class="bar"></div>
+      <section class="sectionContent">
+        <div class="input">
+          <p>BUSCAR ESTUDIANTE:</p>
+          <input id="searchInput"  type="text" placeholder="Escribe el nombre..." >
+        </div>
+        <div id="sectionMain" class="sectionMain"></div>
+
       </section>
 
-    </section>
+    </section> 
     
    
     <script src="data.js"></script>
