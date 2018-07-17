@@ -1,0 +1,188 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.header {
+  
+    background-color: #ffe521;
+    padding: 10px 10px;
+   /* height: 100%;*/    
+}
+.initial{
+    background-color: #E0E0E0;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 4px ;
+    box-shadow: 0 4px 10px 4px rgb(204, 200, 200);
+    max-width: 400px;
+    font-family: Arial, Helvetica, sans-serif;   
+}
+.contenedorTabs{
+    list-style: none;
+    margin: 0 0 40px 0;
+    padding: 0;
+}
+.tab{
+    display: block;
+    text-decoration: none;
+    float: left;
+    cursor: pointer;
+    padding: 15px;
+    width: 50%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+.tab:hover {
+    background-color: #777;
+}
+#sectionInitial{  
+  font-family: Arial;
+}
+.img{
+    width: 20%;   
+}
+.intro{
+    padding: 20px;   
+}
+.selectC{
+    font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
+    text-align: left;
+    font-size:18px;
+    padding: 15% 8% 0%;
+}
+.selectCo{
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-size:18px;
+    padding: 6% 8% 0%;
+}
+.selectCo select{
+    text-align: center;
+    margin:auto;
+    font-size:15px;
+}
+.list {
+    list-style-type: none;
+    padding: 0% 20%;
+    margin: 0;
+} 
+.list li a {
+    border: 1px solid #ddd;
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #e6e34d;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block
+} 
+.list li a:hover:not(.header) {
+    background-color: #eee;
+}
+.container {
+    margin: 2%;
+    border-radius: 5px ;
+    box-shadow: 0 4px 10px 4px rgb(204, 200, 200);
+    position: relative;
+    width: 104%;
+    float:left;
+}
+.student {
+    width: 18%;
+    float: left;
+    margin: 2px 36px;
+}  
+.image {
+    display: block;
+    height: auto;
+    width: 40%;    
+} 
+.text {
+    /* color: rgb(20, 19, 19); */
+    font-size: 15px;
+    padding: 20px 0px 15px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    width: 65%;
+    float: right;
+    /* margin: 0% 1%; */
+}
+.text-block {
+    position: absolute;
+    /* bottom: 5px; */
+    left: 30px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    padding: 2px;
+    width: 140px;
+    font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
+    bottom: 2px;
+    text-align: center;
+    height: 40px;     
+}
+.headerSection{
+    /*background-color: #ffe521;*/
+    background-color: #fafafa;
+    height: 100px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-color: rgb(209, 206, 206);
+}
+.imgOne{
+    width: 60%;
+    padding: 3% 18% ;
+}
+.bar{
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background-color: #ffe521;
+    width: 70%;
+    height: 100px;
+    position: fixed;
+    overflow-x: hidden;
+}
+.side {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    border-right-width: 2px;
+    border-right-style: solid;
+    border-color: rgb(209, 206, 206);
+    background-color: #fafafa;
+    width: 30%;   
+}
+.sectionContent{
+    padding: 12% 13%;
+    margin-left: 350px;   
+}
+.input {
+    padding: 0% 2% 3%;
+    font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    color: black;
+}
+/*responsive*/
+
+@media screen and (max-width:1200px) {
+    .text {
+        /* color: rgb(20, 19, 19); */
+        padding: 20px 0px 0px 20px;
+        font-size: 12px;
+        width: 50%;
+        /* margin: 0% 1%; */
+    }
+    .student {
+        width: 25%;
+        margin: 30px 36px 20px;
+    }
+    .sectionContent {
+        padding: 15% 13%;
+        margin-left: 26%;
+    }
+}
