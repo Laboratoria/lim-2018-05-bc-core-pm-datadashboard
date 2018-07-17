@@ -1,55 +1,44 @@
 <!DOCTYPE html>
-
 <html>
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
   </head>
   <body>
     <header class="header" id="header">
       <img class="img" src="laboratoria.png" alt="img">
-      
     </header> 
-
     <section class="initial" id="content">
-      
       <ul class="contenedorTabs">
         <li><button type="button" name="button" data-tab-seleccionado="tabLogin" class="tab">INICIAR SESIÓN</button></li>
         <li><button type="button" name="button" data-tab-seleccionado="tabRegister" class="tab">CREAR CUENTA</button></li>     
       </ul>
-     
-      <div class="intro" id="signIn">
-        <form action="">
+     <div class="intro" id="signIn">
+        <form >
          <h4>Iniciar Sesión</h4>
           <input type="text" id="username" placeholder="Usuario" required><br>
           <input type="password" id="password" placeholder="Contraseña" required><br>
           <button  type="button" id="button">ACEPTAR</button>
-           
-        </form>
+         </form>
       </div>
-       
       <div class="intro" id="signUp">
-        <form action="">
+        <form>
           <h4>Registrese</h4>
           <input type = "text" placeholder = "Usuario" required><br>
           <input type = "text" placeholder = "Email" required><br>
           <input type = "password" placeholder = "Contraseña" required><br>
           <button  type = "button" id = "btn" >ACEPTAR</button>
-            
-         </form>
+        </form>
       </div> 
-      
     </section>
     <section id="pageOne">
-      
       <section class="side">
         <div>
             <div class="headerSection">
               <img class = "imgOne" src = "labo.png" alt = "img">
             </div>
         </div>
-        
         <div class="selectC">
          <p>SELECCIONE SEDE:</p>
          <select id="selectCampuses">
@@ -78,7 +67,6 @@
            <option value="quizpoints">Puntuación promedio en quizzes completados</option>  
            <option value="reads">% de lecturas completadas</option>
          </select>
-
          <select id="direction">
             <option value="asc">Ascendente</option>
             <option value="desc">Descendente</option>
@@ -93,14 +81,9 @@
           <input id="searchInput"  type="text" placeholder="Escribe el nombre..." >
         </div>
         <div id="sectionMain" class="sectionMain"></div>
-
       </section>
-
     </section> 
-    
-   
     <script src="data.js"></script>
     <script src="main.js"></script>
-    
   </body>
 </html>

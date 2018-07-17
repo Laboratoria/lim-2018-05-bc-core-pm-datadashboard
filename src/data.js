@@ -35,8 +35,7 @@ window.computeUsersStats=(users,progress,courses)=>{
                            //console.log(lessonsExercise);
                            lessonsExercise.forEach((objExercise)=>{
                               //console.log(objExercise.completed);
-                              completed+=objExercise.completed;
-                              
+                              completed+=objExercise.completed;  
                             });
                             total+=lessonsExercise.length;
                            break;//rompe el ciclo que esta ocurriendo
@@ -45,8 +44,7 @@ window.computeUsersStats=(users,progress,courses)=>{
                            //console.log(lessonsRead);
                            lessonsRead.forEach((objRead)=>{
                               //console.log(objRead.completed);
-                              completed+=objRead.completed;
-                              
+                              completed+=objRead.completed;  
                            });
                            total+=lessonsRead.length;
                            break;
@@ -61,20 +59,15 @@ window.computeUsersStats=(users,progress,courses)=>{
                              
                               if(objQuiz.hasOwnProperty('score')){
                                   scoreSum+=objQuiz.score;
-                                  
                                 }else{
                                     scoreSum+=0;
-                                   
                                 }
-                                
-                               
                             });
                             total+=lessonsQuizzes.length;
                            break;
                         default:
                         break;
                     }
-                        
                 })     
             }
         });
@@ -212,13 +205,9 @@ window.filterUsers=(users,search)=>{
 };
 window.processCohortData=(options)=>{
     let courses=Object.keys(options.cohort.coursesIndex);
-    
- 
+
     let studentWithStats = computeUsersStats(options.cohortData.users,options.cohortData.progress,courses);
     studentWithStats = sortUsers(studentWithStats,options.orderBy,options.orderDirection);
     studentWithStats = filterUsers(studentWithStats,options.search);
-    
-    
-
     return studentWithStats;
 }
