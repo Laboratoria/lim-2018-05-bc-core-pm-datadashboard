@@ -46,20 +46,30 @@ window.computeUsersStats=(users,progress,courses)=>{
                            lessonsRead.forEach((objRead)=>{
                               //console.log(objRead.completed);
                               completed+=objRead.completed;
-                            });
+                              
+                           });
                            total+=lessonsRead.length;
                            break;
                         case "quiz":
                             const lessonsQuizzes=partsOfUnits.filter(objLesson=>objLesson.type==="quiz");
                             //console.log(lessonsQuizzes);
                             lessonsQuizzes.forEach((objQuiz)=>{
+                             //console.log(objQuiz.completed);
+                             //console.log(objQuiz.score);
+                              //console.log(scoreSum/lessonsQuizzes.length);
                               completed+=objQuiz.completed;
+                             
                               if(objQuiz.hasOwnProperty('score')){
-                                scoreSum+=objQuiz.score;
-                              }
-                            })
+                                  scoreSum+=objQuiz.score;
+                                  
+                                }else{
+                                    scoreSum+=0;
+                                   
+                                }
+                                
+                               
+                            });
                             total+=lessonsQuizzes.length;
-                            
                            break;
                         default:
                         break;
