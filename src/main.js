@@ -182,7 +182,7 @@ direction.addEventListener('change', evt=>{
 let btnOrder=document.getElementById('btnOrder');
 btnOrder.addEventListener('click',()=>{
   const studentsStatsSort=processCohortData(options);
-  showAll(studentsStatsSort);
+  showAll(studentsStatsSort); 
 })
 
 
